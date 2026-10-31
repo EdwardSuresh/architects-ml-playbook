@@ -2350,7 +2350,7 @@ function parseLines(s){const set=new Set();String(s).split(/[,;]/).forEach(p=>{c
 
 /* ---------- main tabs ---------- */
 function showView(v){$$("#maintabs button").forEach(b=>b.classList.toggle("active",b.dataset.view===v));$$(".view").forEach(s=>s.classList.toggle("active",s.id==="view-"+v));renderDiagrams($("#view-"+v));window.scrollTo({top:0});}
-$$("#maintabs button").forEach(b=>b.onclick=()=>showView(b.dataset.view));
+$$("#maintabs button").forEach(b=>b.onclick=()=>{if(b.dataset.view==="lessons"&&current===null)openLesson(1);else showView(b.dataset.view);});
 
 /* ---------- ranking ---------- */
 const heat=v=>`<td><div class="heat h${v}">${v}</div></td>`;
