@@ -115,6 +115,7 @@ pre.code.dim-py .ln.pyc,pre.code.dim-ml .ln.mlc{display:none}
 .lvlgoal{font-size:15.5px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:8px;padding:10px 14px}
 .kv td:first-child{font-weight:700;color:var(--navy);width:180px}
 .sec-icon{display:inline-block;width:22px}
+.azbar{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0 12px}.azbar button{min-width:34px;height:32px;padding:0 8px;border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:7px;font-weight:700;cursor:pointer;font-size:13.5px}.azbar button:hover:not(:disabled){background:var(--blue-l);border-color:var(--blue)}.azbar button.on,.azbar button.on:hover{background:var(--navy);color:var(--gold);border-color:var(--navy)}.azbar button:disabled{color:#C3C9D4;background:#F7F8FB;cursor:default}
 .idx-list a{cursor:pointer;text-decoration:none;font-size:13px;display:inline-block;margin:2px 6px 2px 0;padding:1px 7px;border-radius:5px;background:var(--blue-l)}
 .small{font-size:13px;color:var(--muted)}
 .pill-row{display:flex;gap:6px;flex-wrap:wrap}
@@ -243,7 +244,7 @@ footer{color:var(--muted);text-align:center;font-size:12.5px;padding:20px}
   <div class="card">
     <h2>🐍 Python concepts — where each one is taught</h2>
     <p class="lede">Every lab lists the Python features it teaches. Use this index to learn a specific Python skill: click a link to open that lab.</p>
-    <input id="pySearch" class="mono" style="padding:8px 10px;border:1px solid var(--line);border-radius:8px;width:100%;max-width:420px;margin-bottom:10px" placeholder="Search e.g. dictionary, groupby, class…">
+    <input id="pySearch" class="mono" style="padding:8px 10px;border:1px solid var(--line);border-radius:8px;width:100%;max-width:420px;margin-bottom:10px" placeholder="Search all concepts e.g. dictionary, groupby, class…">
     <div style="overflow:auto"><table id="pyTable"></table></div>
   </div>
 </section>
@@ -252,7 +253,7 @@ footer{color:var(--muted);text-align:center;font-size:12.5px;padding:20px}
 <section class="view" id="view-mlidx">
   <div class="card">
     <h2>🧠 Machine-learning concepts — where each one is taught</h2>
-    <input id="mlSearch" style="padding:8px 10px;border:1px solid var(--line);border-radius:8px;width:100%;max-width:420px;margin-bottom:10px" placeholder="Search e.g. overfitting, cross-validation, reward…">
+    <input id="mlSearch" style="padding:8px 10px;border:1px solid var(--line);border-radius:8px;width:100%;max-width:420px;margin-bottom:10px" placeholder="Search all concepts e.g. overfitting, cross-validation, reward…">
     <div style="overflow:auto"><table id="mlTable"></table></div>
   </div>
 </section>
@@ -2467,10 +2468,23 @@ function buildFam(){
 function buildIndex(field,tableId,inputId){
   const idx={};
   DATA.forEach(d=>LV.forEach(l=>d.levels[l][field].forEach(c=>{const k=c.trim();const key=k.toLowerCase();(idx[key]=idx[key]||{label:k,refs:[]}).refs.push([d,l]);})));
-  const draw=()=>{const q=$("#"+inputId).value.toLowerCase();
-    const rows=Object.values(idx).filter(x=>!q||x.label.toLowerCase().includes(q)).sort((a,b)=>b.refs.length-a.refs.length||a.label.localeCompare(b.label));
-    $("#"+tableId).innerHTML=`<tr><th class="nosort">Concept</th><th class="nosort">Taught in</th></tr>`+rows.map(x=>`<tr><td><b>${esc(x.label)}</b></td><td class="idx-list">${x.refs.map(([d,l])=>`<a onclick="openLesson(${d.rank},'${l}')">#${d.rank} ${esc(d.short)} · ${l}</a>`).join("")}</td></tr>`).join("");};
-  $("#"+inputId).oninput=draw;draw();
+  const letterOf=s=>{const m=s.match(/[A-Za-z0-9]/);const c=m?m[0].toUpperCase():"#";return /[A-Z]/.test(c)?c:"#";};
+  const sortKey=s=>s.replace(/^[^A-Za-z0-9]+/,"").toLowerCase();
+  const all=Object.values(idx).sort((a,b)=>sortKey(a.label).localeCompare(sortKey(b.label)));
+  const counts={};all.forEach(x=>{const L=letterOf(x.label);counts[L]=(counts[L]||0)+1;});
+  const letters=["ALL",..."ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""),"#"];
+  let sel=letters.find(L=>L!=="ALL"&&counts[L])||"ALL";
+  const inp=$("#"+inputId);
+  const bar=document.createElement("div");bar.className="azbar";inp.parentNode.insertBefore(bar,inp);
+  const info=document.createElement("div");info.className="small";info.style.margin="-4px 0 8px";inp.parentNode.insertBefore(info,inp.nextSibling);
+  const drawBar=()=>{bar.innerHTML=letters.map(L=>{const n=L==="ALL"?all.length:(counts[L]||0);return `<button data-l="${L}" class="${L===sel&&!inp.value?"on":""}" ${n?"":"disabled"} title="${n} concept${n===1?"":"s"}">${L==="ALL"?"All":L}</button>`}).join("");
+    $$("button",bar).forEach(b=>b.onclick=()=>{sel=b.dataset.l;inp.value="";draw();});};
+  const draw=()=>{const q=inp.value.trim().toLowerCase();
+    const rows=q?all.filter(x=>x.label.toLowerCase().includes(q)):all.filter(x=>sel==="ALL"||letterOf(x.label)===sel);
+    info.textContent=q?`${rows.length} match${rows.length===1?"":"es"} for “${inp.value.trim()}” across all letters`:`${rows.length} concept${rows.length===1?"":"s"} ${sel==="ALL"?"in total":"starting with "+sel} · sorted A–Z`;
+    drawBar();
+    $("#"+tableId).innerHTML=`<tr><th class="nosort">Concept</th><th class="nosort">Taught in</th></tr>`+(rows.length?rows.map(x=>`<tr><td><b>${esc(x.label)}</b></td><td class="idx-list">${x.refs.sort((a,b)=>a[0].rank-b[0].rank||LV.indexOf(a[1])-LV.indexOf(b[1])).map(([d,l])=>`<a onclick="openLesson(${d.rank},'${l}')">#${d.rank} ${esc(d.short)} · ${l}</a>`).join("")}</td></tr>`).join(""):`<tr><td colspan="2" class="small">No concepts found. Try another word or pick a letter.</td></tr>`);};
+  inp.oninput=draw;draw();
 }
 
 buildRank();buildFam();buildIndex("python_concepts","pyTable","pySearch");buildIndex("ml_concepts","mlTable","mlSearch");updateProg();
