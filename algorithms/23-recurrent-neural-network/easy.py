@@ -46,5 +46,5 @@ for d, (p, a) in enumerate(zip(pred, oil_bbl_per_day[1:]), start=2):
 
 # ---
 # Recurrent Neural Network (RNN) — EASY lab · Oil & Gas: Daily oil production rate forecasting for a well
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

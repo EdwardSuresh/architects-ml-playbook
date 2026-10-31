@@ -69,5 +69,5 @@ print("\nBusiness read-out: lowering the threshold from 0.5 to 0.45 roughly doub
 
 # ---
 # AdaBoost — MEDIUM lab · Oil & Gas: Drilling stuck-pipe early warning
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

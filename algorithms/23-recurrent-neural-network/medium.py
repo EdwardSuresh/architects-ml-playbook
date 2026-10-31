@@ -104,5 +104,5 @@ print("so always report a naive baseline. The value of sequence models shows up 
 
 # ---
 # Recurrent Neural Network (RNN) — MEDIUM lab · Oil & Gas: Daily oil production rate forecasting for a well
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

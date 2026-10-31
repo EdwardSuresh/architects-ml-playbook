@@ -1,6 +1,6 @@
 # 7. Isolation Forest
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/30-ai-algorithms/blob/main/notebooks/07-isolation-forest.ipynb) ![Anomaly Detection](https://img.shields.io/badge/family-Anomaly%20Detection-0B2545) ![Unsupervised](https://img.shields.io/badge/type-Unsupervised-C9A227)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/architects-ml-playbook/blob/main/notebooks/07-isolation-forest.ipynb) ![Anomaly Detection](https://img.shields.io/badge/family-Anomaly%20Detection-0B2545) ![Unsupervised](https://img.shields.io/badge/type-Unsupervised-C9A227)
 
 [← 6. Decision Tree](../06-decision-tree/README.md) · [All algorithms](../../README.md#-the-30-algorithms-ranked) · [8. k-Means Clustering →](../08-k-means-clustering/README.md)
 

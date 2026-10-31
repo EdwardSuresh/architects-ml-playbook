@@ -78,5 +78,5 @@ print(f"\nAuto-route {auto.mean():.0%} of complaints at >=90% confidence; "
 
 # ---
 # Naive Bayes — MEDIUM lab · Financial Services: Customer complaint routing to the right product team
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

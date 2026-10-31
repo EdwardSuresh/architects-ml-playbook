@@ -1,6 +1,6 @@
 # 21. Q-Learning
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/30-ai-algorithms/blob/main/notebooks/21-q-learning.ipynb) ![Reinforcement Learning](https://img.shields.io/badge/family-Reinforcement%20Learning-0B2545) ![Reinforcement](https://img.shields.io/badge/type-Reinforcement-C9A227)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/architects-ml-playbook/blob/main/notebooks/21-q-learning.ipynb) ![Reinforcement Learning](https://img.shields.io/badge/family-Reinforcement%20Learning-0B2545) ![Reinforcement](https://img.shields.io/badge/type-Reinforcement-C9A227)
 
 [← 20. Hierarchical Clustering](../20-hierarchical-clustering/README.md) · [All algorithms](../../README.md#-the-30-algorithms-ranked) · [22. Genetic Algorithms →](../22-genetic-algorithms/README.md)
 

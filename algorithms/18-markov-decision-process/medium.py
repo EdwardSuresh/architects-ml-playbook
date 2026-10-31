@@ -80,5 +80,5 @@ print("\nReading: keep running healthy pumps, intervene before failure - the pol
 
 # ---
 # Markov Decision Process (MDP) — MEDIUM lab · Oil & Gas: Pump maintenance policy optimisation
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

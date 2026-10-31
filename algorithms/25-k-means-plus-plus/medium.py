@@ -76,5 +76,5 @@ print(f"\nBusiness read-out: average customer is {d.mean():.0f} miles from its D
 
 # ---
 # k-Means++ — MEDIUM lab · Supply Chain: Choosing distribution center locations
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

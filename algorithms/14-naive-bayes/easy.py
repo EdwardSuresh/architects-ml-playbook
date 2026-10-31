@@ -53,5 +53,5 @@ print(f"Route to: {best} team (probability {probs[best]:.0%})")
 
 # ---
 # Naive Bayes — EASY lab · Financial Services: Customer complaint routing to the right product team
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

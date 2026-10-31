@@ -144,5 +144,5 @@ if __name__ == "__main__":
 
 # ---
 # XGBoost — HARD lab · Financial Services: Real-time credit card fraud detection
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

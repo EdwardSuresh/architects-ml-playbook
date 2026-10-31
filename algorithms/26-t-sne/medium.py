@@ -77,5 +77,5 @@ print("so investigators can lasso that island and review those accounts together
 
 # ---
 # t-SNE — MEDIUM lab · Financial Services: Visualising card-transaction behaviour to reveal fraud clusters
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

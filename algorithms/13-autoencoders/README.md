@@ -1,6 +1,6 @@
 # 13. Autoencoders
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/30-ai-algorithms/blob/main/notebooks/13-autoencoders.ipynb) ![Anomaly Detection](https://img.shields.io/badge/family-Anomaly%20Detection-0B2545) ![Self-supervised](https://img.shields.io/badge/type-Self-supervised-C9A227)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/architects-ml-playbook/blob/main/notebooks/13-autoencoders.ipynb) ![Anomaly Detection](https://img.shields.io/badge/family-Anomaly%20Detection-0B2545) ![Self-supervised](https://img.shields.io/badge/type-Self-supervised-C9A227)
 
 [← 12. Artificial Neural Network (ANN / MLP)](../12-artificial-neural-network/README.md) · [All algorithms](../../README.md#-the-30-algorithms-ranked) · [14. Naive Bayes →](../14-naive-bayes/README.md)
 

@@ -157,5 +157,5 @@ if __name__ == "__main__":
 
 # ---
 # Convolutional Neural Network (CNN) — HARD lab · Oil & Gas: Pipeline inspection - detecting corrosion pits and cracks in image patches
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

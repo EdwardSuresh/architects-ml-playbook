@@ -1,6 +1,6 @@
 # 8. k-Means Clustering
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/30-ai-algorithms/blob/main/notebooks/08-k-means-clustering.ipynb) ![Clustering](https://img.shields.io/badge/family-Clustering-0B2545) ![Unsupervised](https://img.shields.io/badge/type-Unsupervised-C9A227)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/architects-ml-playbook/blob/main/notebooks/08-k-means-clustering.ipynb) ![Clustering](https://img.shields.io/badge/family-Clustering-0B2545) ![Unsupervised](https://img.shields.io/badge/type-Unsupervised-C9A227)
 
 [← 7. Isolation Forest](../07-isolation-forest/README.md) · [All algorithms](../../README.md#-the-30-algorithms-ranked) · [9. Transformer →](../09-transformer/README.md)
 

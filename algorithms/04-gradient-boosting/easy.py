@@ -45,5 +45,5 @@ print(f"\nNew 1,400 mi storm lane -> raw score {raw:.2f}, clipped risk {risk:.2f
 
 # ---
 # Gradient Boosting — EASY lab · Supply Chain: Predict late shipments (on-time delivery risk)
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

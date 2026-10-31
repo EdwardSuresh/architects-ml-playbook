@@ -94,5 +94,5 @@ for q, p in sorted(zip(QUEUES, probs.tolist()), key=lambda t: -t[1]):
 
 # ---
 # Transformer — MEDIUM lab · Insurance: Claim notes / first notice of loss text triage
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -168,5 +168,5 @@ if __name__ == "__main__":
 
 # ---
 # Actor-Critic — HARD lab · Financial Services: Monthly Stocks / Bonds / Cash allocation
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

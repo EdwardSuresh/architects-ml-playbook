@@ -1,6 +1,6 @@
 # 14. Naive Bayes
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/30-ai-algorithms/blob/main/notebooks/14-naive-bayes.ipynb) ![Classification](https://img.shields.io/badge/family-Classification-0B2545) ![Supervised](https://img.shields.io/badge/type-Supervised-C9A227)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/architects-ml-playbook/blob/main/notebooks/14-naive-bayes.ipynb) ![Classification](https://img.shields.io/badge/family-Classification-0B2545) ![Supervised](https://img.shields.io/badge/type-Supervised-C9A227)
 
 [← 13. Autoencoders](../13-autoencoders/README.md) · [All algorithms](../../README.md#-the-30-algorithms-ranked) · [15. Convolutional Neural Network (CNN) →](../15-convolutional-neural-network/README.md)
 

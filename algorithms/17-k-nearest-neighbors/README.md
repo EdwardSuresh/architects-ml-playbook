@@ -1,6 +1,6 @@
 # 17. k-Nearest Neighbors (k-NN)
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/30-ai-algorithms/blob/main/notebooks/17-k-nearest-neighbors.ipynb) ![Classification](https://img.shields.io/badge/family-Classification-0B2545) ![Supervised](https://img.shields.io/badge/type-Supervised-C9A227)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/architects-ml-playbook/blob/main/notebooks/17-k-nearest-neighbors.ipynb) ![Classification](https://img.shields.io/badge/family-Classification-0B2545) ![Supervised](https://img.shields.io/badge/type-Supervised-C9A227)
 
 [← 16. Support Vector Machine (SVM)](../16-support-vector-machine/README.md) · [All algorithms](../../README.md#-the-30-algorithms-ranked) · [18. Markov Decision Process (MDP) →](../18-markov-decision-process/README.md)
 

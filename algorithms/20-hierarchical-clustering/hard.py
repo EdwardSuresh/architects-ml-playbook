@@ -153,5 +153,5 @@ print("Model-risk note (SR 11-7): document distance, linkage and lookback choice
 
 # ---
 # Hierarchical Clustering — HARD lab · Financial Services: Portfolio diversification with correlation clustering and HRP
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -137,5 +137,5 @@ print("Model-risk note: validate on blind wells per basin; document logs, tool v
 
 # ---
 # Support Vector Machine (SVM) — HARD lab · Oil & Gas: Lithology classification from well logs
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

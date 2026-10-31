@@ -147,5 +147,5 @@ if __name__ == "__main__":
 
 # ---
 # Policy Gradient (REINFORCE) — HARD lab · Insurance: Renewal retention offers: which discount for which policyholder
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

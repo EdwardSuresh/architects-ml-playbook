@@ -153,5 +153,5 @@ if __name__ == "__main__":
 
 # ---
 # SARSA — HARD lab · Supply Chain: Warehouse robot learning a safe route past a forklift lane
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

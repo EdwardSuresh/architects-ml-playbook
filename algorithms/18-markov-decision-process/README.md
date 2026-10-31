@@ -1,6 +1,6 @@
 # 18. Markov Decision Process (MDP)
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/30-ai-algorithms/blob/main/notebooks/18-markov-decision-process.ipynb) ![Reinforcement Learning](https://img.shields.io/badge/family-Reinforcement%20Learning-0B2545) ![Reinforcement](https://img.shields.io/badge/type-Reinforcement-C9A227)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/architects-ml-playbook/blob/main/notebooks/18-markov-decision-process.ipynb) ![Reinforcement Learning](https://img.shields.io/badge/family-Reinforcement%20Learning-0B2545) ![Reinforcement](https://img.shields.io/badge/type-Reinforcement-C9A227)
 
 [← 17. k-Nearest Neighbors (k-NN)](../17-k-nearest-neighbors/README.md) · [All algorithms](../../README.md#-the-30-algorithms-ranked) · [19. DBSCAN →](../19-dbscan/README.md)
 

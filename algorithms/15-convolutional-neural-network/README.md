@@ -1,6 +1,6 @@
 # 15. Convolutional Neural Network (CNN)
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/30-ai-algorithms/blob/main/notebooks/15-convolutional-neural-network.ipynb) ![Deep Learning](https://img.shields.io/badge/family-Deep%20Learning-0B2545) ![Supervised](https://img.shields.io/badge/type-Supervised-C9A227)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/architects-ml-playbook/blob/main/notebooks/15-convolutional-neural-network.ipynb) ![Deep Learning](https://img.shields.io/badge/family-Deep%20Learning-0B2545) ![Supervised](https://img.shields.io/badge/type-Supervised-C9A227)
 
 [← 14. Naive Bayes](../14-naive-bayes/README.md) · [All algorithms](../../README.md#-the-30-algorithms-ranked) · [16. Support Vector Machine (SVM) →](../16-support-vector-machine/README.md)
 

@@ -71,5 +71,5 @@ print(f"\n{within_1:.0%} of test shipments predicted within +/- 1 day -> good en
 
 # ---
 # k-Nearest Neighbors (k-NN) — MEDIUM lab · Supply Chain: Delivery transit-day estimation from similar past shipments
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

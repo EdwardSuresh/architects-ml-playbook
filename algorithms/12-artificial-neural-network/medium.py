@@ -75,5 +75,5 @@ print(scored.groupby("on_autopay")["p_lapse"].mean().round(3).to_string())
 
 # ---
 # Artificial Neural Network (ANN / MLP) — MEDIUM lab · Insurance: Life insurance policy lapse prediction for retention outreach
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

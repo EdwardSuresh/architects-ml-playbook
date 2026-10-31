@@ -51,5 +51,5 @@ print("Next step: add actions (Repair, Replace) and let an MDP choose the cheape
 
 # ---
 # Markov Decision Process (MDP) — EASY lab · Oil & Gas: Pump maintenance policy optimisation
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

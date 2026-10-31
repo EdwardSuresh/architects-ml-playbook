@@ -131,5 +131,5 @@ print("Saved ->", os.path.basename(path))
 
 # ---
 # Isolation Forest — HARD lab · Financial Services: AML suspicious transaction detection for the analyst alert queue
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

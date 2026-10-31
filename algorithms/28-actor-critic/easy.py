@@ -41,5 +41,5 @@ print("Positive surprise raised Risk-On; the below-average Risk-Off month lowere
 
 # ---
 # Actor-Critic — EASY lab · Financial Services: Monthly Stocks / Bonds / Cash allocation
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -1,6 +1,6 @@
 # 16. Support Vector Machine (SVM)
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/30-ai-algorithms/blob/main/notebooks/16-support-vector-machine.ipynb) ![Classification](https://img.shields.io/badge/family-Classification-0B2545) ![Supervised](https://img.shields.io/badge/type-Supervised-C9A227)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/architects-ml-playbook/blob/main/notebooks/16-support-vector-machine.ipynb) ![Classification](https://img.shields.io/badge/family-Classification-0B2545) ![Supervised](https://img.shields.io/badge/type-Supervised-C9A227)
 
 [← 15. Convolutional Neural Network (CNN)](../15-convolutional-neural-network/README.md) · [All algorithms](../../README.md#-the-30-algorithms-ranked) · [17. k-Nearest Neighbors (k-NN) →](../17-k-nearest-neighbors/README.md)
 

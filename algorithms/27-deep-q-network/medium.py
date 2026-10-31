@@ -105,5 +105,5 @@ print("A good policy fills in the cheap summer months and withdraws into the win
 
 # ---
 # Deep Q-Network (DQN) — MEDIUM lab · Oil & Gas: Natural gas storage: daily Inject / Hold / Withdraw decisions
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

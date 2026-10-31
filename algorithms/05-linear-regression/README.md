@@ -1,6 +1,6 @@
 # 5. Linear Regression
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/30-ai-algorithms/blob/main/notebooks/05-linear-regression.ipynb) ![Regression](https://img.shields.io/badge/family-Regression-0B2545) ![Supervised](https://img.shields.io/badge/type-Supervised-C9A227)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/architects-ml-playbook/blob/main/notebooks/05-linear-regression.ipynb) ![Regression](https://img.shields.io/badge/family-Regression-0B2545) ![Supervised](https://img.shields.io/badge/type-Supervised-C9A227)
 
 [← 4. Gradient Boosting](../04-gradient-boosting/README.md) · [All algorithms](../../README.md#-the-30-algorithms-ranked) · [6. Decision Tree →](../06-decision-tree/README.md)
 

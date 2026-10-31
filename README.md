@@ -1,13 +1,14 @@
-# 30 AI Algorithms — ranked and taught for real industry
+# The Architect's ML Playbook
+### 30 AI algorithms · 90 Python labs · ranked for real industry
 
-![30 AI Algorithms](assets/social-preview.png)
+![The Architect's ML Playbook](assets/social-preview.png)
 
 **Learn Python and machine learning together, through the problems banks, insurers, supply chains and energy companies actually solve.**
 
-[![Live course](https://img.shields.io/badge/▶_Open_the_interactive_course-0B2545?style=for-the-badge)](https://edwardsuresh.github.io/30-ai-algorithms/)
+[![Live course](https://img.shields.io/badge/▶_Open_the_interactive_course-0B2545?style=for-the-badge)](https://edwardsuresh.github.io/architects-ml-playbook/)
 ![Labs](https://img.shields.io/badge/labs-90-C9A227?style=for-the-badge)
 ![Python](https://img.shields.io/badge/python-3.10%2B-1D4E89?style=for-the-badge)
-[![Run all labs](https://github.com/EdwardSuresh/30-ai-algorithms/actions/workflows/run-labs.yml/badge.svg)](https://github.com/EdwardSuresh/30-ai-algorithms/actions/workflows/run-labs.yml)
+[![Run all labs](https://github.com/EdwardSuresh/architects-ml-playbook/actions/workflows/run-labs.yml/badge.svg)](https://github.com/EdwardSuresh/architects-ml-playbook/actions/workflows/run-labs.yml)
 
 Most ML tutorials teach algorithms in textbook order with toy data. This repository does three things differently:
 
@@ -18,11 +19,11 @@ Most ML tutorials teach algorithms in textbook order with toy data. This reposit
 Each lab also has **5 W's and an H**, an **architecture diagram**, the **real output**, and each algorithm has an **end-to-end production sequence diagram**, pitfalls and interview questions.
 
 ## 🚀 Start in 60 seconds
-- **Easiest:** open the [interactive course](https://edwardsuresh.github.io/30-ai-algorithms/) (works offline too: download [`docs/index.html`](docs/index.html)).
+- **Easiest:** open the [interactive course](https://edwardsuresh.github.io/architects-ml-playbook/) (works offline too: download [`docs/index.html`](docs/index.html)).
 - **Colab:** open any notebook in [`notebooks/`](notebooks) and click *Open in Colab*.
 - **Locally:**
   ```bash
-  git clone https://github.com/EdwardSuresh/30-ai-algorithms.git && cd 30-ai-algorithms
+  git clone https://github.com/EdwardSuresh/architects-ml-playbook.git && cd architects-ml-playbook
   pip install -r requirements.txt
   python algorithms/01-xgboost/easy.py
   python scripts/run_all.py          # runs all 90 labs (~10 minutes on a laptop)

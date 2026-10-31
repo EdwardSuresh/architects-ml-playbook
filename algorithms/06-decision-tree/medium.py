@@ -64,5 +64,5 @@ print(f"Business check: {dec_as_acc} true-Decline risks auto-accepted out of {le
 
 # ---
 # Decision Tree — MEDIUM lab · Insurance: Homeowners underwriting decision: Accept / Refer / Decline
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

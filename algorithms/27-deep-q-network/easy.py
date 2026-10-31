@@ -55,5 +55,5 @@ for label, s in [("Summer, cheap, nearly empty", [0.2, 0.1]), ("Winter, pricey, 
 
 # ---
 # Deep Q-Network (DQN) — EASY lab · Oil & Gas: Natural gas storage: daily Inject / Hold / Withdraw decisions
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

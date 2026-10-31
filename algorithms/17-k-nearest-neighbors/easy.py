@@ -53,5 +53,5 @@ print(f"k=3 distance-weighted -> {weighted:.2f} days")
 
 # ---
 # k-Nearest Neighbors (k-NN) — EASY lab · Supply Chain: Delivery transit-day estimation from similar past shipments
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

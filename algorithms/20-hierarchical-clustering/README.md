@@ -1,6 +1,6 @@
 # 20. Hierarchical Clustering
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/30-ai-algorithms/blob/main/notebooks/20-hierarchical-clustering.ipynb) ![Clustering](https://img.shields.io/badge/family-Clustering-0B2545) ![Unsupervised](https://img.shields.io/badge/type-Unsupervised-C9A227)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/architects-ml-playbook/blob/main/notebooks/20-hierarchical-clustering.ipynb) ![Clustering](https://img.shields.io/badge/family-Clustering-0B2545) ![Unsupervised](https://img.shields.io/badge/type-Unsupervised-C9A227)
 
 [← 19. DBSCAN](../19-dbscan/README.md) · [All algorithms](../../README.md#-the-30-algorithms-ranked) · [21. Q-Learning →](../21-q-learning/README.md)
 

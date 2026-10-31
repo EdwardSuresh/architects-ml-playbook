@@ -54,5 +54,5 @@ print(f"  k-means++ : mean inertia {pp_scores.mean():7.1f}, bad starts (>100) {(
 
 # ---
 # k-Means++ — EASY lab · Supply Chain: Choosing distribution center locations
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

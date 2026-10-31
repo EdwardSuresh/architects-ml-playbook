@@ -71,5 +71,5 @@ print("Holding 5 stocks from ONE cluster is close to holding one stock - spread 
 
 # ---
 # Hierarchical Clustering — MEDIUM lab · Financial Services: Portfolio diversification with correlation clustering and HRP
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

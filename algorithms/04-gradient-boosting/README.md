@@ -1,6 +1,6 @@
 # 4. Gradient Boosting
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/30-ai-algorithms/blob/main/notebooks/04-gradient-boosting.ipynb) ![Ensemble / Boosting](https://img.shields.io/badge/family-Ensemble%20%2F%20Boosting-0B2545) ![Supervised](https://img.shields.io/badge/type-Supervised-C9A227)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/architects-ml-playbook/blob/main/notebooks/04-gradient-boosting.ipynb) ![Ensemble / Boosting](https://img.shields.io/badge/family-Ensemble%20%2F%20Boosting-0B2545) ![Supervised](https://img.shields.io/badge/type-Supervised-C9A227)
 
 [← 3. Random Forest](../03-random-forest/README.md) · [All algorithms](../../README.md#-the-30-algorithms-ranked) · [5. Linear Regression →](../05-linear-regression/README.md)
 

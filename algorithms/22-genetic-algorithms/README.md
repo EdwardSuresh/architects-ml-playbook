@@ -1,6 +1,6 @@
 # 22. Genetic Algorithms
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/30-ai-algorithms/blob/main/notebooks/22-genetic-algorithms.ipynb) ![Optimization](https://img.shields.io/badge/family-Optimization-0B2545) ![Optimization](https://img.shields.io/badge/type-Optimization-C9A227)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/architects-ml-playbook/blob/main/notebooks/22-genetic-algorithms.ipynb) ![Optimization](https://img.shields.io/badge/family-Optimization-0B2545) ![Optimization](https://img.shields.io/badge/type-Optimization-C9A227)
 
 [← 21. Q-Learning](../21-q-learning/README.md) · [All algorithms](../../README.md#-the-30-algorithms-ranked) · [23. Recurrent Neural Network (RNN) →](../23-recurrent-neural-network/README.md)
 

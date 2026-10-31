@@ -67,5 +67,5 @@ print(f"\nInvestigating top 10% ({k} claims) targets ${saved:,.0f} of fraudulent
 
 # ---
 # Random Forest — MEDIUM lab · Insurance: Auto insurance claims fraud detection (SIU referral)
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

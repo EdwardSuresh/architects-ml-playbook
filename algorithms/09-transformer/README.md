@@ -1,6 +1,6 @@
 # 9. Transformer
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/30-ai-algorithms/blob/main/notebooks/09-transformer.ipynb) ![Deep Learning](https://img.shields.io/badge/family-Deep%20Learning-0B2545) ![Self-supervised](https://img.shields.io/badge/type-Self-supervised-C9A227)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EdwardSuresh/architects-ml-playbook/blob/main/notebooks/09-transformer.ipynb) ![Deep Learning](https://img.shields.io/badge/family-Deep%20Learning-0B2545) ![Self-supervised](https://img.shields.io/badge/type-Self-supervised-C9A227)
 
 [← 8. k-Means Clustering](../08-k-means-clustering/README.md) · [All algorithms](../../README.md#-the-30-algorithms-ranked) · [10. LSTM →](../10-lstm/README.md)
 

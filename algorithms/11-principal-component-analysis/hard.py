@@ -136,5 +136,5 @@ if __name__ == "__main__":
 
 # ---
 # Principal Component Analysis (PCA) — HARD lab · Financial Services: Treasury yield curve risk factors for rate hedging
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

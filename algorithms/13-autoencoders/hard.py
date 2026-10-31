@@ -155,5 +155,5 @@ if __name__ == "__main__":
 
 # ---
 # Autoencoders — HARD lab · Oil & Gas: Gas compressor sensor anomaly detection for predictive maintenance
-# Part of 30 AI Algorithms: https://github.com/EdwardSuresh/30-ai-algorithms
+# Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson
