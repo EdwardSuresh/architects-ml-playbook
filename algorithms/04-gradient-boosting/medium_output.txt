@@ -1,0 +1,19 @@
+Shipments: 5000  late rate: 31.5%
+Trees actually built (early stopping): 66
+ROC-AUC 0.825 | precision 0.70 | recall 0.58
+
+By carrier:
+             shipments  actual_late  predicted_late
+carrier                                            
+BlueLine           399        0.271           0.297
+CheapHaul          225        0.422           0.418
+FastFreight        380        0.311           0.334
+RegionalX          246        0.293           0.306
+
+By weather severity (0 clear .. 3 storm):
+  0: actual 19% predicted 18% #######
+  1: actual 23% predicted 25% ##########
+  2: actual 35% predicted 37% ##############
+  3: actual 47% predicted 51% ####################
+
+Flag top 15% (risk >= 0.70): 85% of them really were late vs 31% overall -> catches 41% of all late loads

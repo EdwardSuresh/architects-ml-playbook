@@ -1,0 +1,16 @@
+Data shape: (18, 4) | fraud rows: 5 | fraud rate: 28%
+
+Trees used | P(fraud) coffee swipe | P(fraud) 3am online swipe
+         1 |                0.222 |                     0.398
+         3 |                0.147 |                     0.582
+         5 |                0.102 |                     0.703
+        10 |                0.050 |                     0.853
+        20 |                0.038 |                     0.898
+
+Feature importance (gain share):
+  km_from_home  ######################################## 1.00
+  amount_usd                                             0.00
+  hour_of_day                                            0.00
+  is_online                                              0.00
+
+Decisions: ['APPROVE', 'DECLINE/REVIEW']

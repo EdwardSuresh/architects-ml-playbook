@@ -1,0 +1,32 @@
+25 stocks, train 500 days, test 500 days (higher-vol regime)
+
+Linkage  | cophenetic corr | sector purity at 5 clusters
+single   |      0.986      |   1.00
+average  |      0.990      |   1.00
+complete |      0.986      |   1.00
+ward     |      0.916      |   1.00
+
+Ward leaf order: ENE1 ENE5 ENE3 ENE4 ENE2 TEC1 TEC2 TEC3 TEC4 TEC5 BAN2 BAN5 BAN3 BAN1 BAN4 HEA4 HEA3 HEA2 HEA5 HEA1 UTI1 UTI4 UTI5 UTI2 UTI3
+
+Portfolio                    | train vol | test vol | test Sharpe | max weight | min weight
+Equal weight                 |  14.43%  | 22.49%  |    0.19     |   4.00%   |   4.00%
+Inverse variance             |  13.13%  | 20.79%  |   -0.01     |   8.60%   |   1.83%
+HRP (single)                 |  13.32%  | 20.97%  |    0.04     |   7.21%   |   1.21%
+HRP (ward)                   |  13.32%  | 20.97%  |    0.04     |   7.21%   |   1.21%
+Min-variance (unconstrained) |  12.42%  | 21.07%  |    0.20     |  15.98%   |  -7.77%
+
+HRP (ward) weight by sector:
+  UTI  31.88% ###############################
+  HEA  24.71% ########################
+  BAN  19.82% ###################
+  TEC  14.57% ##############
+  ENE   9.02% #########
+Rebalance turnover HRP (ward)                  :  14.7%
+Rebalance turnover Min-variance (unconstrained): 112.0%
+HRP single vs ward identical? True (clean sector blocks give the same leaf order)
+Effective N (Equal weight):  25.0
+Effective N (HRP (ward)):  20.8
+Effective N (Min-variance (unconstrained)):   7.9
+
+Saved HRP weights -> hrp_weights.joblib
+Model-risk note (SR 11-7): document distance, linkage and lookback choices; backtest across regimes; check weight stability before every rebalance.

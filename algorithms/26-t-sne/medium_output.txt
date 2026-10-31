@@ -1,0 +1,40 @@
+           avg_txn_amount  night_txn_share  foreign_txn_share  txn_per_day  distinct_merchants_7d
+segment                                                                                          
+FraudRing          301.15             0.28               0.34         4.14                  14.70
+Retail              59.37             0.08               0.06         1.97                   7.85
+Student             24.33             0.38               0.06         5.90                  19.75
+Traveler           240.64             0.12               0.31         1.00                   5.08
+
+Final KL divergence: 0.867
+
+t-SNE map (R=Retail T=Traveler S=Student F=FraudRing)
++------------------------------------------------------------+
+|                         F                                  |
+|                      FFFFF                                 |
+|   TTTTTTTTTFTTT     T  FFFFF                               |
+|  TTTTTTTTTTTTTTTTFTTT                                      |
+|  TT TTTTTTTTTTTTTTTTT                        S             |
+|TTTTTTTTTTTTTTTTTTTTTT                     FSSSSSSS S SSSS  |
+|  TTTTTT TTTTTT  TTT                    SSSSSSSSSSSSSSSSSSSS|
+|      TTTTT  T                          RSSSSSSSS SSSSSS    |
+|        FRR T TTRRR  R   T                 S   S  S         |
+|        RRRRRRRRR FRRRRRRT                                  |
+|        RRR RRRRRR RRRRR   RRRRRRR                          |
+|     RRRRR RRRRRRRRRRR  RRRRRRRRRRR                         |
+|     TRRRRRRRRRR   RRRRRRRRRRR RRR                          |
+|        RRRRRRR   RR RRRRRRRRRRRRRR                         |
+|            RRRRRRRRRRRRRRRRRRRRRRR                         |
+|           RRRRRRRRRR RRRR R  R RR                          |
+|          RRRRRRRRRRRRRRRRRRRR                              |
+|                    RRRRRRRRR R                             |
++------------------------------------------------------------+
+
+10-NN purity in the 2-D map, by segment:
+segment
+FraudRing    0.886
+Retail       0.970
+Student      0.992
+Traveler     0.942
+
+Business read: 89% of a fraud-ring card's map neighbours are also fraud-ring cards,
+so investigators can lasso that island and review those accounts together.

@@ -1,0 +1,9 @@
+Support vector indices: [3 9]
+  sample  3: GR=  50 API  RHOB=2.35  -> Sandstone
+  sample  9: GR=  88 API  RHOB=2.48  -> Shale
+
+Weights w = [0.853 0.885], bias b = 0.118
+Margin width (scaled units) = 1.627
+GR= 60 RHOB=2.36 -> score -0.67 -> Sandstone (inside margin)
+GR= 85 RHOB=2.44 -> score +0.61 -> Shale     (inside margin)
+GR=115 RHOB=2.53 -> score +2.08 -> Shale     (clear side)

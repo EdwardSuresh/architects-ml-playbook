@@ -1,0 +1,40 @@
+Decision mix: {'Accept': 1477, 'Refer': 1138, 'Decline': 385}
+Train accuracy: 0.734
+Test accuracy : 0.745
+
+Confusion matrix (rows=true):
+          Accept  Refer  Decline
+Accept      350     19        0
+Refer       110    159       16
+Decline       3     43       50
+
+              precision    recall  f1-score   support
+
+      Accept       0.76      0.95      0.84       369
+     Decline       0.76      0.52      0.62        96
+       Refer       0.72      0.56      0.63       285
+
+    accuracy                           0.75       750
+   macro avg       0.74      0.68      0.70       750
+weighted avg       0.74      0.75      0.73       750
+
+Feature importance:
+  prior_claims_5yr         0.336 #############
+  roof_age_yrs             0.295 ###########
+  wildfire_zone            0.193 #######
+  credit_insurance_score   0.176 #######
+  dist_fire_station_mi     0.000
+  home_value_k             0.000
+
+Top of the rule book:
+|--- roof_age_yrs <= 20.50
+|   |--- prior_claims_5yr <= 1.50
+|   |   |--- truncated branch of depth 3
+|   |--- prior_claims_5yr >  1.50
+|   |   |--- truncated branch of depth 3
+|--- roof_age_yrs >  20.50
+|   |--- prior_claims_5yr <= 1.50
+|   |   |--- truncated branch of depth 3
+|   |--- prior_claims_5yr >  1.50
+|   |   |--- truncated branch of depth 3
+... (output trimmed)

@@ -1,0 +1,33 @@
+Problem: 15 stops, 7 with afternoon windows
+
+== Parameter sweep (population x tournament size x mutation rate), 2 seeds, 80 gens ==
+  pop= 40 k=2 mut=0.1  mean_cost=$  323.1  sd=$ 39.5
+  pop= 40 k=2 mut=0.4  mean_cost=$  354.0  sd=$ 25.3
+  pop= 40 k=5 mut=0.1  mean_cost=$  328.2  sd=$ 20.2
+  pop= 40 k=5 mut=0.4  mean_cost=$  331.8  sd=$ 32.3
+  pop= 80 k=2 mut=0.1  mean_cost=$  344.9  sd=$  7.5
+  pop= 80 k=2 mut=0.4  mean_cost=$  329.9  sd=$ 27.9
+  pop= 80 k=5 mut=0.1  mean_cost=$  307.2  sd=$ 49.5
+  pop= 80 k=5 mut=0.4  mean_cost=$  305.2  sd=$ 23.4
+  -> chosen pop=80, k=5, mut=0.4
+
+== Final comparison ==
+  Nearest neighbour            cost=$ 1732.4  miles= 117.8  late_min= 742.5
+  GA (tuned, random start)     cost=$  257.7  miles= 121.8  late_min=   1.0
+  GA (seeded with NN)          cost=$  257.7  miles= 121.8  late_min=   1.0
+
+GA saving vs nearest neighbour: $1474.7/day (~$368,682/year at 250 delivery days)
+  Most of that saving is avoided lateness penalty, not fewer miles - check the penalty rate with the business.
+
+First 8 stops of the chosen route (arrival vs window, minutes after 8:00):
+  stop  2: arrive    23  window [  0,300]  ok
+  stop  5: arrive    48  window [  0,300]  ok
+  stop  9: arrive    81  window [  0,300]  ok
+  stop  1: arrive   114  window [  0,300]  ok
+  stop 10: arrive   129  window [  0,300]  ok
+  stop 14: arrive   180  window [180,480]  ok
+  stop  3: arrive   200  window [  0,300]  ok
+  stop  4: arrive   228  window [180,480]  ok
+
+Compliance note: route drive time 4.1h; verify against FMCSA hours-of-service and keep a human dispatcher able to override the plan.
+Saved route plan -> route_plan.json in a temp dir

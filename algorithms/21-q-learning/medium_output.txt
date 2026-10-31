@@ -1,0 +1,24 @@
+Avg 30-day cost, first 100 episodes: $301.5
+Avg 30-day cost, last 100 episodes : $187.2
+
+Learned policy (every 2nd stock level):
+ stock  best_order  Q_order0  Q_order5  Q_order10
+     0          10    -149.1    -129.7     -124.0
+     2          10    -132.6    -125.8     -123.7
+     4          10    -124.7    -125.3     -123.9
+     6           0    -119.9    -125.6     -125.3
+     8           0    -119.0    -124.3     -125.3
+    10           0    -118.3    -123.3     -124.9
+    12           0    -117.8    -121.5     -123.1
+    14           0    -118.2    -121.3     -120.1
+    16           0    -118.6    -119.6     -120.0
+    18           0    -118.7    -119.0     -119.0
+    20           0    -114.3    -115.1     -116.1
+
+Policy evaluation (mean cost over 30 days, 300 runs):
+  Q-learning policy : $  175.1
+  Always order 5    : $  396.7
+  Never order       : $  877.2
+
+Full policy, stock 0..20: 10 10 10 10 10 10 0 0 0 0 0 0 0 0 0 0 0 0 0 10 0
+Business read-out: the agent mostly reorders when stock < 6 units, saving $222 per month vs a fixed 'order 5 daily' rule.

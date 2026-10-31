@@ -1,0 +1,16 @@
+      vibration_mm_s  discharge_temp_f  suction_pressure_psi  discharge_pressure_psi  flow_mmscfd  motor_current_a
+mean             4.1             232.0                 365.0                  1110.1         48.0            290.1
+std              0.5              11.7                   9.6                    52.7          7.0             35.3
+epoch   0  train MSE 1.2011
+epoch 100  train MSE 0.0581
+epoch 200  train MSE 0.0453
+epoch 300  train MSE 0.0429
+
+Threshold (99th pct of normal error): 0.1924
+Median error  normal: 0.0328   faulty: 0.2993
+
+False alarm rate on new normal data: 0.6%
+Valve-leak readings detected:        82.0%
+
+Maintenance read-out: a high error means the sensors no longer agree with each other
+the way they do on a healthy compressor - send a technician before the valve fails.

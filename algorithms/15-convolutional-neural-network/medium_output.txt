@@ -1,0 +1,14 @@
+Patches: (1200, 16, 16), defect rate 30.3%
+Trainable parameters: 1505
+epoch  2  last batch loss 0.609
+epoch  4  last batch loss 0.507
+epoch  6  last batch loss 0.409
+epoch  8  last batch loss 0.250
+epoch 10  last batch loss 0.123
+
+Test accuracy: 0.925
+Defects caught: 51/69  (recall 0.74)
+False calls on clean steel: 0  (precision 1.00)
+
+Inspection read-out: patches flagged as defects go to an integrity engineer for review;
+missed defects (false negatives) are the costly error, so recall is the key number.

@@ -1,0 +1,9 @@
+step   0  log-loss 0.693  weights DTI=+0.14 missed=+0.16
+step  50  log-loss 0.367  weights DTI=+1.19 missed=+1.61
+step 100  log-loss 0.365  weights DTI=+1.27 missed=+1.81
+step 150  log-loss 0.365  weights DTI=+1.29 missed=+1.86
+step 200  log-loss 0.365  weights DTI=+1.29 missed=+1.88
+
+Odds multiplier per +1 std of DTI: 3.65x, of missed payments: 6.55x
+DTI 20%, missed 0 -> probability of default 2.1% -> APPROVE
+DTI 48%, missed 3 -> probability of default 95.4% -> DECLINE

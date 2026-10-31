@@ -1,0 +1,22 @@
+            mean  min     max
+day        547.0  0.0  1094.0
+oil_bbl_d  310.9  0.4   943.5
+
+Train windows: 862  Test windows: 219
+epoch 10  train Huber loss=0.00042
+epoch 20  train Huber loss=0.00008
+epoch 30  train Huber loss=0.00045
+epoch 40  train Huber loss=0.00053
+
+Test MAE  RNN:  10.2 bbl/d   naive 'same as yesterday':   9.9 bbl/d
+Normal days only (200): RNN   6.8  naive   6.8 bbl/d
+
+Last 5 test days:
+  actual   10.9  predicted   12.0
+  actual  137.4  predicted   12.8
+  actual  141.5  predicted  128.6
+  actual  137.7  predicted  139.9
+  actual  141.3  predicted  136.8
+
+Business read-out: mean test rate 143 bbl/d; RNN error 10 bbl/d (7.1%). For a ONE-day horizon it only ties the naive rule -
+so always report a naive baseline. The value of sequence models shows up in multi-day forecasts (Hard).

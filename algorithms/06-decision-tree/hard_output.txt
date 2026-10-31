@@ -1,0 +1,36 @@
+Class mix (train): {'Refer': 1251, 'Accept': 1200, 'Decline': 549}
+Best params: {'tree__ccp_alpha': 0.001, 'tree__max_depth': 6, 'tree__min_samples_leaf': 10} CV macro-F1=0.775
+Test macro-F1: 0.791
+Confusion (rows=true A/R/D): [[320, 80, 0], [35, 331, 51], [0, 39, 144]]
+Business cost  model=$22,370  vs  rule-of-thumb=$160,660
+
+Permutation importance (macro-F1 drop):
+  prior_claims_5yr         +0.252 ###############
+  roof_age_yrs             +0.233 ##############
+  wildfire_zone            +0.141 ########
+  credit_insurance_score   +0.095 #####
+  construction             +0.036 ##
+  dist_fire_station_mi     +0.014
+
+Top rules (depth<=2):
+|--- roof_age_yrs <= 20.50
+|   |--- prior_claims_5yr <= 0.50
+|   |   |--- wildfire_zone_high <= 0.50
+|   |   |   |--- truncated branch of depth 4
+|   |   |--- wildfire_zone_high >  0.50
+|   |   |   |--- truncated branch of depth 2
+|   |--- prior_claims_5yr >  0.50
+|   |   |--- prior_claims_5yr <= 1.50
+|   |   |   |--- truncated branch of depth 4
+|   |   |--- prior_claims_5yr >  1.50
+|   |   |   |--- truncated branch of depth 4
+|--- roof_age_yrs >  20.50
+
+Applicant 0 -> Accept; path:
+  roof_age_yrs = 15.0 <= 20.5
+  prior_claims_5yr = 0.0 <= 0.5
+  wildfire_zone_high = 0.0 <= 0.5
+  credit_insurance_score = 737.0 > 620.5
+
+Model-risk note: credit_insurance_score use must follow state law; log rules + version.
+Saved model -> ho_underwriting_tree.joblib (9395 bytes)

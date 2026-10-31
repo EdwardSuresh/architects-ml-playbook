@@ -1,0 +1,15 @@
+Claims: 14 | known fraud: 5
+
+Each tree's vote on the new claim:
+  tree 1: first question asks about 'claim_amount_k' -> vote FRAUD
+  tree 2: first question asks about 'police_report' -> vote FRAUD
+  tree 3: first question asks about 'days_policy_to_claim' -> vote FRAUD
+
+Forest fraud probability: 1.00 -> Refer to SIU
+100-tree forest: suspicious claim 1.00, routine claim 0.00
+
+What the forest relies on:
+  claim_amount_k         ************* 0.45
+  police_report          ********** 0.36
+  days_policy_to_claim   **** 0.14
+  witnesses              * 0.04

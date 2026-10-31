@@ -1,0 +1,15 @@
+Last 100 training episodes: avg reward -21.3, collisions 2
+  episodes   0- 99: avg reward   -65.3, collisions  30
+  episodes 100-199: avg reward   -22.5, collisions   3
+  episodes 200-299: avg reward   -23.8, collisions   3
+  episodes 300-399: avg reward   -20.2, collisions   0
+  episodes 400-499: avg reward   -21.3, collisions   2
+
+Greedy route learned by SARSA (17 moves). F = forklift lane:
+> > > > > > > > > > v .
+^ . . . . . . . . . > v
+^ . . . . . . . . . . v
+S F F F F F F F F F F G
+
+Business read: SARSA keeps a buffer row away from the forklift lane, accepting a few extra
+moves because the robot's own random exploration could otherwise drift into traffic.

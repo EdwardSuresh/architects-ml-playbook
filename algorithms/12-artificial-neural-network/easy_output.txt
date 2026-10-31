@@ -1,0 +1,16 @@
+epoch   0  loss=0.666  w=[0.34 0.1 ]  b=-0.01
+epoch 100  loss=0.079  w=[2.19 0.96]  b=-3.45
+epoch 200  loss=0.043  w=[2.6  1.47]  b=-4.58
+epoch 300  loss=0.030  w=[2.85 1.81]  b=-5.28
+
+Customer  missed  prem_inc  lapsed  P(lapse)
+       0       0        0%       0      0.01
+       1       0        5%       0      0.01
+       2       1        2%       0      0.11
+       3       0       10%       0      0.03
+       4       2       15%       1      0.96
+       5       3        8%       1      0.99
+       6       2       20%       1      0.98
+       7       4       12%       1      1.00
+
+New customer lapse probability: 0.35

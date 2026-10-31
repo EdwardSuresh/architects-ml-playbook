@@ -1,0 +1,21 @@
+Loans: 4000  12-month default rate: 13.3%
+AUC 0.765 | Gini 0.530 | Brier 0.100
+
+Coefficient (per 1 std) and odds ratio:
+  credit_score     -1.059   odds x0.35
+  months_employed  -0.291   odds x0.75
+  annual_income_k  -0.264   odds x0.77
+  loan_amount_k    +0.168   odds x1.18
+  delinq_2y        +0.309   odds x1.36
+  debt_to_income   +0.565   odds x1.76
+
+Risk grade calibration:
+         loans  predicted  actual
+grade                            
+A-best     200      0.017   0.020
+B          200      0.045   0.070
+C          200      0.088   0.085
+D          200      0.159   0.155
+E-worst    200      0.371   0.335
+
+Policy PD < 10%: approve 54% of applicants, bad rate among approved 5.3% vs 22.8% among declined

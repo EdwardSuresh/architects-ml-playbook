@@ -1,0 +1,11 @@
+discount   0%: true expected retained premium = $ 840.00
+discount   5%: true expected retained premium = $ 934.80
+discount  10%: true expected retained premium = $ 928.80
+step    1  probs(0%,5%,10%) = [0.333 0.333 0.333]
+step   10  probs(0%,5%,10%) = [0.348 0.328 0.324]
+step  100  probs(0%,5%,10%) = [0.423 0.275 0.302]
+step  500  probs(0%,5%,10%) = [0.434 0.433 0.133]
+step 1000  probs(0%,5%,10%) = [0.237 0.457 0.306]
+step 3000  probs(0%,5%,10%) = [0.036 0.807 0.158]
+
+Learned policy favours a 5% discount.

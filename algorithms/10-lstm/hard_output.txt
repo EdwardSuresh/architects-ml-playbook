@@ -1,0 +1,28 @@
+windows train/val/test = 153/23/49  inputs per step = 9
+  hidden=16 lr=0.01   val MSE=0.100
+  hidden=16 lr=0.003  val MSE=0.119
+  hidden=32 lr=0.01   val MSE=0.147
+  hidden=32 lr=0.003  val MSE=0.142
+Chosen hidden=16 lr=0.01
+
+MAPE by horizon   LSTM   seasonal-naive
+  week +1         10.2%    22.0%
+  week +2          7.5%    22.2%
+  week +3          8.4%    22.3%
+  week +4          8.3%    22.2%
+  overall          8.6%    22.2%
+Week+1 MAPE on promo weeks: LSTM 10.8% vs naive 36.1%
+
+Feature importance (MAPE increase when shuffled):
+  units         +4.7 pts
+  promo         +1.4 pts
+  price         +0.5 pts
+  week_sin      -0.5 pts
+  week_cos      +4.4 pts
+  future_promo +11.3 pts
+Safety stock (LSTM          ): sigma=  135  ->   314 units at 95% service
+Safety stock (seasonal-naive): sigma=  423  ->   986 units at 95% service
+
+Next 4-week forecast: [948, 1681, 1572, 954]  actual: [1054, 1860, 2045, 1377]
+Governance: version the model, monitor weekly MAPE drift, log planner overrides in S&OP.
+Saved -> sku_lstm.pt

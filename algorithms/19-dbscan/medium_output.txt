@@ -1,0 +1,31 @@
+1010 claims loaded. Sample:
+         lat        lon    true_area  claim_amount
+0  36.216225 -97.090066  North swath       29182.0
+1  36.243930 -97.009457  North swath       10958.0
+2  36.232710 -97.039816  North swath       18137.0
+
+ eps_km | clusters | noise claims
+   0.3 |    22    |    454
+   0.6 |     3    |     60
+   1.0 |     3    |     52
+   2.0 |     3    |     49
+
+Chosen eps=0.6 km. Silhouette (non-noise) = 0.693
+
+Hotspots ranked by exposure:
+         claims   total_usd  centre_lat  centre_lon
+cluster                                            
+0           450  $5,403,643     36.2197    -97.0752
+1           300  $3,907,474     36.1154    -96.9501
+2           200  $2,527,998     36.1150    -97.0650
+
+True area vs DBSCAN label:
+cluster      -1    0    1    2
+true_area                     
+East swath    3    0  297    0
+North swath   2  448    0    0
+Scattered    54    2    3    1
+Town core     1    0    0  199
+
+950 claims sit in 3 hotspots -> deploy adjuster teams to each centre.
+60 isolated claims ($820,000) -> desk review; a hail claim far from any swath deserves a closer look.

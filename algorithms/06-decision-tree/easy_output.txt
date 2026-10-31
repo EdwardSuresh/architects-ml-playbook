@@ -1,0 +1,20 @@
+Gini of all 12 applications: 0.653
+roof <= 13 -> ['Accept', 'Accept', 'Accept', 'Accept', 'Refer', 'Refer']  gini=0.444
+roof  > 13 -> ['Refer', 'Refer', 'Refer', 'Decline', 'Decline', 'Decline'] gini=0.500
+
+Learned underwriting rules:
+|--- roof_age_yrs <= 19.00
+|   |--- wildfire_zone <= 0.50
+|   |   |--- roof_age_yrs <= 15.00
+|   |   |   |--- class: Accept
+|   |   |--- roof_age_yrs >  15.00
+|   |   |   |--- class: Refer
+|   |--- wildfire_zone >  0.50
+|   |   |--- class: Refer
+|--- roof_age_yrs >  19.00
+|   |--- home_value_k <= 257.50
+|   |   |--- class: Decline
+|   |--- home_value_k >  257.50
+|   |   |--- class: Refer
+
+New application [14, 2, 1, 280] -> Refer

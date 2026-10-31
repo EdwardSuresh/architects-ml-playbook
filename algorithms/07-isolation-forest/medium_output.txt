@@ -1,0 +1,20 @@
+Rows: 5000  suspicious rate: 2.0%
+ROC-AUC: 0.958   alert precision: 0.50   alert recall: 0.57
+Alerts raised: 34 of 1500 test transactions
+  top-10  queue:  9 truly suspicious (90%)
+  top-30  queue: 17 truly suspicious (57%)
+  top-50  queue: 19 truly suspicious (38%)
+
+Top 5 alerts for the AML analyst:
+ txn_amount  cash_deposit  cross_border  txns_last_24h  acct_age_days  risk_score
+    3645.18             1             1              5             11       0.754
+    6853.18             1             1              5            762       0.753
+    8432.62             0             1              6            404       0.735
+    9067.31             0             1              6            843       0.732
+    5370.12             1             0              7            523       0.727
+
+Average profile by alert flag:
+       txn_amount  cash_deposit  txns_last_24h
+alert
+0          668.95          0.09           2.02
+1         3709.16          0.44           3.68

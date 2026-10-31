@@ -1,0 +1,16 @@
+Data shape (days, maturities): (10, 4)
+
+Covariance matrix (bp^2):
+[[ 2.9  5.6  6.9  6.1]
+ [ 5.6 12.7 15.4 13.8]
+ [ 6.9 15.4 20.  18.8]
+ [ 6.1 13.8 18.8 18.2]]
+
+Factor       variance share   loadings on ['3M', '2Y', '10Y', '30Y']
+PC1 level?      96.3%        [0.21 0.48 0.62 0.58]
+PC2 slope?       3.0%        [-0.39 -0.67  0.05  0.64]
+PC3 curve?       0.7%        [ 0.89 -0.44 -0.04  0.08]
+PC4 noise        0.0%        [ 0.09  0.36 -0.78  0.5 ]
+
+Day-by-day PC1 score (how much the whole curve shifted):
+[  7.8  -7.    1.2  10.8 -10.1  -3.3   4.2  -8.7   5.7  -0.7]

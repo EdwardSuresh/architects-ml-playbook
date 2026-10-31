@@ -1,0 +1,40 @@
+Train: 4500 rows / 18 wells, event rate 2.8%  |  Test: 1500 rows / 6 wells, event rate 2.3%
+== AdaBoost grid search (3-fold GroupKFold, PR-AUC) ==
+ param_n_estimators  param_learning_rate  param_estimator__max_depth  mean_test_score
+                150                  0.1                           2            0.304
+                 50                  0.1                           2            0.302
+                150                  0.5                           1            0.283
+                150                  0.1                           1            0.280
+                 50                  0.5                           2            0.275
+== Staged learning curve on test wells (ROC-AUC as stumps are added) ==
+     1 estimators  AUC=0.571 #####
+     5 estimators  AUC=0.603 ########
+    20 estimators  AUC=0.793 #######################
+    50 estimators  AUC=0.801 ########################
+    75 estimators  AUC=0.788 #######################
+   150 estimators  AUC=0.795 #######################
+== Model comparison on 6 unseen wells ==
+  AdaBoost (tuned)     ROC-AUC=0.795  PR-AUC=0.186
+  AdaBoost + balanced  ROC-AUC=0.805  PR-AUC=0.184
+  GradientBoosting     ROC-AUC=0.823  PR-AUC=0.193
+== Alarm threshold by expected cost (AdaBoost) ==
+  thr=0.163  missed=  5  false_alarms=1020  cost=$ 5.33M
+  thr=0.187  missed=  5  false_alarms= 873  cost=$ 4.74M
+  thr=0.205  missed=  5  false_alarms= 727  cost=$ 4.16M
+  thr=0.212  missed=  6  false_alarms= 573  cost=$ 3.79M
+  thr=0.231  missed=  9  false_alarms= 429  cost=$ 3.97M
+  thr=0.251  missed= 11  false_alarms= 294  cost=$ 3.93M
+  thr=0.286  missed= 15  false_alarms= 157  cost=$ 4.38M
+  thr=0.388  missed= 27  false_alarms=  24  cost=$ 6.85M
+  -> threshold 0.212: $3.79M vs $8.50M with no warning system
+== Permutation importance (PR-AUC drop) ==
+  torque_trend_10min     +0.136
+  hookload_trend_10min   +0.084
+  mud_weight_ppg         +0.044
+  hookload_klb           +0.000
+  rop_ft_hr              +0.000
+  standpipe_psi          -0.001
+  torque_kftlb           -0.008
+Safety note: this is an ADVISORY tool - the driller keeps authority (API RP 59 well-control
+practice, BSEE SEMS). Log every alarm and response; re-validate per field and formation.
+Saved model + threshold -> stuck_pipe_ada.joblib in a temp dir

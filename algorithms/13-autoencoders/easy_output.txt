@@ -1,0 +1,7 @@
+Healthy reconstruction errors: [1.2e-04 1.2e-04 1.3e-04 1.3e-04 5.0e-05 5.0e-05 1.3e-04 5.0e-05]
+Alarm threshold: 0.00038
+
+normal load   code=0.500 rebuilt=[0.5 0.5 0.5 0.5] error=0.00005 -> ok
+              biggest error on: temperature
+bearing wear  code=0.597 rebuilt=[0.6 0.6 0.6 0.6] error=0.03052 -> ANOMALY
+              biggest error on: vibration

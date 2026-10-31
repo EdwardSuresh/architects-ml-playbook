@@ -1,0 +1,14 @@
+k-means++ seeding, step by step:
+  pick probs: 0.00 0.00 0.00 0.00 0.11 0.11 0.13 0.10 0.13 0.14 0.12 0.15
+  chose center #2 at [19. 20.]
+  pick probs: 0.00 0.00 0.00 0.00 0.00 0.01 0.00 0.00 0.23 0.28 0.23 0.24
+  chose center #3 at [32.  5.]
+k-means++ seeds:
+[[ 3.  2.]
+ [19. 20.]
+ [32.  5.]]
+inertia = 57.0
+
+Seeding only (before any k-means iterations), 200 trials:
+  random    : mean inertia  1496.9, bad starts (>100) 67%
+  k-means++ : mean inertia   110.8, bad starts (>100) 3%

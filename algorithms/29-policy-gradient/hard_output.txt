@@ -1,0 +1,33 @@
+config                         grad-norm std  valid $/customer
+baseline=False entropy=0.00            0.038          1197.62
+baseline=True  entropy=0.00            0.021          1199.94
+baseline=True  entropy=0.01            0.023          1201.23
+baseline=True  entropy=0.05            0.020          1201.52
+Chosen: baseline=True  entropy=0.05
+
+Strategy comparison on held-out book (expected retained premium net of discount):
+  fixed   0% for everyone   $ 1094.07
+  fixed   5% for everyone   $ 1143.75
+  fixed  10% for everyone   $ 1141.79
+  REINFORCE policy         $ 1187.19
+  uplift vs best fixed: $43.44/customer = $21.72M on a 500k-policy book
+
+Average offer by tenure band and whether a rival quote is >5% cheaper:
+rival_cheaper False  True 
+tenure_band               
+1-3y           7.1%  10.0%
+4-7y           5.0%   9.7%
+8-14y          0.6%   6.4%
+
+Fairness audit by age band (not a model input):
+          avg_offer  avg_premium  renew_rate
+age_band                                    
+18-34         0.043     1383.250       0.901
+35-54         0.044     1378.251       0.895
+55+           0.047     1390.147       0.900
+
+Saved policy to /tmp/tmpXXXXXX/renewal_policy.pt
+REGULATORY NOTE: many US states restrict or ban 'price optimization' - setting renewal prices
+by predicted willingness to stay rather than risk (see NAIC 2015 white paper, CA/NY/FL bulletins).
+Where banned, use this only for non-price retention actions; elsewhere, file rating rules, keep
+discounts within approved bands, and test for disparate impact before deployment.

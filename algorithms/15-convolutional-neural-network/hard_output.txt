@@ -1,0 +1,33 @@
+Train/val/test: 1600/400/400   defect rate 15.3%
+
+Model        threshold  test recall  test precision  pits caught  cracks caught
+LogReg pix        0.50         0.86            0.95          76%            95%
+CNN no-aug        0.55         0.94            1.00          88%           100%
+CNN + aug         0.30         0.94            0.96          88%           100%
+
+Confusion matrix for CNN + aug (rows = truth clean/defect, cols = predicted):
+               pred clean  pred defect
+  true clean          325            3
+  true defect           4           68
+
+Test patch 383 (pit, p=1.00)   darkness map  |  saliency map
+   -----:::::.:::..  |                  
+   -:=-:=:::-.:.  .  |       ..         
+   -=::-==---... .   |     . .          
+   --:==+==-::.:.    |  .   .-  .       
+   +:==+=+==-:..:    |     . +          
+   ===++#++=:::..:   |     *#+-.        
+   ---+++=+-=:.::.   |   . =--          
+   --:==-=---:.:..   |   .:..-          
+   ----=----:::...:  |                  
+   -:-:===::::.....  |                  
+   :-----:-.:-....   |                  
+   =::-::::::.. ...  |                  
+   ----:-:::::.....  |                  
+   ---:-:-::.:....   |                  
+   -----.-::..:...   |                  
+   =-:-.:-:.::.. :.  |                  
+
+Saved model and threshold -> defect_cnn.pt
+PHMSA note: 49 CFR 192/195 integrity management - model flags support, not replace,
+qualified ILI analysis; log every miss found in the field and revalidate the threshold.

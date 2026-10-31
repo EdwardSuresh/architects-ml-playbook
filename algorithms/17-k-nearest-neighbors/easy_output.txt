@@ -1,0 +1,13 @@
+Past shipments ranked by similarity to the new one:
+  S3    900 mi    800 lb  days=4  distance=0.079
+  S2    450 mi   1200 lb  days=3  distance=0.239
+  S5   1500 mi    600 lb  days=5  distance=0.247
+  S1    300 mi    500 lb  days=2  distance=0.336
+  S4   1200 mi   2000 lb  days=5  distance=0.344
+  S6   2000 mi   1500 lb  days=7  distance=0.449
+  S8    600 mi   2500 lb  days=3  distance=0.527
+  S7   2400 mi   3000 lb  days=8  distance=0.886
+k=1: neighbours [S3] -> predicted transit 4.00 days
+k=3: neighbours [S3, S2, S5] -> predicted transit 4.00 days
+k=5: neighbours [S3, S2, S5, S1, S4] -> predicted transit 3.80 days
+k=3 distance-weighted -> 3.99 days

@@ -1,0 +1,38 @@
+Customers=5000  model features=7 (age held out for fairness review)
+ k   inertia  silhouette  inertia_drop_%
+ 2 23170.453       0.330             NaN
+ 3 13903.243       0.423            40.0
+ 4 10363.190       0.433            25.5
+ 5  9107.703       0.392            12.1
+ 6  8274.489       0.363             9.1
+ 7  7838.239       0.253             5.3
+ 8  7422.073       0.328             5.3
+Chosen k=4  bootstrap stability ARI=0.999
+Silhouette  k-means=0.433  vs balance-tier baseline=0.191
+
+Segment fingerprint (z-scores):
+         avg_balance_k  monthly_deposits_k  card_spend_k  digital_login_share  loan_balance_ratio  num_products  overdrafts_12m
+segment
+0                 0.40                0.59          0.37                 0.05                0.75          0.78           -0.38
+1                -1.17               -1.08         -1.51                -1.20                1.50         -0.56            1.83
+2                -0.65               -0.68         -0.16                 1.06               -0.80         -0.43           -0.22
+3                 1.54                1.27          0.98                -1.02               -0.80          0.14           -0.52
+
+Surrogate tree fidelity=0.987; first rules:
+|--- loan_balance_ratio <= 0.4
+|   |--- avg_balance_k <= 12.7
+|   |   |--- monthly_deposits_k <= 8.9
+|   |   |   |--- class: 2
+|   |   |--- monthly_deposits_k >  8.9
+|   |   |   |--- class: 0
+|   |--- avg_balance_k >  12.7
+|   |   |--- digital_login_share <= 0.6
+
+seg  size  med_age  offer     expected_margin
+  0  1387      42  refi      $    66,576
+  1   800      47  hardship  $     4,800
+  2  1808      27  card      $    21,696
+  3  1005      63  wealth    $    54,270
+
+Fairness check: age is held out; review segments that skew by age before credit offers.
+Saved -> retail_segments_kmeans.joblib

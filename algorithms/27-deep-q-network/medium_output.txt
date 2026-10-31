@@ -1,0 +1,23 @@
+episode 10  mark-to-market P&L=$  136.9k  buffer=1200
+episode 20  mark-to-market P&L=$  133.6k  buffer=2400
+episode 30  mark-to-market P&L=$  187.4k  buffer=3600
+episode 40  mark-to-market P&L=$  166.3k  buffer=4800
+episode 50  mark-to-market P&L=$  178.1k  buffer=6000
+episode 60  mark-to-market P&L=$  176.1k  buffer=7200
+
+Month  avg_price  most_common_action  end_storage
+  Apr  $    2.82            Withdraw           8
+  May  $    2.31            Withdraw           8
+  Jun  $    2.14            Withdraw           8
+  Jul  $    1.93              Inject          72
+  Aug  $    2.23              Inject         100
+  Sep  $    2.66              Inject         100
+  Oct  $    3.25              Inject         100
+  Nov  $    3.79              Inject          84
+  Dec  $    3.90                Hold          60
+  Jan  $    4.00            Withdraw           0
+  Feb  $    3.74                Hold           0
+  Mar  $    3.32            Withdraw           0
+
+Business read: year-end value (cash + gas left) = $237k on a 100k MMBtu field.
+A good policy fills in the cheap summer months and withdraws into the winter price peak.

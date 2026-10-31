@@ -1,0 +1,25 @@
+Train windows 520 (days 30-1100)  |  test forecast origins 22 (days 1100+)
+Arps fit on train: qi=989 bbl/d  Di=0.0037/day  b=0.68
+
+30-day forecast error on unseen future (MAPE, producing days):
+  Model                         days 1-7  days 8-30    all
+  Naive (last 7-day level)          3.7%       4.1%   4.0%
+  Arps decline (scipy)              7.6%       8.0%   7.9%
+  RNN (nn.RNN)                      3.6%       3.9%   3.9%
+  GRU upgrade                       3.6%       4.1%   4.0%
+
+Note: naive is a strong baseline on a smooth decline - the RNN edges it, it does not crush it.
+Why Arps struggles here: the choke cut at day 900 shifted the level; Arps fitted the whole
+history and cannot 'see' it, while sequence models re-anchor on the latest 30 days.
+
+Vanishing-gradient check (input sensitivity relative to the most recent day):
+   1 days back: 1.000 ########################################
+   5 days back: 0.347 #############
+  10 days back: 0.020 
+  20 days back: 0.002 
+  30 days back: 0.000 
+  -> a plain RNN barely uses inputs from 3-4 weeks back; LSTM/GRU gates are designed to keep it.
+
+Model-risk note: reserves (SEC/PRMS) still rely on Arps-type curves an engineer can defend;
+use the RNN for short-term ops forecasting and anomaly flags, validated monthly vs actuals.
+Saved RNN weights + Arps params -> oil_rnn.pt in a temp dir

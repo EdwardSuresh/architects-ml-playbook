@@ -1,0 +1,16 @@
+Q-table before:
+  Q(aisle_B2, east ) =  -3.00
+  Q(aisle_B2, north) =  -4.00
+  Q(aisle_B3, east ) =  -2.00
+  Q(aisle_B3, north) =  -3.50
+  Q(aisle_B3, south) = -20.00
+
+Experience: S=aisle_B2, A=east, R=-1.0, S'=aisle_B3, A'=south  <- the 5 letters S-A-R-S-A
+SARSA target      = -1.0 + 1.0 * Q(aisle_B3, south) = -21.00
+Q-learning target = -1.0 + 1.0 * max Q(aisle_B3, .)  = -3.00
+
+TD error = -21.00 - (-3.00) = -18.00
+Q(aisle_B2, east): -3.00 -> -12.00   (Q-learning would give -3.00)
+
+Takeaway: because SARSA 'remembers' that its own exploration sometimes goes wrong,
+it rates risky moves lower than Q-learning does - that is why it learns safer routes.

@@ -1,0 +1,40 @@
+1050 claims after the event, total incurred $24,465,471
+
+k-distance curve (k=12) percentiles, km:
+  p10  0.25 ##
+  p50  0.43 ####
+  p80  0.67 ######
+  p90  0.81 ########
+  p95  1.29 ############
+  p99 15.10 ########################################
+Knee suggests eps = 1.12 km
+
+DBSCAN found 3 hotspots, 47 noise claims
+        claims   total_usd  avg_usd     lat     lon  adjuster_days
+dbscan                                                            
+0          352  15968588.0  45365.0  36.114 -97.103             59
+1          402   4550331.0  11319.0  36.260 -97.079             67
+2          249   2981348.0  11973.0  36.109 -96.835             42
+
+ eps_km | hotspots | noise
+   0.56 |    13    |  148
+   1.12 |     3    |   47
+   2.23 |     3    |   43
+
+Agreement with true storm zones (Adjusted Rand Index, 1 = perfect):
+  DBSCAN  0.992
+  k-Means 0.665
+  k-Means forced all 50 scattered claims into a hotspot; DBSCAN flagged 46 of them as noise
+
+Top noise claims for SIU/desk review (of 47):
+claim_id    lat     lon  claim_usd  policy_age_days  days_after_event  review_score
+CLM01015 36.170 -97.048    91238.0               10                18             3
+CLM01006 36.187 -97.065    29392.0               45                23             3
+CLM01030 36.229 -97.024    27463.0               10                22             3
+CLM01021 36.318 -97.377    22932.0               25                27             3
+CLM01016 36.209 -96.801    15511.0               45                23             3
+CLM01002 35.987 -97.130    10049.0               45                22             3
+
+Deploy plan: 168 adjuster-days across 3 hotspots; largest hotspot holds 65% of incurred $
+Saved hotspot config -> cat_hotspots.joblib
+Compliance: noise flags trigger review, not denial - state unfair claims settlement rules (NAIC model act) require prompt, fair handling of every claim.

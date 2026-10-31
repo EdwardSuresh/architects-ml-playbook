@@ -1,0 +1,18 @@
+epoch 160  avg reward +1.352%/mo  critic loss 11.270
+epoch 320  avg reward +1.027%/mo  critic loss 7.859
+epoch 480  avg reward +0.374%/mo  critic loss 14.413
+epoch 640  avg reward +0.873%/mo  critic loss 6.722
+epoch 800  avg reward +1.268%/mo  critic loss 9.803
+
+Test period (30 years)   ann_return  ann_vol
+A2C agent                   4.13%   12.18%
+60/40 static                1.98%   10.08%
+
+How often each model portfolio was chosen:
+  stocks 90% / bonds 10% / cash 0%: 75%
+  stocks 70% / bonds 30% / cash 0%: 3%
+  stocks 50% / bonds 40% / cash 10%: 1%
+  stocks 30% / bonds 50% / cash 20%: 0%
+  stocks 0% / bonds 30% / cash 70%: 21%
+Business read: the agent mostly holds the growth mix and switches to the defensive mix in some months.
+It earned more than 60/40 here but with more volatility - the Hard level adds risk and cost penalties.

@@ -1,0 +1,17 @@
+Starting guess for every shipment: 0.50
+
+round 1: split on storm    at     0.5 | squared error 0.116
+round 2: split on distance at  1350.0 | squared error 0.077
+round 3: split on storm    at     0.5 | squared error 0.054
+round 4: split on distance at   875.0 | squared error 0.044
+round 5: split on distance at  1600.0 | squared error 0.038
+
+Shipment | miles | storm | actual | predicted risk
+       0 |   120 |     0 |      0 |   0.10
+       1 |   300 |     0 |      0 |   0.10
+       2 |   450 |     1 |      1 |   0.71
+       3 |   800 |     0 |      0 |   0.10
+       4 |   950 |     1 |      1 |   0.83
+       5 |  1200 |     0 |      0 |   0.22
+
+New 1,400 mi storm lane -> raw score 1.09, clipped risk 1.00 -> expedite / warn customer

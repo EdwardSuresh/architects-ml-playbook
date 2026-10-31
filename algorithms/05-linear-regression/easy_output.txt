@@ -1,0 +1,18 @@
+cost = 1120 -19.6 x age +48.8 x miles_k
+-> each extra year of age changes expected cost by $-19.6
+-> each extra 1,000 miles driven adds $48.8
+
+ age | miles_k | actual | predicted | error
+  19 |      14 |   1650 |      1431 |  +219
+  22 |      12 |   1380 |      1275 |  +105
+  25 |      15 |   1290 |      1363 |   -73
+  30 |      10 |    900 |      1021 |  -121
+  35 |      12 |    870 |      1021 |  -151
+  40 |       8 |    640 |       728 |   -88
+  45 |      11 |    700 |       776 |   -76
+  50 |       9 |    560 |       581 |   -21
+  55 |      13 |    690 |       678 |   +12
+  60 |       7 |    480 |       288 |  +192
+
+R-squared: 0.890
+New 28-year-old driving 16k miles: expected claims $1353, premium $1691

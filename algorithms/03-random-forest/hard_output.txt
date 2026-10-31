@@ -1,0 +1,27 @@
+Claims 8,000 | fraud rate 4.9% | train 6000 / test 2000
+Best RF params: {'min_samples_leaf': 25, 'max_features': 0.5, 'max_depth': 6}
+
+Model                 ROC-AUC  PR-AUC
+LogReg baseline         0.705   0.195
+Random Forest           0.788   0.294
+
+Capacity threshold (top 8%): score >= 0.523
+Referred | claims | fraud caught | share of all fraud
+top   2% |     40 |           17 |      17%
+top   5% |    100 |           36 |      37%
+top   8% |    160 |           60 |      61%
+top  15% |    300 |           67 |      68%
+Fraud payouts avoided $863,343 - SIU cost $72,000 = net $791,343
+
+Permutation importance (PR-AUC drop):
+  police_report          +0.1629
+  num_witnesses          +0.1612
+  claim_amount           +0.1550
+  days_policy_to_claim   +0.0579
+  injury_claim           +0.0402
+  vehicle_age_yrs        +0.0101
+
+Referral rate by state: CA 9%, FL 9%, NY 7%, OK 7%, TX 8%
+Governance: NAIC AI Model Bulletin + state unfair-claims laws -> model only PRIORITISES;
+a human SIU investigator decides. Log reasons, monitor drift, re-validate yearly.
+Saved siu_rf.joblib (902 KB)

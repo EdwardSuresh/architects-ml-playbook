@@ -1,0 +1,19 @@
+Vocab size=38  train=1600  test=400  example=['highway', 'airbags', 'reported', 'frame', 'highway', 'windshield', 'er', 'on']
+epoch 1  last-batch loss=1.128  test acc=0.627
+epoch 2  last-batch loss=0.817  test acc=0.812
+epoch 3  last-batch loss=0.430  test acc=0.873
+epoch 4  last-batch loss=0.434  test acc=0.885
+epoch 5  last-batch loss=0.343  test acc=0.900
+epoch 6  last-batch loss=0.508  test acc=0.902
+
+Per-queue test accuracy:
+  AutoGlass    0.94  (n=99)
+  TotalLoss    0.86  (n=106)
+  Injury       0.90  (n=114)
+  FraudReview  0.91  (n=81)
+
+New FNOL note: insured reported neck pain after car rolled on highway
+  Injury       0.95 ############################
+  TotalLoss    0.05 #
+  AutoGlass    0.00
+  FraudReview  0.00

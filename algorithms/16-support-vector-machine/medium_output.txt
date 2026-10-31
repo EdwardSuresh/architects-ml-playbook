@@ -1,0 +1,29 @@
+Rows per class:
+ lithology
+Sandstone    600
+Shale        600
+Limestone    600 
+
+RBF SVM  scaled=False  test accuracy = 0.673
+RBF SVM  scaled=True   test accuracy = 0.927
+
+Support vectors per class: {'Limestone': 95, 'Sandstone': 154, 'Shale': 98}
+
+Classification report (test):
+              precision    recall  f1-score   support
+
+   Limestone      0.972     0.920     0.945       150
+   Sandstone      0.888     0.900     0.894       150
+       Shale      0.923     0.960     0.941       150
+
+    accuracy                          0.927       450
+   macro avg      0.928     0.927     0.927       450
+weighted avg      0.928     0.927     0.927       450
+
+Confusion matrix:
+                 pred_Limestone  pred_Sandstone  pred_Shale
+true_Limestone             138              12           0
+true_Sandstone               3             135          12
+true_Shale                   1               5         144
+
+Shale called Sandstone: 5 samples. These are the costly errors - a petrophysicist might flag a non-reservoir zone as pay.

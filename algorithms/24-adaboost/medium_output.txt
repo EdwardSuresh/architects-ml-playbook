@@ -1,0 +1,25 @@
+Rows: 4000   stuck-pipe rate: 8.0%
+Test ROC-AUC: 0.910
+
+Threshold 0.5: caught 22/80 events, 14 false alarms
+
+Threshold 0.45: caught 46/80 events, 61 false alarms
+              precision    recall  f1-score   support
+
+      normal      0.962     0.934     0.948       920
+       stuck      0.430     0.575     0.492        80
+
+    accuracy                          0.905      1000
+   macro avg      0.696     0.754     0.720      1000
+weighted avg      0.919     0.905     0.911      1000
+
+Feature importance:
+  torque_trend_10min   0.386 #######################
+  hookload_klb         0.219 #############
+  rop_ft_hr            0.201 ############
+  mud_weight_ppg       0.098 #####
+  standpipe_psi        0.077 ####
+  torque_kftlb         0.018 #
+
+Business read-out: lowering the threshold from 0.5 to 0.45 roughly doubles events caught;
+each false alarm costs a short pause to circulate/ream, far cheaper than a fishing job.

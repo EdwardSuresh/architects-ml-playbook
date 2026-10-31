@@ -1,0 +1,13 @@
+Gen 0: best=A-B-C-D-E  miles=30.96  worst=41.27
+Gen 1: best=A-B-C-D-E  miles=30.96  worst=37.43
+Gen 2: best=E-A-D-C-B  miles=25.37  worst=37.43
+Gen 3: best=E-A-D-C-B  miles=25.37  worst=37.43
+Gen 4: best=E-A-D-C-B  miles=25.37  worst=37.87
+Gen 5: best=E-A-D-C-B  miles=25.37  worst=37.15
+Gen 6: best=E-A-D-C-B  miles=25.37  worst=37.87
+Gen 7: best=E-A-D-C-B  miles=25.37  worst=30.80
+Gen 8: best=E-A-D-C-B  miles=25.37  worst=25.37
+Gen 9: best=E-A-D-C-B  miles=25.37  worst=38.26
+
+GA route : Depot-E-A-D-C-B-Depot  25.37 mi
+Best route: Depot-B-C-D-A-E-Depot  25.37 mi

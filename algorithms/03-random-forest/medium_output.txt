@@ -1,0 +1,25 @@
+Claims: 4000  confirmed fraud rate: 5.5%
+Out-of-bag accuracy: 0.917
+Test ROC-AUC: 0.819
+              precision    recall  f1-score   support
+
+       legit       0.97      0.96      0.96       945
+       fraud       0.37      0.42      0.39        55
+
+    accuracy                           0.93      1000
+   macro avg       0.67      0.69      0.68      1000
+weighted avg       0.93      0.93      0.93      1000
+
+SIU capacity | fraud found | hit rate | lift vs random
+top   5%     |          21 |    42.0% |    7.6x
+top  10%     |          28 |    28.0% |    5.1x
+top  20%     |          37 |    18.5% |    3.4x
+
+Top red-flag drivers:
+  claim_amount           ################## 0.310
+  days_policy_to_claim   ############ 0.201
+  vehicle_age_yrs        ######## 0.142
+  num_witnesses          ###### 0.106
+  police_report          ###### 0.101
+
+Investigating top 10% (100 claims) targets $344,114 of fraudulent payouts

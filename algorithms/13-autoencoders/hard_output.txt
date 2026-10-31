@@ -1,0 +1,18 @@
+Windows train/val/test: 3997/997/1397  best val MSE 0.1014
+
+Percentile  threshold  precision  recall  (raw / with 3-of-5 persistence)
+       95     0.1729   0.62/0.71    0.77/0.72
+       99     0.2151   0.86/0.84    0.73/0.67
+     99.5     0.2370   0.91/0.86    0.68/0.65
+
+Chosen threshold: 99th percentile = 0.2151
+
+Per-episode detection and top sensor by error share:
+  valve leak             first alarm after 220 min  | flow_mmscfd 31%, suction_pressure_psi 22%
+  bearing wear           first alarm after 40 min   | vibration_mm_s 73%, flow_mmscfd 7%
+  pressure sensor drift  first alarm after 170 min  | discharge_pressure_psi 49%, suction_pressure_psi 26%
+
+False-alarm time on healthy periods: 2.7 h of 211 h
+Saved model, scaler and threshold -> compressor_ae.pt
+Safety note: alarms support, not replace, API 618/670 machinery protection trips;
+retrain after overhauls and log every alarm outcome for threshold review.

@@ -1,0 +1,10 @@
+Rows sum to 1: True
+One 20-week run: G W W W W W W C C F F F F F F F F F F F
+Cost of that run: $289,000
+Week  1: Good=0.85  Worn=0.15  Critical=0.00  Failed=0.00
+Week  5: Good=0.44  Worn=0.35  Critical=0.12  Failed=0.09
+Week 10: Good=0.20  Worn=0.27  Critical=0.16  Failed=0.38
+Week 20: Good=0.04  Worn=0.08  Critical=0.06  Failed=0.82
+
+Average 20-week cost if we never maintain: $209,972
+Next step: add actions (Repair, Replace) and let an MDP choose the cheapest policy.

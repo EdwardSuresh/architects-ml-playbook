@@ -1,0 +1,22 @@
+Inspection patch (dark column = crack):
+[[9 9 9 1 9 9]
+ [9 9 9 1 9 9]
+ [9 9 9 1 9 9]
+ [9 9 9 1 9 9]
+ [9 9 9 1 9 9]
+ [9 9 9 1 9 9]]
+
+Filter (vertical dark-line detector):
+[[ 1 -2  1]
+ [ 1 -2  1]
+ [ 1 -2  1]]
+
+Feature map after convolution:
+[[  0 -24  48 -24]
+ [  0 -24  48 -24]
+ [  0 -24  48 -24]
+ [  0 -24  48 -24]]
+
+Strongest crack response: 48 at feature-map column 2 (image column 3)
+Verdict: DEFECT - send for dig verification
+Clean patch response: 0 -> clean

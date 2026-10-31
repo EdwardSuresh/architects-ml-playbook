@@ -1,0 +1,31 @@
+                                                                                    complaint_text  product
+          account hacked they will not respond scam wire transfer my account they will not respond    Fraud
+                  i called the bank please help my account account hacked unauthorized transaction    Fraud
+my account refinance closing delayed i called the bank on my statement mortgage payment misapplied Mortgage
+
+Class counts:
+product
+Credit Card    1032
+Mortgage        742
+Fraud           618
+Fees            608
+
+Vocabulary: 62 words; matrix shape (2250, 62)
+
+Test accuracy: 0.940
+              precision    recall  f1-score   support
+
+ Credit Card      0.954     0.961     0.958       258
+        Fees      0.928     0.934     0.931       152
+       Fraud      0.939     0.890     0.914       155
+    Mortgage      0.932     0.957     0.944       185
+
+    accuracy                          0.940       750
+   macro avg      0.938     0.936     0.937       750
+weighted avg      0.940     0.940     0.940       750
+
+Fraud        99%  <- 'someone opened a card in my name identity theft'
+Fees         92%  <- 'they charged an overdraft fee twice this month'
+Mortgage     99%  <- 'my escrow went up and the mortgage payment doubled'
+
+Auto-route 98% of complaints at >=90% confidence; accuracy on those 94.0%

@@ -1,0 +1,31 @@
+Maintenance log: 4000 rows, 40 pumps
+pump_id  week state action next_state
+    P00     0  Good    Run       Worn
+    P00     1  Worn Repair       Good
+    P00     2  Good    Run       Good
+    P00     3  Good    Run       Worn 
+
+No data for (Failed, Run) -> assume it stays Failed
+Estimated P(next | state, Run):
+          Good  Worn  Critical  Failed
+Good      0.86  0.14      0.00    0.00
+Worn      0.00  0.80      0.18    0.02
+Critical  0.00  0.00      0.67    0.33
+Failed    0.00  0.00      0.00    1.00 
+
+Value iteration converged in 276 sweeps (gamma=0.95)
+
+State     | Best action | Expected discounted cost
+Good      | Run         | $    21,964
+Worn      | Repair      | $    30,514
+Critical  | Repair      | $    42,161
+Failed    | Replace     | $    65,866
+
+Q-table ($, lower is better):
+            Run  Repair  Replace
+Good      21964   27596    40866
+Worn      32644   30514    41866
+Critical  51411   42161    44866
+Failed    87572   69940    65866
+
+Reading: keep running healthy pumps, intervene before failure - the policy shows exactly where paying for maintenance beats risking a $25k/week outage.

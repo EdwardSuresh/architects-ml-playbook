@@ -1,0 +1,36 @@
+Applications: 8,000  bad rate: 14.2%
+Best params: {'lr__C': 1.0, 'woe__n_bins': 8}  CV AUC 0.801
+Test AUC  raw LR 0.796 (Gini 0.593) | WoE scorecard 0.811 (Gini 0.623)
+
+Feature           IV     coef
+  credit_score    0.871  -1.079
+  debt_to_income  0.173  -1.152
+  utilization_pct 0.213  -1.171
+  delinq_2y       0.054  -1.100
+  months_employed 0.047  -1.189
+  inquiries_6m    0.038  -1.154
+
+Score range on test set: 480 - 709
+         apps  bad_rate
+band                   
+<560      280     0.471
+560-599   783     0.203
+600-639   831     0.049
+640-679   448     0.018
+680+       58     0.000
+
+Cut-off | approve % | bad rate | expected profit $k
+    560 |       89% |     9.9% |          467
+    580 |       76% |     7.1% |          743
+    600 |       56% |     3.8% |          861
+    620 |       38% |     2.4% |          672
+    640 |       22% |     1.5% |          416
+
+Declined applicant score 480. Top adverse action reasons:
+  - credit_score (value 561.0), 106 points below best bin
+  - utilization_pct (value 97.9), 48 points below best bin
+  - debt_to_income (value 49.4), 44 points below best bin
+
+Fair lending: no protected attributes used; run disparate-impact tests on proxies (ECOA/FHA).
+Model risk: SR 11-7 documentation, independent validation, annual PSI/KS monitoring.
+Saved scorecard to pd_scorecard.joblib

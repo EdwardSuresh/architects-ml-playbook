@@ -1,0 +1,31 @@
+Policies 20,000 | with a claim 11.2% | avg pure premium $833
+Tweedie best: {'alpha': 0.01, 'power': 1.3}
+
+Model                   MAE $   Tweedie dev   Gini  min pred $
+OLS (plain linear)       1,419        151.5  0.242       -268
+Ridge + age splines      1,404        148.9  0.303       -224
+Tweedie GLM (log link)   1,401        147.4  0.295        201
+
+Balance: predicted $2,578,328 vs actual $2,563,758
+
+Rating relativities (categorical factors):
+  territory_suburban   x1.20
+  territory_urban      x1.71
+  vehicle_use_commute  x0.90
+  vehicle_use_pleasure x0.78
+  credit_tier_B        x1.24
+  credit_tier_C        x1.80
+
+Age | indicated pure premium (reference driver)
+ 18 | $  1,212 ############
+ 22 | $    871 ########
+ 30 | $    595 #####
+ 45 | $    463 ####
+ 65 | $    447 ####
+ 80 | $    614 ######
+
+Actual loss cost, lowest vs highest predicted decile: $407 vs $1,906 (4.7x)
+
+Regulatory: rates must not be excessive, inadequate or unfairly discriminatory (state rating laws);
+credit-based factors are restricted in some states; NAIC AI Bulletin expects governance + testing.
+Saved auto_pure_premium_glm.joblib

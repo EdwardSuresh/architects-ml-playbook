@@ -1,0 +1,21 @@
+Weeks of history: 208  min=342  max=1415
+Train windows=144  Test windows=52
+epoch  40  train MSE=0.2444
+epoch  80  train MSE=0.2025
+epoch 120  train MSE=0.1824
+epoch 160  train MSE=0.1662
+epoch 200  train MSE=0.1537
+
+Test MAPE  LSTM=10.2%   naive last-week=12.1%
+
+week  actual  lstm  naive
+ 156    1111   974    816
+ 157    1009  1023   1111
+ 158     879  1033   1009
+ 159    1099  1032    879
+ 160     970  1033   1099
+ 161    1178  1037    970
+ 162    1244  1064   1178
+ 163    1073  1112   1244
+
+Planner view: average absolute error = 95 cases/week

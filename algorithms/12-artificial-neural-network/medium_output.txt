@@ -1,0 +1,25 @@
+ policy_age_years  insured_age  annual_premium_usd  premium_increase_pct  missed_payments_12m  on_autopay  agent_contacts_12m  cash_value_usd  lapsed
+                2           38               880.0                     0                    2           1                   3          1781.0       0
+               19           66               700.0                    10                    0           0                   0          1199.0       0
+               16           23              2911.0                     0                    0           0                   3           530.0       0
+
+Policies: 4000, lapse rate: 17.7%
+Training stopped after 56 epochs
+
+Test ROC-AUC: 0.790
+              precision    recall  f1-score   support
+
+    in_force      0.857     0.971     0.911       823
+      lapsed      0.647     0.249     0.359       177
+
+    accuracy                          0.843      1000
+   macro avg      0.752     0.610     0.635      1000
+weighted avg      0.820     0.843     0.813      1000
+
+Top 10% riskiest policies: actual lapse rate 58.0% vs book average 17.7%
+Calling them reaches 33% of all lapses with 100 calls.
+
+Average predicted lapse risk by autopay:
+on_autopay
+0    0.261
+1    0.106

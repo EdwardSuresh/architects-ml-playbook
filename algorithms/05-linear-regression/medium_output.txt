@@ -1,0 +1,20 @@
+Policies: 4000  mean annual claim cost: $1,128
+Test MAE $148 | R-squared 0.536
+
+Intercept: $619
+  driver_age             -2.8 $
+  annual_miles_k        +22.7 $
+  vehicle_value_k        +5.5 $
+  prior_claims_3y      +210.0 $
+  credit_tier_B         +70.6 $
+  credit_tier_C        +152.5 $
+  territory_suburban    +70.5 $
+  territory_urban      +251.8 $
+
+Age band | actual $ | predicted $ | gap
+(17, 25] |     1321 |        1203 |  +117
+(25, 35] |     1087 |        1166 |   -79
+(35, 50] |     1086 |        1129 |   -43
+(50, 80] |     1089 |        1079 |    +9
+Quote age 20, urban: pure premium $1,533 -> charged $1,993
+Quote age 45, rural: pure premium $910 -> charged $1,183

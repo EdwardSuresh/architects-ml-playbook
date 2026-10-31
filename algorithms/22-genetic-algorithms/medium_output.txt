@@ -1,0 +1,15 @@
+GA progress (every 50 generations):
+ generation  best_miles  avg_miles
+          0       260.1      335.9
+         50       141.4      145.5
+        100       141.4      144.7
+        150       141.4      145.1
+        200       141.4      144.8
+        250       141.4      147.3
+
+Best GA route  :  141.4 miles
+Avg random route:  334.2 miles
+
+Stop sequence: Depot -> C11 -> C13 -> C03 -> C14 -> C01 -> C07 -> C12 -> C06 -> C08 -> C04 -> C10 -> C09 -> C05 -> C15 -> C02 -> Depot
+
+Business read-out: at $2.1/mile and 250 delivery days, the GA route saves about $101,251/year vs an unplanned order of stops.

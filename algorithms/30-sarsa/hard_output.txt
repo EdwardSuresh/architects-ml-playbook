@@ -1,0 +1,38 @@
+Training (eps=0.1, alpha=0.5), mean over 5 seeds, last 100 episodes:
+method          train reward  collisions/ep
+SARSA                  -24.3          0.042
+Q-learning             -36.4          0.240
+Expected SARSA         -21.5          0.028
+
+Exploration sweep - evaluated WITH the same eps the robot keeps in operation:
+  eps method           avg reward  collisions/trip  avg moves
+ 0.00 SARSA                 -17.0            0.000       17.0
+ 0.00 Q-learning            -13.0            0.000       13.0
+ 0.05 SARSA                 -21.8            0.020       19.8
+ 0.05 Q-learning            -31.5            0.123       19.3
+ 0.10 SARSA                 -27.6            0.053       22.3
+ 0.10 Q-learning            -37.6            0.240       13.9
+ 0.20 SARSA                 -27.8            0.063       21.5
+ 0.20 Q-learning            -57.5            0.457       12.3
+
+SARSA greedy route (19 moves). F=forklift lane, #=rack:
+  . . . . > > > > > > > v
+  > > > > ^ . . . . . . v
+  ^ . . # # # . # # . . v
+  ^ . . . . . . . . . . v
+  S F F F F F F F F F F G
+
+Q-learning greedy route (13 moves). F=forklift lane, #=rack:
+  . . . . . . . . . . . .
+  . . . . . . . . . . . .
+  . . . # # # . # # . . .
+  > > > > > > > > > > > v
+  S F F F F F F F F F F G
+
+Daily risk cost at eps=0.1 (400 trips/day, $2,500 per forklift incident):
+  SARSA      :   8.0 incidents/day -> $   20,000  (avg 20.8 moves/trip)
+  Q-learning :  94.7 incidents/day -> $  236,667  (avg 14.5 moves/trip)
+
+Saved Q-tables to /tmp/tmpXXXXXX
+SAFETY NOTE: RL routing is a planning aid, not a safety system. Physical separation, speed limits,
+lidar e-stops and ANSI/RIA R15.08 / OSHA 1910.178 controls must stay in place regardless of policy.

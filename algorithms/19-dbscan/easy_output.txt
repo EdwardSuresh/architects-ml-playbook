@@ -1,0 +1,16 @@
+C1   neighbours=['C1', 'C2', 'C3', 'C4']  -> CORE
+C2   neighbours=['C1', 'C2', 'C3', 'C4', 'C11']  -> CORE
+C3   neighbours=['C1', 'C2', 'C3', 'C4']  -> CORE
+C4   neighbours=['C1', 'C2', 'C3', 'C4']  -> CORE
+C5   neighbours=['C5', 'C6', 'C7', 'C8']  -> CORE
+C6   neighbours=['C5', 'C6', 'C7', 'C8']  -> CORE
+C7   neighbours=['C5', 'C6', 'C7']  -> CORE
+C8   neighbours=['C5', 'C6', 'C8']  -> CORE
+C9   neighbours=['C9']  -> not core (border if a core point reaches it)
+C10  neighbours=['C10']  -> not core (border if a core point reaches it)
+C11  neighbours=['C2', 'C11']  -> not core (border if a core point reaches it)
+
+Final labels: {'C1': 1, 'C2': 1, 'C3': 1, 'C4': 1, 'C5': 2, 'C6': 2, 'C7': 2, 'C8': 2, 'C9': -1, 'C10': -1, 'C11': 1}
+  NOISE - review individually: ['C9', 'C10']
+  Hotspot 1 - send an adjuster team: ['C1', 'C2', 'C3', 'C4', 'C11']
+  Hotspot 2 - send an adjuster team: ['C5', 'C6', 'C7', 'C8']

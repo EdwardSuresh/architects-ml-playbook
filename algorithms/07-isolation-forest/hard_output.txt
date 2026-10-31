@@ -1,0 +1,18 @@
+Train txns=8417  Test txns=4154  test suspicious=75
+Best (n_estimators, max_samples, max_features) = (300, 1024, 0.6)  PR-AUC=0.971
+ROC-AUC=0.999
+  top-25  alerts ->  25/75 suspicious caught  precision=100%
+  top-50  alerts ->  50/75 suspicious caught  precision=100%
+  top-100 alerts ->  73/75 suspicious caught  precision=73%
+  rule baseline   ->  16/75 caught using 17 alerts  precision=94%
+
+Why is cust 120 day 56 top of queue? (score=0.789)
+  amt_vs_cust_avg  value=    13.15  score lift=+0.055
+  log_amount       value=     9.18  score lift=+0.037
+  cross_border     value=     1.00  score lift=+0.030
+  txns_last_3d     value=     3.00  score lift=+0.021
+  is_night         value=     1.00  score lift=+0.021
+
+Cost @top-100: model=$14,000  rule=$295,680
+Governance: SR 11-7 validation + BSA/AML tuning docs; analyst, not model, files the SAR.
+Saved -> aml_iforest.joblib

@@ -1,0 +1,6 @@
+epoch   0  squared TD error = 115.845
+epoch 100  squared TD error = 0.317
+epoch 200  squared TD error = 0.001
+epoch 300  squared TD error = 0.000
+Summer, cheap, nearly empty    Q=[ 6.14  2.91 -1.89] -> Inject
+Winter, pricey, fairly full    Q=[ 8.64  4.22 15.1 ] -> Withdraw

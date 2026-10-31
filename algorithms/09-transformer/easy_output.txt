@@ -1,0 +1,15 @@
+Raw attention scores (row = word looking, col = word looked at):
+  windshield [0.88 0.83 0.07 0.54]
+     cracked [0.83 0.82 0.07 0.49]
+          by [0.03 0.03 0.02 0.03]
+        rock [0.48 0.43 0.05 0.33]
+
+Attention weights (each row sums to 1):
+  windshield 0.32 0.31 0.14 0.23
+     cracked 0.32 0.31 0.15 0.23
+          by 0.25 0.25 0.25 0.25
+        rock 0.29 0.27 0.19 0.25
+
+Context-aware vector for 'cracked': [0.71 0.71 0.06 0.11]
+Similarity to Auto-Glass queue: 0.96
+Word 'by' receives the least attention: by

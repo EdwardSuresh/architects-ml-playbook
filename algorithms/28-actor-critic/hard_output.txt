@@ -1,0 +1,18 @@
+Tuning risk aversion (validation Sharpe):
+  lambda=0.0  valid Sharpe= 0.46
+  lambda=3.0  valid Sharpe= 0.41
+  lambda=8.0  valid Sharpe= 0.32
+Chosen lambda = 0.0
+
+Test period (40 unseen years), after 10 bps transaction costs:
+strategy        ann_ret%  ann_vol%  sharpe  max_dd%  turnover/yr
+A2C agent           6.37     12.33    0.32   -41.22         1.43
+60/40 static        4.68      9.42    0.24   -33.23         0.00
+Always 90/10        5.23     13.95    0.20   -51.82         0.02
+calm uptrend      P(90/10, 70/30, 60/40, 40/50/10, 10/40/50) = [0.91 0.03 0.06 0.   0.  ]
+stressed selloff  P(90/10, 70/30, 60/40, 40/50/10, 10/40/50) = [0.37 0.25 0.15 0.14 0.09]
+
+Saved model to /tmp/tmpXXXXXX/a2c_allocator.pt
+MODEL-RISK NOTE (SR 11-7): synthetic regimes are not history. Validate on real out-of-sample data,
+stress-test 2008/2020/2022-style scenarios, cap allocation changes, and keep a human PM sign-off.
+Suitability (Reg BI / fiduciary duty) still applies: the agent cannot know a client's risk tolerance.

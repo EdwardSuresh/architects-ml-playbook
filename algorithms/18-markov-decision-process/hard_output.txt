@@ -1,0 +1,31 @@
+Value iteration :  569 sweeps    12.5 ms
+Policy iteration:    5 rounds     0.3 ms
+Same policy? True   max value gap $0.00
+
+State               | Optimal action | Discounted cost
+Good/LowPrice       | Run            | $    96,460
+Worn/LowPrice       | Repair         | $   113,562
+Critical/LowPrice   | Repair         | $   135,827
+Failed/LowPrice     | Replace        | $   176,909
+Good/HighPrice      | Run            | $   103,517
+Worn/HighPrice      | Repair         | $   129,320
+Critical/HighPrice  | Repair         | $   163,911
+Failed/HighPrice    | Replace        | $   238,864
+
+Gamma | Policy (LowPrice: G W C F | HighPrice: G W C F)
+ 0.50 | Run Run Fix Fix  |  Run Run Fix Fix
+ 0.80 | Run Fix Fix New  |  Run Fix Fix New
+ 0.90 | Run Fix Fix New  |  Run Fix Fix New
+ 0.97 | Run Fix Fix New  |  Run Fix Fix New
+ 0.99 | Run Fix Fix New  |  Run Fix Fix New
+
+Monte Carlo, 1000 pumps x 104 weeks:
+Strategy               | Avg 2-yr cost | Std dev   | Failed weeks
+Run to failure         | $    914,301 | $ 197,110 |  6.49
+Fixed schedule (8wk)   | $    817,480 | $ 206,189 |  4.20
+MDP optimal policy     | $    314,061 | $  83,126 |  0.00
+
+MDP policy saves $600,240 per pump over 2 years vs run-to-failure (synthetic costs).
+If repair cost doubles, policy changes in: ['Critical/LowPrice', 'Critical/HighPrice']
+Saved policy -> pump_policy.joblib
+Safety note: a cost-optimal policy must never override API/OSHA/PHMSA safety limits - Critical units on sour or high-pressure service need mandatory shutdown rules on top.

@@ -1,0 +1,40 @@
+Train rows 1643 from wells ['W1', 'W2', 'W3', 'W4'], blind well W5 rows 481
+Train mix: {'Shale': 0.45, 'Sandstone': 0.35, 'Limestone': 0.2}
+
+Best params {'svm__C': 0.3, 'svm__gamma': 1.0}  CV macro-F1 0.901
+param_svm__gamma   0.03   0.10   0.30   1.00
+param_svm__C                                
+0.3               0.885  0.899  0.899  0.901
+1.0               0.893  0.896  0.898  0.894
+10.0              0.898  0.898  0.889  0.885
+50.0              0.898  0.893  0.886  0.878
+
+Blind well W5 results:
+  Baseline (always majority)  acc 0.414  macro-F1 0.195
+  Calibrated SVM              acc 0.919  macro-F1 0.918
+  Calibrated log-loss 0.281
+           Limestone  Sandstone  Shale
+Limestone        130          4      1
+Sandstone          7        125     15
+Shale              0         12    187
+
+Permutation importance (drop in macro-F1):
+  neutron_porosity   0.192 ###################
+  density_g_cc       0.176 #################
+  gamma_ray_api      0.133 #############
+  resistivity_ohm_m  0.128 ############
+
+Threshold | auto-labelled | errors in auto | depths to review
+   0.5    |    481        |    39          |      0
+   0.7    |    467        |    32          |     14
+   0.8    |    452        |    26          |     29
+   0.9    |    298        |     5          |    183
+
+Depth log (blind well, around first miss):
+   5013.0 ft  true Shale     pred Shale     conf 0.93
+   5013.5 ft  true Shale     pred Shale     conf 0.93
+   5014.0 ft  true Shale     pred Sandstone conf 0.69  <-- miss
+   5014.5 ft  true Shale     pred Shale     conf 0.93
+
+Saved calibrated model -> lithology_svm.joblib
+Model-risk note: validate on blind wells per basin; document logs, tool vendors and depth ranges used; re-calibrate when a new field or logging suite is added.

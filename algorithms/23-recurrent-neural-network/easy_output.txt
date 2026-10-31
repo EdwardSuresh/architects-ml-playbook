@@ -1,0 +1,12 @@
+day | rate_bbl/d | hidden state h (3 numbers)      | raw output
+ 1  |    520.0   | [+0.212 -0.060 +0.274]          | -0.153
+ 2  |    505.0   | [+0.332 +0.022 +0.273]          | -0.216
+ 3  |    498.0   | [+0.401 +0.148 +0.282]          | -0.337
+ 4  |    470.0   | [+0.421 +0.248 +0.256]          | -0.407
+ 5  |    462.0   | [+0.424 +0.304 +0.242]          | -0.448
+
+Final hidden state summarises the whole 5-day history: [0.424 0.304 0.242]
+Day 2: predicted  503.9 bbl/d   actual  505.0
+Day 3: predicted  485.4 bbl/d   actual  498.0
+Day 4: predicted  497.3 bbl/d   actual  470.0
+Day 5: predicted  446.6 bbl/d   actual  462.0

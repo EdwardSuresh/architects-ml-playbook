@@ -1,0 +1,20 @@
+Rows: 5000  fraud cases: 106  fraud rate: 2.12%
+scale_pos_weight used: 46.3
+
+ROC-AUC: 0.861
+PR-AUC : 0.156  (random model = 0.021)
+
+Threshold | caught fraud | missed | false alarms | precision
+      0.5 |           18 |     14 |           84 |      0.18
+      0.7 |            6 |     26 |           34 |      0.15
+      0.9 |            3 |     29 |            8 |      0.27
+
+Top drivers:
+  card_present    ######### 0.19
+  hour            ####### 0.16
+  km_from_home    ####### 0.14
+  merchant_risk   ####### 0.14
+  txn_amount      ###### 0.13
+
+At threshold 0.5: fraud $ stopped = $2,427, fraud $ missed = $1,384
+Customers inconvenienced (declines/step-up) = 102 of 1500 swipes

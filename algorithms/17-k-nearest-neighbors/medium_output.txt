@@ -1,0 +1,32 @@
+   distance_mi  weight_lb  is_peak  is_winter  transit_days
+0       1080.0     2071.0        0          0           2.5
+1       2664.0     1588.0        0          0           7.2
+2       2063.0     1653.0        0          0           5.2
+3       1696.0      483.0        0          0           4.9
+4        479.0     2269.0        0          1           2.2 
+
+      distance_mi  weight_lb  is_peak  is_winter  transit_days
+mean       1424.7     1297.7      0.2        0.2           4.5
+min          50.0      163.0      0.0        0.0           1.0
+max        2799.0    11565.0      1.0        1.0           9.7 
+
+Baseline (predict mean) MAE: 1.50 days
+
+  k | MAE unscaled | MAE scaled
+  1 |    0.95      |   0.72
+  5 |    0.73      |   0.55
+ 15 |    0.69      |   0.52
+ 40 |    0.67      |   0.52
+
+Chosen k=15  MAE 0.52 days   R2 0.868
+
+New shipment 1400 mi, 2200 lb, December -> estimate 6.5 days
+Five closest past shipments:
+      distance_mi  weight_lb  is_peak  is_winter  transit_days
+626        1322.0     2341.0        1          1           5.5
+1932       1592.0     2199.0        1          1           6.8
+1482       1547.0     2042.0        1          1           5.2
+1757       1392.0     2475.0        1          1           6.5
+2488       1669.0     2466.0        1          1           7.6
+
+90% of test shipments predicted within +/- 1 day -> good enough to quote customer ETAs.

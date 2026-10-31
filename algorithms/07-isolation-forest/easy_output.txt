@@ -1,0 +1,15 @@
+Shape of data: (10, 3)
+txn 0 amount=  1200: avg cuts to isolate = 5.58
+txn 8 amount=  9800: avg cuts to isolate = 1.08
+
+  #  amount hour newCtry  score  flag
+  0    1200   10       0 -0.391
+  1     850   11       0 -0.430
+  2    1500   14       0 -0.489
+  3     990    9       0 -0.470
+  4    1100   15       0 -0.434
+  5    1300   13       0 -0.410
+  6     700   16       0 -0.535
+  7    1250   10       0 -0.394
+  8    9800    3       1 -0.800  ALERT
+  9    1050   12       0 -0.387

@@ -1,0 +1,31 @@
+Policies 5000, lapse rate 13.3%
+MLP early-stopped at epoch 27, best val loss 0.9537
+
+Model        ROC-AUC  PR-AUC  Brier
+Logistic     0.808    0.457   0.181
+MLP          0.814    0.401   0.192
+
+Permutation importance (ROC-AUC drop) for the MLP:
+  on_autopay             +0.1230 ########################
+  premium_increase_pct   +0.0894 #################
+  missed_payments_12m    +0.0579 ###########
+  policy_age_years       +0.0242 ####
+  cash_value_usd         +0.0130 ##
+  agent_contacts_12m     +0.0083 #
+  insured_age            +0.0008 
+  annual_premium_usd     +0.0000 
+
+Calibration of MLP (class weights inflate probabilities):
+      pred  actual
+bin               
+0    0.112   0.020
+1    0.211   0.045
+2    0.347   0.045
+3    0.578   0.160
+4    0.818   0.395
+Mean predicted after odds correction 0.149 vs actual 0.133; Brier 0.095
+
+Call top 150 policies: reach 67/133 lapses (50%); expected net value $24,150
+Saved model -> lapse_mlp.pt
+Governance: NAIC AI Model Bulletin - document data, test for unfair discrimination,
+keep the logistic baseline as a challenger, and monitor calibration quarterly.

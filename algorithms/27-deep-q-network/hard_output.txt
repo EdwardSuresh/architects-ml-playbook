@@ -1,0 +1,26 @@
+Best rule on training years: buy < $2.2, sell > $3.8 (avg $101.7k)
+Training Double DQN with target network...
+  episode  30  eps=0.65  train value=$ 133.6k  updates=1301
+  episode  60  eps=0.30  train value=$ 151.0k  updates=3101
+  episode  90  eps=0.05  train value=$ 171.2k  updates=4901
+  episode 120  eps=0.05  train value=$ 109.6k  updates=6701
+Training + tuning time: 11.8s
+
+Out-of-sample results over 200 price years ($k per year):
+policy            mean      p5     p95  loss yrs
+Do nothing         0.0     0.0     0.0      0.0%
+Rule (tuned)     114.9     0.0   182.8      3.5%
+DQN              132.7    44.4   190.5      0.0%
+DQN beats rule in 72% of years; mean uplift $17.8k
+
+Policy map (rows = fill level, cols = month index, price at seasonal average):
+fill   1  2  3  4  5  6  7  8  9 10 11 12
+ 0.0  W  W  H  I  I  I  I  I  I  H  W  W
+ 0.5  W  W  H  I  I  I  I  I  W  W  W  W
+ 1.0  W  I  W  H  H  H  H  W  W  W  I  I
+(I=Inject H=Hold W=Withdraw; month 1 = April)
+
+Saved Q-network weights to /tmp/tmpXXXXXX/gas_storage_dqn.pt
+MODEL-RISK NOTE: treat the agent as decision SUPPORT. Pipeline nominations, FERC/tariff limits,
+ratchets and credit limits must be hard constraints outside the model; re-validate when the
+forward curve regime changes (SR 11-7 style ongoing monitoring for trading models).

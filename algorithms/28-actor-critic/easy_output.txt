@@ -1,0 +1,12 @@
+Month 1: policy probs = ['0.50', '0.50'], critic V = 0.600
+   chose Risk-On (80% stocks), reward = +1.2%, TD error = +0.600
+   new theta = [ 0.15 -0.15], new V = 0.900
+Month 2: policy probs = ['0.57', '0.43'], critic V = 0.900
+   chose Risk-On (80% stocks), reward = +1.2%, TD error = +0.300
+   new theta = [ 0.214 -0.214], new V = 1.050
+Month 3: policy probs = ['0.61', '0.39'], critic V = 1.050
+   chose Risk-Off (20% stocks), reward = +0.4%, TD error = -0.650
+   new theta = [ 0.411 -0.411], new V = 0.725
+
+Final policy: {'Risk-On (80% stocks)': 0.694, 'Risk-Off (20% stocks)': 0.306}
+Positive surprise raised Risk-On; the below-average Risk-Off month lowered Risk-Off.

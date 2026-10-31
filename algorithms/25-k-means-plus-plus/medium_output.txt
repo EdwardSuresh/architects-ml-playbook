@@ -1,0 +1,40 @@
+        lat     lon  weekly_cases
+mean  34.64  -96.34         23.87
+min   28.66 -106.27          3.00
+max   40.85  -89.09        242.00
+
+Training inertia (millions of sq-miles) per seed:
+init  k-means++  random
+seed                   
+0          2.95    5.41
+1          2.95    5.38
+2          2.95   13.90
+3          3.99    4.52
+4          4.40    2.95
+5          2.95    3.91
+6          3.88    5.40
+7          2.95   15.25
+8          2.95   13.76
+9          2.95   15.33
+
+Summary over 10 seeds:
+           mean_inertia  worst    sd  avg_iters  holdout
+init                                                    
+k-means++          3.29   4.40  0.56        3.8     0.81
+random             8.58  15.33  5.22       11.3     2.20
+
+Share of runs >5% worse than best: random 90%, k-means++ 30%
+
+Recommended DC sites (k-means++, n_init=10):
+  lat     lon  customers  avg_miles
+32.78  -96.79        678      31.20
+29.78  -95.35        584      31.30
+39.74 -104.99        365      30.72
+39.11  -94.61        327      31.06
+35.46  -97.56        311      29.67
+35.15  -90.08        274      30.31
+36.17  -95.94        243      31.05
+34.75  -92.31        218      31.88
+
+Business read-out: average customer is 31 miles from its DC. Random init often
+puts two DCs in one metro and leaves another metro unserved - k-means++ makes that rare.

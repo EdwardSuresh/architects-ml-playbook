@@ -1,0 +1,40 @@
+Class mix: {'Credit Card': 0.41, 'Mortgage': 0.28, 'Fees': 0.2, 'Fraud': 0.11}
+Baseline (always Credit Card) macro-F1: 0.146
+
+MultinomialNB  best CV macro-F1 0.938 | test macro-F1 0.929 | Fraud recall 0.845
+               best params {'nb__alpha': 0.5, 'tfidf__min_df': 3, 'tfidf__ngram_range': (1, 2)}
+ComplementNB   best CV macro-F1 0.935 | test macro-F1 0.930 | Fraud recall 0.827
+               best params {'nb__alpha': 1.0, 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 2)}
+
+Chosen model: MultinomialNB
+              precision    recall  f1-score   support
+
+ Credit Card      0.945     0.966     0.955       411
+        Fees      0.963     0.901     0.931       202
+       Fraud      0.912     0.845     0.877       110
+    Mortgage      0.931     0.971     0.951       277
+
+    accuracy                          0.941      1000
+   macro avg      0.938     0.921     0.929      1000
+weighted avg      0.941     0.941     0.941      1000
+
+Confusion matrix (rows = true team, columns = routed team):
+             Credit Card  Fees  Fraud  Mortgage
+Credit Card          397     1      4         9
+Fees                  10   182      3         7
+Fraud                  9     4     93         4
+Mortgage               4     2      2       269
+
+Most distinctive words per team:
+  Credit Card  card, balance, payment, statement, statement balance, card statement
+  Fees         fee, fee charged, charged, statement fee, paper, paper statement
+  Fraud        account, hacked, account hacked, unauthorized, transaction, unauthorized transaction
+  Mortgage     escrow, loan, late loan, escrow account, pmi, pmi removed
+
+Threshold  auto-routed  accuracy-on-auto  sent-to-human
+   0.5        89.1%        94.9%          10.9%
+   0.6        88.4%        95.2%          11.6%
+   0.7        86.9%        95.2%          13.1%
+   0.8        83.6%        95.1%          16.4%
+
+... (output trimmed)

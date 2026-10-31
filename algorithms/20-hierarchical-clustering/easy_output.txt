@@ -1,0 +1,12 @@
+Correlation matrix:
+  BANK1   1.00   0.99  -0.29  -0.40  -0.36
+  BANK2   0.99   1.00  -0.20  -0.31  -0.42
+  TECH1  -0.29  -0.20   1.00   0.99  -0.43
+  TECH2  -0.40  -0.31   0.99   1.00  -0.34
+  UTIL1  -0.36  -0.42  -0.43  -0.34   1.00
+Step 1: merge ('TECH1',) + ('TECH2',) at distance 0.067
+Step 2: merge ('BANK1',) + ('BANK2',) at distance 0.077
+Step 3: merge ('TECH1', 'TECH2') + ('BANK1', 'BANK2') at distance 0.806
+Step 4: merge ('UTIL1',) + ('TECH1', 'TECH2', 'BANK1', 'BANK2') at distance 0.832
+
+Reading: the two tech names merge first, then the banks; the utility joins last -> best diversifier.

@@ -1,0 +1,10 @@
+iter 0: labels=[0, 1, 0, 1, 2, 2, 2, 2, 0, 0, 0, 0] inertia=2.867
+iter 1: labels=[1, 1, 0, 1, 2, 2, 2, 2, 0, 0, 0, 0] inertia=1.797
+iter 2: labels=[1, 1, 1, 1, 2, 2, 2, 2, 0, 0, 0, 0] inertia=0.970
+iter 3: labels=[1, 1, 1, 1, 2, 2, 2, 2, 0, 0, 0, 0] inertia=0.970
+Converged - centroids stopped moving.
+
+Segment profiles (original units):
+Segment 0: avg balance $  8.6k, 23.8 card txns/mo -> ['C08', 'C09', 'C10', 'C11']
+Segment 1: avg balance $  1.1k, 47.5 card txns/mo -> ['C00', 'C01', 'C02', 'C03']
+Segment 2: avg balance $ 26.2k,  7.2 card txns/mo -> ['C04', 'C05', 'C06', 'C07']

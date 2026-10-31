@@ -1,0 +1,39 @@
+Customers: 805, features: 20, mix: {'Retail': 400, 'Traveler': 200, 'Student': 140, 'AccountTakeover': 40, 'CardTesting': 25}
+PCA(10) keeps 62.8% of variance; first 3 PCs: [0.116 0.07  0.063]
+Method comparison (higher trust/purity = better local fidelity):
+method perplexity  trust@10  purity@10  secs
+PCA-2D          -     0.727      0.868 0.000
+ t-SNE          5     0.889      0.772 1.327
+ t-SNE         30     0.914      0.819 1.321
+ t-SNE         50     0.908      0.826 1.660
+Best t-SNE map (perplexity=50) R=Retail T=Traveler S=Student A=AcctTakeover C=CardTest
++----------------------------------------------------------------+
+|                                 R                              |
+|                        SR RRRR  R  R RRR  RR                   |
+|          T   R T  R  RRRRRRRT RRRRRRRRRRRSSRS   S  R           |
+|    TA TTT  TTR T RRRRRRRRRTRRRRRRRRRRRRRR RRSR  R RR           |
+|  TTT TT TT TTTTT  R RRRRRRRTRRRR RRRRRRRRRSSRRRSSSSRSSS        |
+| TTT TTTTTTTTTTRTTTRT RRRRRRRTSRRRSRRRR R SRSSSSSS S SS SSSS    |
+|TTTTTTT TTTTTTTT TTTRTRRR RR RRSRRRRRRRSRRRSSSSSS SSSSSSSSSSS S |
+|RR TTTTTTT TTTTTT TTTRRRTRR R  RRRRRR  R SS SSS SSSSS SSCSCCCCCC|
+|   T TT TTTT T AAT ATT TTRR RRRRR S  SS  A RS SSSRSS SS  CCCCC  |
+|        RT TTTRATR    A T AT  R   AR AAAAAAAAAA    C   S        |
+|                  AAA    A  R     AA AA A AS                    |
++----------------------------------------------------------------+
+PCA 2-D map for comparison:
++----------------------------------------------------------------+
+|                                                                |
+|                                   AAA  A                       |
+|      T T  TTTT T T AA  AAAA AAAAA   AA     C C C  CCCCCC C   C |
+| T TTTTTTTTTTTTTTTTTTTRTTATATAARASAASSSSSSSCSSSCSSSCSC C CC  C  |
+|TT T TTTTTT TTTTTTRRRTRRRRRRSRSRRSSSSSSSSSSSSSSSS  S            |
+|        T    R RRRRRRRRRRRRRRRRSRSRSSSSSS S          SS         |
++----------------------------------------------------------------+
+Per-segment 10-NN purity on best t-SNE map: {'AccountTakeover': 0.65, 'CardTesting': 0.87, 'Retail': 0.85, 'Student': 0.76, 'Traveler': 0.85}
+Fraud cards whose map neighbours are mostly other segments: 16 of 65
+Saved preprocessing pipeline + embedding to /tmp/tmpXXXXXX
+MODEL-RISK NOTE (SR 11-7 / investigator guidance):
+ - t-SNE is an EXPLORATION tool. Cluster sizes and gaps between islands are NOT meaningful distances.
+ - It has no transform() for new cards: never score live transactions with a t-SNE coordinate.
+ - Use islands to form hypotheses, then confirm with a validated, documented fraud model + case review.
+ - Record perplexity, seed and PCA settings so the picture shown to investigators is reproducible.

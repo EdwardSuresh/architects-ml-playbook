@@ -1,0 +1,9 @@
+Vocabulary size: 33
+Top words in Fraud: [('my', 2), ('fraud', 2), ('someone', 1)]
+
+New complaint: 'unauthorized charge on my credit card'
+  Credit Card  log-score  -20.77
+  Fraud        log-score  -21.87
+  Fees         log-score  -22.57
+  Mortgage     log-score  -23.40
+Route to: Credit Card team (probability 64%)

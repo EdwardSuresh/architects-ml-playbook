@@ -1,0 +1,33 @@
+Train 6766 loads (late 33.0%) | Test 2234 loads (late 33.2%)
+gbm   best {'clf__learning_rate': 0.05, 'clf__max_depth': 2} | tuned in 7.8s
+hist  best {'clf__learning_rate': 0.1, 'clf__max_leaf_nodes': 15} | tuned in 2.0s
+
+Model      ROC-AUC  log-loss
+baseline     0.500     0.635
+gbm          0.832     0.456
+hist         0.829     0.458
+
+Threshold | expedited | late loads caught | net savings $
+      0.2 |      1273 |              636 |      127,020
+      0.3 |       914 |              552 |      144,600
+      0.4 |       720 |              478 |      138,080
+      0.5 |       584 |              433 |      137,360
+      0.6 |       451 |              358 |      119,300
+      0.7 |       346 |              295 |      102,920
+      0.8 |       251 |              227 |       81,940
+Break-even risk = 0.32; best tested threshold 0.3
+
+Permutation importance (AUC drop):
+  promised_days          +0.1371
+  distance_mi            +0.1259
+  weather_severity       +0.0624
+  carrier_late_rate_30d  +0.0126
+  dock_wait_hrs          +0.0033
+  lane_volume_7d         +0.0022
+
+Month | actual late | predicted
+   10 |       27.5% |     31.5%
+   11 |       31.4% |     31.5%
+   12 |       40.3% |     40.7%
+Governance: carrier-scorecard use must be explainable to carriers; retrain monthly, alert if calibration gap > 5 pts.
+Saved ontime_hgb.joblib

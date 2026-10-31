@@ -1,0 +1,25 @@
+Customers: 2500  features: ['age', 'avg_balance_k', 'card_txns_month', 'digital_login_share', 'loan_balance_ratio', 'num_products']
+
+ k   inertia  silhouette
+ 2      8657     0.396  ***************
+ 3      5054     0.475  *******************
+ 4      3591     0.481  *******************
+ 5      2980     0.450  ******************
+ 6      2644     0.417  ****************
+ 7      2457     0.407  ****************
+
+Best k by silhouette: 4
+
+Segment profiles:
+           age  avg_balance_k  card_txns_month  digital_login_share  loan_balance_ratio  num_products  customers
+segment
+0        42.00          12.15            30.24                 0.60                0.69          3.67        676
+1        62.82          55.74            10.00                 0.30                0.13          2.69        498
+2        27.33           2.70            44.95                 0.88                0.13          1.60        909
+3        48.22           1.30            12.41                 0.26                0.98          1.46        417
+
+Suggested offers:
+  Segment 0 (676 cust, age 42): Mortgage refinance + 529 college saver
+  Segment 1 (498 cust, age 63): Wealth advisory / CDs
+  Segment 2 (909 cust, age 27): Cash-back card + mobile-first savings
+  Segment 3 (417 cust, age 48): Debt consolidation + budgeting tools
