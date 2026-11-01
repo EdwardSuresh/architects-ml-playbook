@@ -87,7 +87,7 @@ scripts/run_all.py    runs every lab and reports pass/fail and timing
 **Rajaretnam Suresh Edward David** — TOGAF-certified Enterprise Architect with 25+ years across financial services (banking, capital markets, insurance and energy), focused on AI architecture and governance for regulated industries. [LinkedIn](https://www.linkedin.com/in/sureshedward)
 
 ## 🙏 Credits
-The algorithm list was inspired by Rushika Rai's *30 AI Algorithms* infographic. The ranking, use cases, labs and diagrams are original to this repository.
+The algorithm list was inspired by the *30 AI Algorithms* infographic shared by Rushika Rai on LinkedIn. The ranking, use cases, labs and diagrams are original to this repository.
 
 ## ⚖️ License and disclaimer
 Code is released under the [MIT License](LICENSE). Educational material only: the data is synthetic, results are illustrative, and nothing here is financial, actuarial, engineering or investment advice. Production use in regulated industries requires your organisation's model-risk, fairness and safety review.
