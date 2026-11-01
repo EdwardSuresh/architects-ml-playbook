@@ -1,4 +1,4 @@
-# Hard: Hierarchical Risk Parity (HRP) - correlation clustering, linkage comparison, out-of-sample risk
+# Production: Hierarchical Risk Parity (HRP) - correlation clustering, linkage comparison, out-of-sample risk
 import os
 import tempfile
 import joblib
@@ -152,6 +152,6 @@ print("Model-risk note (SR 11-7): document distance, linkage and lookback choice
       " regimes; check weight stability before every rebalance.")
 
 # ---
-# Hierarchical Clustering — HARD lab · Financial Services: Portfolio diversification with correlation clustering and HRP
+# Hierarchical Clustering — PRODUCTION lab · Financial Services: Portfolio diversification with correlation clustering and HRP
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -1,4 +1,4 @@
-# Medium: RBF SVM classifying Sandstone / Shale / Limestone from four well logs
+# Build: RBF SVM classifying Sandstone / Shale / Limestone from four well logs
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -72,6 +72,6 @@ print(f"\nShale called Sandstone: {shale_as_sand} samples."
       " These are the costly errors - a petrophysicist might flag a non-reservoir zone as pay.")
 
 # ---
-# Support Vector Machine (SVM) — MEDIUM lab · Oil & Gas: Lithology classification from well logs
+# Support Vector Machine (SVM) — BUILD lab · Oil & Gas: Lithology classification from well logs
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

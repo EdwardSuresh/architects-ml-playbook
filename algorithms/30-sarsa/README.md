@@ -8,7 +8,7 @@
 
 💡 **Analogy:** A new forklift driver learns routes while sometimes taking a wrong turn. A careful driver (SARSA) remembers that 'I sometimes slip up, so I avoid the edge of the loading dock'. A bold driver (Q-learning) plans as if they never make mistakes and hugs the edge for the shortest route.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Supply Chain — Warehouse robot learning a safe route past a forklift lane**
 
 An e-commerce fulfilment centre runs mobile robots from a receiving dock to a packing station, and the shortest path runs right beside a forklift lane. Robots still explore and occasionally make random moves, and any step into the lane risks a collision, equipment damage and an OSHA-reportable incident. Data available: a grid map of aisles, racks and the forklift lane, move costs, and incident logs. Success means a learned route that keeps collisions near zero while robots keep exploring, with only a few extra moves per trip compared with the shortest path.
@@ -43,7 +43,7 @@ An e-commerce fulfilment centre runs mobile robots from a receiving dock to a pa
 | Expected SARSA | A variant that averages over all next actions weighted by the policy's probabilities. |
 | learning rate (alpha) | How far each update moves Q toward the target; 0.5 means halfway. |
 
-## 🟢 Easy — One SARSA update by hand next to the forklift lane
+## 🟢 Concept — One SARSA update by hand next to the forklift lane
 Perform a single SARSA update on a tiny Q-table and compare it with the Q-learning update for the same experience.
 
 | 5W + H | |
@@ -120,7 +120,7 @@ it rates risky moves lower than Q-learning does - that is why it learns safer ro
 
 **Try this next:** Change a_next to 'east' (no exploration this time) and compare both targets. · Set alpha to 0.1: how far does Q(B2, east) move now? · Add ('aisle_B3', 'west') with value -5 and check whether the Q-learning target changes.
 
-## 🟡 Medium — Tabular SARSA on a 4x12 warehouse grid
+## 🟡 Build — Tabular SARSA on a 4x12 warehouse grid
 Train tabular SARSA on a cliff-walking style warehouse grid and print the safe route the robot learns.
 
 | 5W + H | |
@@ -197,7 +197,7 @@ moves because the robot's own random exploration could otherwise drift into traf
 
 **Try this next:** Set eps to 0.01: does SARSA still choose the top-row route? · Change the collision penalty to -10 and see whether the route moves closer to the lane. · Replace Q[s2][a2] with Q[s2].max() (Q-learning) and compare the route.
 
-## 🔴 Hard — SARSA vs Q-learning vs Expected SARSA under exploration
+## 🔴 Production — SARSA vs Q-learning vs Expected SARSA under exploration
 Compare SARSA, Q-learning and Expected SARSA on a richer warehouse with racks, sweep the exploration rate, draw both routes and convert collisions into daily cost.
 
 | 5W + H | |

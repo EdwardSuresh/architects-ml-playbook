@@ -1,4 +1,4 @@
-# EASY: a hand-built "forest" of 3 tiny trees votes on whether an auto claim goes to SIU
+# CONCEPT: a hand-built "forest" of 3 tiny trees votes on whether an auto claim goes to SIU
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 
@@ -45,6 +45,6 @@ for n, imp in sorted(zip(names, rf100.feature_importances_), key=lambda t: t[1],
     print(f"  {n:<22} {'*' * int(imp * 30)} {imp:.2f}")
 
 # ---
-# Random Forest — EASY lab · Insurance: Auto insurance claims fraud detection (SIU referral)
+# Random Forest — CONCEPT lab · Insurance: Auto insurance claims fraud detection (SIU referral)
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

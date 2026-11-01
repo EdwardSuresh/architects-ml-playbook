@@ -8,7 +8,7 @@
 
 💡 **Analogy:** A seasoned compressor technician can glance at the gauges and say 'with this load, I expect these readings'. When the gauges disagree with what they would expect, they know something is off - the autoencoder learns that same 'expected picture' from healthy history.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Oil & Gas — Gas compressor sensor anomaly detection for predictive maintenance**
 
 Gas compression stations keep pipelines flowing, and an unplanned compressor trip can cut throughput and cost a great deal per day in lost deliveries and emergency repairs. Each unit streams vibration, temperature, pressure, flow and motor current readings, but real failures are rare and seldom well labelled. Simple fixed limits on each sensor miss faults where every reading is in range but the readings no longer agree with each other. Success means catching developing faults hours before a trip, with few false alarms, and pointing technicians to the likely sensor or component.
@@ -43,7 +43,7 @@ Gas compression stations keep pipelines flowing, and an unplanned compressor tri
 | Percentile threshold | An alarm level set so that, for example, only 1% of healthy data would exceed it. |
 | Alarm persistence | Requiring several flagged readings in a row before alarming, to cut one-off false alarms. |
 
-## 🟢 Easy — Compress 4 sensors to 1 number and rebuild
+## 🟢 Concept — Compress 4 sensors to 1 number and rebuild
 Use a hand-made linear encoder and decoder in numpy to see how reconstruction error exposes a bearing fault.
 
 | 5W + H | |
@@ -112,7 +112,7 @@ bearing wear  code=0.597 rebuilt=[0.6 0.6 0.6 0.6] error=0.03052 -> ANOMALY
 
 **Try this next:** Change the bearing-wear vibration from 0.90 to 0.60 - is it still caught? · Make every sensor 0.95 at once (high but consistent load) and confirm it is NOT flagged. · Change the threshold multiplier from 3 to 1.5 and see if the normal reading starts alarming.
 
-## 🟡 Medium — PyTorch autoencoder flags valve leaks
+## 🟡 Build — PyTorch autoencoder flags valve leaks
 Train a small PyTorch autoencoder on healthy compressor data and detect valve-leak readings by reconstruction error.
 
 | 5W + H | |
@@ -192,7 +192,7 @@ the way they do on a healthy compressor - send a technician before the valve fai
 
 **Try this next:** Change the bottleneck from 2 to 6 neurons and see detection fall as the net learns to copy faults too. · Use the 95th percentile as threshold and compare false alarms and detection. · Make the leak milder (flow drop 2-4) and see how detection changes.
 
-## 🔴 Hard — Windowed autoencoder with alarm tuning and sensor blame
+## 🔴 Production — Windowed autoencoder with alarm tuning and sensor blame
 Detect injected compressor faults from 40-minute sensor windows, pick a threshold from validation percentiles, measure precision/recall and attribute alarms to sensors.
 
 | 5W + H | |

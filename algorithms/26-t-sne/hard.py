@@ -1,4 +1,4 @@
-# t-SNE for fraud investigators: PCA pre-reduction, perplexity sweep, trust checks, PCA comparison (Hard)
+# t-SNE for fraud investigators: PCA pre-reduction, perplexity sweep, trust checks, PCA comparison (Production)
 import time
 import tempfile
 import warnings
@@ -130,6 +130,6 @@ if __name__ == "__main__":
     main()
 
 # ---
-# t-SNE — HARD lab · Financial Services: Visualising card-transaction behaviour to reveal fraud clusters
+# t-SNE — PRODUCTION lab · Financial Services: Visualising card-transaction behaviour to reveal fraud clusters
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -1,4 +1,4 @@
-# t-SNE by hand: how similar are 6 card customers? (Easy)
+# t-SNE by hand: how similar are 6 card customers? (Concept)
 import numpy as np
 
 np.set_printoptions(precision=3, suppress=True)
@@ -55,6 +55,6 @@ for name, row in zip(labels, P):
     print(f"{name}: strongest neighbour = {best}  (p={row.max():.3f})")
 
 # ---
-# t-SNE — EASY lab · Financial Services: Visualising card-transaction behaviour to reveal fraud clusters
+# t-SNE — CONCEPT lab · Financial Services: Visualising card-transaction behaviour to reveal fraud clusters
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -1,4 +1,4 @@
-# One actor-critic update by hand: should this month's portfolio be "Risk-On" or "Risk-Off"? (Easy)
+# One actor-critic update by hand: should this month's portfolio be "Risk-On" or "Risk-Off"? (Concept)
 import numpy as np
 
 # 🐍 PY: a dict maps each action name to the monthly return we happened to observe after choosing it
@@ -40,6 +40,6 @@ print("\nFinal policy:", {name: round(float(p), 3) for name, p in zip(ACTIONS, s
 print("Positive surprise raised Risk-On; the below-average Risk-Off month lowered Risk-Off.")
 
 # ---
-# Actor-Critic — EASY lab · Financial Services: Monthly Stocks / Bonds / Cash allocation
+# Actor-Critic — CONCEPT lab · Financial Services: Monthly Stocks / Bonds / Cash allocation
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

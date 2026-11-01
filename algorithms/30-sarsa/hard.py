@@ -1,4 +1,4 @@
-# SARSA vs Q-learning (and Expected SARSA) for a warehouse robot near a forklift lane (Hard)
+# SARSA vs Q-learning (and Expected SARSA) for a warehouse robot near a forklift lane (Production)
 import os
 import tempfile
 import numpy as np
@@ -152,6 +152,6 @@ if __name__ == "__main__":
     main()
 
 # ---
-# SARSA — HARD lab · Supply Chain: Warehouse robot learning a safe route past a forklift lane
+# SARSA — PRODUCTION lab · Supply Chain: Warehouse robot learning a safe route past a forklift lane
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -15,4 +15,4 @@ How often each model portfolio was chosen:
   stocks 30% / bonds 50% / cash 20%: 0%
   stocks 0% / bonds 30% / cash 70%: 21%
 Business read: the agent mostly holds the growth mix and switches to the defensive mix in some months.
-It earned more than 60/40 here but with more volatility - the Hard level adds risk and cost penalties.
+It earned more than 60/40 here but with more volatility - the Production level adds risk and cost penalties.

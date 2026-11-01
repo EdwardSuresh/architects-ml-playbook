@@ -154,6 +154,6 @@ if __name__ == "__main__":
     print("retrain after overhauls and log every alarm outcome for threshold review.")
 
 # ---
-# Autoencoders — HARD lab · Oil & Gas: Gas compressor sensor anomaly detection for predictive maintenance
+# Autoencoders — PRODUCTION lab · Oil & Gas: Gas compressor sensor anomaly detection for predictive maintenance
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

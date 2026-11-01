@@ -53,6 +53,6 @@ print(f"  random    : mean inertia {rand_scores.mean():7.1f}, bad starts (>100) 
 print(f"  k-means++ : mean inertia {pp_scores.mean():7.1f}, bad starts (>100) {(pp_scores > 100).mean():.0%}")
 
 # ---
-# k-Means++ — EASY lab · Supply Chain: Choosing distribution center locations
+# k-Means++ — CONCEPT lab · Supply Chain: Choosing distribution center locations
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

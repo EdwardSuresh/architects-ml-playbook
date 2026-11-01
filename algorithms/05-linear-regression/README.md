@@ -8,7 +8,7 @@
 
 💡 **Analogy:** A taxi fare is a base charge plus a rate per mile plus a rate per minute. Linear regression looks at many past trips and works out the base charge and the rates that best explain the fares you actually paid.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Insurance — Auto insurance expected claim cost and premium pricing**
 
 An auto insurer must quote a price for every driver before knowing whether they will crash. Charge too little and the book loses money; charge too much and good drivers leave for competitors. Rating data includes driver age, miles driven, vehicle value, prior claims, territory and (where allowed) credit-based insurance score, plus a year of claims history. Success means a pure-premium model whose predictions balance to actual losses, rank risk well, stay positive and can be explained factor-by-factor in a rate filing.
@@ -43,7 +43,7 @@ An auto insurer must quote a price for every driver before knowing whether they 
 | Tweedie | A distribution that combines a point mass at zero with a continuous positive tail - ideal for insurance losses. |
 | relativity | A multiplicative rating factor, e.g. urban territory = 1.7x the base rate. |
 
-## 🟢 Easy — Fit a pricing line through 10 drivers
+## 🟢 Concept — Fit a pricing line through 10 drivers
 Solve least squares with numpy to predict yearly claim cost from driver age and miles driven, then price a new policy.
 
 | 5W + H | |
@@ -123,7 +123,7 @@ New 28-year-old driving 16k miles: expected claims $1353, premium $1691
 
 **Try this next:** Add an age-squared column (age ** 2) to X and see whether the errors at both ends shrink. · Remove miles from the model and compare R-squared. · Price a 70-year-old driver - is a negative age slope sensible that far out?
 
-## 🟡 Medium — Pure premium model on 4,000 policies
+## 🟡 Build — Pure premium model on 4,000 policies
 Fit a scikit-learn linear regression with one-hot rating factors, read dollar coefficients and spot where a straight line misprices.
 
 | 5W + H | |
@@ -207,7 +207,7 @@ Quote age 45, rural: pure premium $910 -> charged $1,183
 
 **Try this next:** Add a 'young' column = max(0, 30 - age) to the features and watch the age-band gaps close. · Remove credit_tier and see how the other coefficients change (omitted-variable effect). · Try sklearn's Ridge(alpha=10) and compare coefficients and MAE.
 
-## 🔴 Hard — Rate plan: OLS vs splines vs Tweedie GLM
+## 🔴 Production — Rate plan: OLS vs splines vs Tweedie GLM
 Compare plain OLS, Ridge with age splines and a tuned Tweedie GLM on an exposure-weighted policy book, then produce relativities, an age curve and lift.
 
 | 5W + H | |

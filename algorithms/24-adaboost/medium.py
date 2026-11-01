@@ -68,6 +68,6 @@ print("\nBusiness read-out: lowering the threshold from 0.5 to 0.45 roughly doub
       "\neach false alarm costs a short pause to circulate/ream, far cheaper than a fishing job.")
 
 # ---
-# AdaBoost — MEDIUM lab · Oil & Gas: Drilling stuck-pipe early warning
+# AdaBoost — BUILD lab · Oil & Gas: Drilling stuck-pipe early warning
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

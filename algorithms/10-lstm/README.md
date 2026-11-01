@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Think of a distribution-center planner with a whiteboard. Each week they read the new numbers, erase notes that no longer matter (forget gate), write down anything important like an upcoming promotion (input gate), and tell the buyer only the part needed for next week's order (output gate). The whiteboard is the LSTM's cell memory.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Supply Chain — Weekly SKU demand forecasting for a distribution center**
 
 A distribution center restocks thousands of SKUs every week and buyers order from forecasts built on spreadsheets and 'same week last year'. Holiday peaks and promotions are badly predicted, so the DC runs out during promotions and carries too much stock afterwards. The company has several years of weekly shipments per SKU, the promotion calendar and price history. Success means a lower forecast error than the seasonal-naive method, especially in promotion weeks, a 4-week forecast that feeds purchase orders and smaller safety stock for the same service level.
@@ -44,7 +44,7 @@ A distribution center restocks thousands of SKUs every week and buyers order fro
 | Seasonal-naive baseline | Forecast that this week will equal the same week last year; a model must beat it. |
 | Safety stock | Extra inventory held to cover forecast error during supplier lead time. |
 
-## 🟢 Easy — Step one LSTM cell through 5 weeks of demand
+## 🟢 Concept — Step one LSTM cell through 5 weeks of demand
 Compute the forget, input, candidate and output gates and the cell and hidden states by hand in numpy for five weeks of SKU demand.
 
 | 5W + H | |
@@ -116,7 +116,7 @@ Untrained forecast for week 6: 506 cases (training would tune W, U, b)
 
 **Try this next:** Set b['forget'] to -3 and see how quickly the cell state forgets. · Increase hidden to 4 and inspect the larger gate vectors. · Add a promotion spike (0.95) in week 4 and watch c react.
 
-## 🟡 Medium — Train a PyTorch LSTM on 4 years of weekly SKU demand
+## 🟡 Build — Train a PyTorch LSTM on 4 years of weekly SKU demand
 Train a one-layer PyTorch LSTM on sliding 12-week windows of a seasonal series and beat a naive last-week forecast on the final year.
 
 | 5W + H | |
@@ -198,7 +198,7 @@ Planner view: average absolute error = 95 cases/week
 
 **Try this next:** Change WINDOW from 12 to 52 so the model sees a full year, and compare MAPE. · Add a seasonal-naive baseline (same week last year) and see whether the LSTM still wins. · Double the noise level and watch both MAPEs rise.
 
-## 🔴 Hard — Multivariate 4-week forecast with promos, baseline, MAPE and safety stock
+## 🔴 Production — Multivariate 4-week forecast with promos, baseline, MAPE and safety stock
 Build a multivariate, multi-step LSTM forecaster with promotions and price, tune it on a validation window, beat seasonal-naive on MAPE and translate the error into safety stock.
 
 | 5W + H | |

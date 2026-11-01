@@ -43,6 +43,6 @@ new_customer = np.array([1, 1.0])  # 1 missed payment, 10% premium increase
 print(f"\nNew customer lapse probability: {sigmoid(new_customer @ w + b):.2f}")
 
 # ---
-# Artificial Neural Network (ANN / MLP) — EASY lab · Insurance: Life insurance policy lapse prediction for retention outreach
+# Artificial Neural Network (ANN / MLP) — CONCEPT lab · Insurance: Life insurance policy lapse prediction for retention outreach
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

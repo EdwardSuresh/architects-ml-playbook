@@ -1,4 +1,4 @@
-# MEDIUM: Random Forest on 4,000 synthetic auto claims to prioritise SIU referrals
+# BUILD: Random Forest on 4,000 synthetic auto claims to prioritise SIU referrals
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -66,6 +66,6 @@ saved = df.loc[X_te.index[order[:k]]].query("siu_confirmed_fraud == 1").claim_am
 print(f"\nInvestigating top 10% ({k} claims) targets ${saved:,.0f} of fraudulent payouts")
 
 # ---
-# Random Forest — MEDIUM lab · Insurance: Auto insurance claims fraud detection (SIU referral)
+# Random Forest — BUILD lab · Insurance: Auto insurance claims fraud detection (SIU referral)
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -1,4 +1,4 @@
-# Medium: cluster 20 stocks by return correlation with scipy linkage and cut into sector groups
+# Build: cluster 20 stocks by return correlation with scipy linkage and cut into sector groups
 import numpy as np
 import pandas as pd
 from scipy.cluster.hierarchy import linkage, fcluster, dendrogram
@@ -70,6 +70,6 @@ print(f"Avg correlation across clusters : {corr.values[~same].mean():.2f}")
 print("Holding 5 stocks from ONE cluster is close to holding one stock - spread picks across clusters.")
 
 # ---
-# Hierarchical Clustering — MEDIUM lab · Financial Services: Portfolio diversification with correlation clustering and HRP
+# Hierarchical Clustering — BUILD lab · Financial Services: Portfolio diversification with correlation clustering and HRP
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Imagine a bank teller sorting a stack of deposit slips by asking random questions like 'over $5,000?' or 'after 10 pm?'. An ordinary slip keeps landing in a crowd and needs many questions to stand alone, but a $9,800 cash deposit at 3 am from a new country is alone after one or two questions. The fewer questions needed, the more suspicious the slip.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Financial Services — AML suspicious transaction detection for the analyst alert queue**
 
 A retail bank must monitor every transaction for money laundering and file Suspicious Activity Reports (SARs) when analysts confirm suspicion. Its legacy rule engine ('cash over $8,000') misses new patterns and produces many false alerts, so analysts waste hours while real laundering slips through. The bank has transaction amount, cash or wire type, cross-border flag, time of day, account age and each customer's history, but very few confirmed SAR labels. Success means a ranked daily alert queue where the top alerts are mostly truly suspicious, within the team's review capacity, with a reason for every alert.
@@ -43,7 +43,7 @@ A retail bank must monitor every transaction for money laundering and file Suspi
 | Alert queue | The ranked list of flagged transactions that AML analysts review each day. |
 | SAR | Suspicious Activity Report: the filing a US bank makes to FinCEN when an analyst confirms suspicion. |
 
-## 🟢 Easy — Spot 1 weird wire among 10
+## 🟢 Concept — Spot 1 weird wire among 10
 See the isolation idea with random cuts by hand, then let IsolationForest flag the odd transaction among ten.
 
 | 5W + H | |
@@ -115,7 +115,7 @@ txn 8 amount=  9800: avg cuts to isolate = 1.08
 
 **Try this next:** Change transaction 8 to 1,400 dollars at hour 14 with newCtry 0 and see if anything is still flagged. · Set contamination=0.2 and notice a second, borderline wire becomes an alert. · Add a second suspicious wire and check whether two anomalies 'hide' each other.
 
-## 🟡 Medium — Score 5,000 transactions into an analyst queue
+## 🟡 Build — Score 5,000 transactions into an analyst queue
 Fit IsolationForest on realistic synthetic transactions and judge it the way an AML team does: by precision in the top of the queue.
 
 | 5W + H | |
@@ -198,7 +198,7 @@ alert
 
 **Try this next:** Drop log_amount and use raw txn_amount; compare ROC-AUC. · Change contamination to 0.01 and 0.05 and watch precision and recall trade off. · Remove acct_age_days from feats and see which top alerts change.
 
-## 🔴 Hard — Customer-aware AML scoring with tuning, baseline and reason codes
+## 🔴 Production — Customer-aware AML scoring with tuning, baseline and reason codes
 Build behaviour-based AML features, tune IsolationForest on PR-AUC with a time-ordered split, beat a legacy rule on cost and explain each alert.
 
 | 5W + H | |

@@ -1,4 +1,4 @@
-# A tiny neural Q-function for gas storage: Inject / Hold / Withdraw (Easy, plain numpy)
+# A tiny neural Q-function for gas storage: Inject / Hold / Withdraw (Concept, plain numpy)
 import numpy as np
 
 np.random.seed(42)
@@ -54,6 +54,6 @@ for label, s in [("Summer, cheap, nearly empty", [0.2, 0.1]), ("Winter, pricey, 
     print(f"{label:30s} Q={np.round(q, 2)} -> {ACTIONS[int(q.argmax())]}")
 
 # ---
-# Deep Q-Network (DQN) — EASY lab · Oil & Gas: Natural gas storage: daily Inject / Hold / Withdraw decisions
+# Deep Q-Network (DQN) — CONCEPT lab · Oil & Gas: Natural gas storage: daily Inject / Hold / Withdraw decisions
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

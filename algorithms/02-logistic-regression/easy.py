@@ -1,4 +1,4 @@
-# EASY: logistic regression from scratch - probability a loan applicant defaults
+# CONCEPT: logistic regression from scratch - probability a loan applicant defaults
 import numpy as np
 
 # 🐍 PY: each tuple is one past borrower: (debt_to_income %, missed_payments_last_2y, defaulted 0/1)
@@ -44,6 +44,6 @@ for (dti, missed), pd_ in zip(new, probs):
     print(f"DTI {dti:.0f}%, missed {missed:.0f} -> probability of default {pd_:.1%} -> {verdict}")
 
 # ---
-# Logistic Regression — EASY lab · Financial Services: Consumer loan default prediction and credit scorecard
+# Logistic Regression — CONCEPT lab · Financial Services: Consumer loan default prediction and credit scorecard
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

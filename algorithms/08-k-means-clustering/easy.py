@@ -44,6 +44,6 @@ for j in range(k):
           f"{members[:, 1].mean():4.1f} card txns/mo -> {who}")
 
 # ---
-# k-Means Clustering — EASY lab · Financial Services: Retail banking customer segmentation for personalized products
+# k-Means Clustering — CONCEPT lab · Financial Services: Retail banking customer segmentation for personalized products
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

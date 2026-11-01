@@ -1,4 +1,4 @@
-# HARD: production on-time-delivery risk model - time-ordered CV, GBM vs HistGBM, cost-based threshold
+# PRODUCTION: production on-time-delivery risk model - time-ordered CV, GBM vs HistGBM, cost-based threshold
 import os
 os.environ.setdefault("OMP_NUM_THREADS", "2")  # keep HistGradientBoosting's threads polite on small boxes
 import tempfile
@@ -134,6 +134,6 @@ if __name__ == "__main__":
     main()
 
 # ---
-# Gradient Boosting — HARD lab · Supply Chain: Predict late shipments (on-time delivery risk)
+# Gradient Boosting — PRODUCTION lab · Supply Chain: Predict late shipments (on-time delivery risk)
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -1,4 +1,4 @@
-# Hard: pump maintenance MDP with price regimes - policy vs value iteration, discount sensitivity,
+# Production: pump maintenance MDP with price regimes - policy vs value iteration, discount sensitivity,
 # and Monte Carlo comparison against run-to-failure and fixed-schedule baselines
 import os
 import time
@@ -147,6 +147,6 @@ print("Safety note: a cost-optimal policy must never override API/OSHA/PHMSA saf
       " Critical units on sour or high-pressure service need mandatory shutdown rules on top.")
 
 # ---
-# Markov Decision Process (MDP) — HARD lab · Oil & Gas: Pump maintenance policy optimisation
+# Markov Decision Process (MDP) — PRODUCTION lab · Oil & Gas: Pump maintenance policy optimisation
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

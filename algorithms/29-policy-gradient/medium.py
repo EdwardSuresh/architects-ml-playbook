@@ -1,4 +1,4 @@
-# REINFORCE with a feature-conditioned softmax policy: personalised renewal discounts (Medium)
+# REINFORCE with a feature-conditioned softmax policy: personalised renewal discounts (Build)
 import numpy as np
 import pandas as pd
 import torch
@@ -80,6 +80,6 @@ print("\nAverage discount offered by tenure band:")
 print(test.groupby("tenure_band", observed=True)["offer"].mean().map("{:.1%}".format).to_string())
 
 # ---
-# Policy Gradient (REINFORCE) — MEDIUM lab · Insurance: Renewal retention offers: which discount for which policyholder
+# Policy Gradient (REINFORCE) — BUILD lab · Insurance: Renewal retention offers: which discount for which policyholder
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

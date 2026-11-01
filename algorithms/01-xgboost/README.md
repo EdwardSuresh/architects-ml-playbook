@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Think of a cricket team reviewing match footage: the first coach fixes the biggest batting flaw, the next coach looks only at what is still going wrong, and so on. After many small corrections the team is far better than any single coach could make it.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Financial Services — Real-time credit card fraud detection**
 
 Every time a card is swiped or used online, the issuing bank has a few milliseconds to approve or decline. Only about 1-2% of authorizations are fraud, but each one costs the bank the full amount plus chargeback fees, while declining a good customer costs goodwill and call-centre time. The bank has rich history: amount, merchant category, channel, distance from home, velocity of recent transactions and account age. Success means catching more fraud dollars at the same or lower false-decline rate than today's rules.
@@ -42,7 +42,7 @@ Every time a card is swiped or used online, the issuing bank has a few milliseco
 | early stopping | Stop adding trees when validation performance stops improving. |
 | SHAP | A method that splits each prediction into per-feature contributions, used for reason codes. |
 
-## 🟢 Easy — Score 2 new card swipes with 20 tiny trees
+## 🟢 Concept — Score 2 new card swipes with 20 tiny trees
 Train XGBoost on 18 hand-typed card authorizations and watch the fraud probability sharpen as trees are added.
 
 | 5W + H | |
@@ -120,7 +120,7 @@ Decisions: ['APPROVE', 'DECLINE/REVIEW']
 
 **Try this next:** Change learning_rate to 1.0 and see how fast the probabilities jump - then try 0.05. · Add a 6th fraud swipe that is small and local (e.g. [9.0, 2, 14, 0]) and see how the model reacts. · Set max_depth=1 so every tree is a single question and compare the final probabilities.
 
-## 🟡 Medium — Score 5,000 authorizations with 2% fraud
+## 🟡 Build — Score 5,000 authorizations with 2% fraud
 Train XGBoost on a realistic imbalanced card dataset and judge it with PR-AUC, thresholds and dollars stopped.
 
 | 5W + H | |
@@ -205,7 +205,7 @@ Customers inconvenienced (declines/step-up) = 102 of 1500 swipes
 
 **Try this next:** Remove scale_pos_weight and compare how many frauds are caught at 0.5. · Add a feature 'is_night' = hour < 5 explicitly and see if PR-AUC changes. · Try thresholds 0.2 and 0.3 - how many extra false alarms per extra fraud caught?
 
-## 🔴 Hard — Real-time fraud scorer with cost-based cut-off
+## 🔴 Production — Real-time fraud scorer with cost-based cut-off
 Build a time-aware, tuned XGBoost pipeline that beats a logistic baseline, picks a threshold on dollars, and is saved for deployment.
 
 | 5W + H | |

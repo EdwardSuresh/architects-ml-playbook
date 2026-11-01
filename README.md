@@ -13,7 +13,7 @@
 Most ML tutorials teach algorithms in textbook order with toy data. This repository does three things differently:
 
 1. **Ranked by real-world use** in Financial Services, Insurance, Supply Chain and Oil & Gas — so you learn what is used most, first.
-2. **One business use case per algorithm, three depths.** Easy (intuition, by hand) → Medium (realistic data, standard library) → Hard (production: tuning, explainability, governance). Only the depth changes, never the context.
+2. **One business use case per algorithm, three depths.** Concept (intuition, by hand) → Build (realistic data, standard library) → Production (tuning, explainability, governance). Only the depth changes, never the context.
 3. **Code that teaches two things at once.** Every script is annotated with `# 🐍 PY:` comments (Python language lessons) and `# 🧠 ML:` comments (machine-learning lessons).
 
 Each lab also has **5 W's and an H**, an **architecture diagram**, the **real output**, and each algorithm has an **end-to-end production sequence diagram**, pitfalls and interview questions.

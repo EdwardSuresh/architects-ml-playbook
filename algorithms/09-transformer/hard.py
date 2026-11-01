@@ -177,6 +177,6 @@ torch.save({"state": model.state_dict(), "vocab": tok.itos, "queues": QUEUES}, p
 print("Saved ->", os.path.basename(path))
 
 # ---
-# Transformer — HARD lab · Insurance: Claim notes / first notice of loss text triage
+# Transformer — PRODUCTION lab · Insurance: Claim notes / first notice of loss text triage
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

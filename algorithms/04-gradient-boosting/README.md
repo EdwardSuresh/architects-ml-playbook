@@ -8,7 +8,7 @@
 
 💡 **Analogy:** A dispatcher estimates delivery times. First guess: the average. Then she notices storms add delay and adjusts; then she notices long lanes add more and adjusts again. Each small correction targets what the previous estimate still got wrong - that is boosting.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Supply Chain — Predict late shipments (on-time delivery risk)**
 
 A shipper moves thousands of truckloads a month and roughly a third miss the promised delivery date. Late loads mean retailer chargebacks, stock-outs and angry customers, but expediting every load would be far too expensive. The company has carrier, lane, distance, promised transit time, pickup day, dock wait time, weather forecasts and each carrier's recent on-time record. Success means flagging the loads most likely to run late early enough to expedite, re-route or warn the customer, at a total cost lower than today.
@@ -42,7 +42,7 @@ A shipper moves thousands of truckloads a month and roughly a third miss the pro
 | log-loss | A metric that rewards confident correct probabilities and punishes confident wrong ones. |
 | LightGBM / XGBoost | Specialised gradient boosting libraries with the same core idea plus speed and regularisation features. |
 
-## 🟢 Easy — Five stumps learn which loads run late
+## 🟢 Concept — Five stumps learn which loads run late
 Hand-code gradient boosting with five one-split trees on 12 shipments and watch the error shrink each round.
 
 | 5W + H | |
@@ -122,7 +122,7 @@ New 1,400 mi storm lane -> raw score 1.09, clipped risk 1.00 -> expedite / warn 
 
 **Try this next:** Set learning_rate = 1.0 and compare the error after five rounds - then try 0.1. · Change max_depth to 2 so each tree can combine distance AND storm. · Run 20 rounds instead of 5 and watch whether training error keeps falling (and why that can overfit).
 
-## 🟡 Medium — Predict late loads across 5,000 shipments
+## 🟡 Build — Predict late loads across 5,000 shipments
 Use scikit-learn HistGradientBoostingClassifier with native categoricals and early stopping to score late-delivery risk.
 
 | 5W + H | |
@@ -205,7 +205,7 @@ Flag top 15% (risk >= 0.70): 85% of them really were late vs 31% overall -> catc
 
 **Try this next:** Set early_stopping=False and max_iter=400 - does test AUC improve or drop? · Drop 'carrier' and see how much AUC falls. · Change the flag share from 15% to 30% and compare precision vs capture.
 
-## 🔴 Hard — On-time risk engine with forward validation
+## 🔴 Production — On-time risk engine with forward validation
 Compare classic GradientBoosting with HistGradientBoosting on time-ordered data, tune both, pick an expedite threshold on dollars and monitor monthly calibration.
 
 | 5W + H | |

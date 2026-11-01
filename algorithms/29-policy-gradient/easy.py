@@ -1,4 +1,4 @@
-# REINFORCE on a 3-arm bandit: which renewal discount (0%, 5%, 10%) keeps the most premium? (Easy)
+# REINFORCE on a 3-arm bandit: which renewal discount (0%, 5%, 10%) keeps the most premium? (Concept)
 import numpy as np
 
 np.random.seed(42)
@@ -39,6 +39,6 @@ best = int(np.argmax(softmax(theta)))
 print(f"\nLearned policy favours a {discounts[best]:.0%} discount.")
 
 # ---
-# Policy Gradient (REINFORCE) — EASY lab · Insurance: Renewal retention offers: which discount for which policyholder
+# Policy Gradient (REINFORCE) — CONCEPT lab · Insurance: Renewal retention offers: which discount for which policyholder
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

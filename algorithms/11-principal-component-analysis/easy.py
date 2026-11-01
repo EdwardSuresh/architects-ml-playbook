@@ -48,6 +48,6 @@ print("\nDay-by-day PC1 score (how much the whole curve shifted):")
 print(np.round(pc1_scores, 1))
 
 # ---
-# Principal Component Analysis (PCA) — EASY lab · Financial Services: Treasury yield curve risk factors for rate hedging
+# Principal Component Analysis (PCA) — CONCEPT lab · Financial Services: Treasury yield curve risk factors for rate hedging
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

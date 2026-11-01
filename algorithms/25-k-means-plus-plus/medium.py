@@ -75,6 +75,6 @@ print(f"\nBusiness read-out: average customer is {d.mean():.0f} miles from its D
       f"\nputs two DCs in one metro and leaves another metro unserved - k-means++ makes that rare.")
 
 # ---
-# k-Means++ — MEDIUM lab · Supply Chain: Choosing distribution center locations
+# k-Means++ — BUILD lab · Supply Chain: Choosing distribution center locations
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

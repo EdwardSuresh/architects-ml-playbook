@@ -1,4 +1,4 @@
-# Easy: separate Sandstone from Shale with a straight line (linear SVM)
+# Concept: separate Sandstone from Shale with a straight line (linear SVM)
 import numpy as np
 from sklearn.svm import SVC
 
@@ -46,6 +46,6 @@ for gr, rho in new_depths:
     print(f"GR={gr:>3} RHOB={rho:.2f} -> score {score:+.2f} -> {label:<9} ({zone})")
 
 # ---
-# Support Vector Machine (SVM) — EASY lab · Oil & Gas: Lithology classification from well logs
+# Support Vector Machine (SVM) — CONCEPT lab · Oil & Gas: Lithology classification from well logs
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

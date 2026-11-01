@@ -1,4 +1,4 @@
-# Easy: estimate transit days for a new shipment by finding the most similar past shipments
+# Concept: estimate transit days for a new shipment by finding the most similar past shipments
 import math
 
 # 🐍 PY: a list of dicts - each dict is one past shipment with named fields
@@ -52,6 +52,6 @@ weighted = sum(w * ranked[i]["transit_days"] for i, w in enumerate(weights)) / s
 print(f"k=3 distance-weighted -> {weighted:.2f} days")
 
 # ---
-# k-Nearest Neighbors (k-NN) — EASY lab · Supply Chain: Delivery transit-day estimation from similar past shipments
+# k-Nearest Neighbors (k-NN) — CONCEPT lab · Supply Chain: Delivery transit-day estimation from similar past shipments
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Think of a youth soccer coach with 40 kids and 4 practice cones. Each kid runs to the nearest cone, then each cone is moved to the middle of its crowd, and the kids re-pick their nearest cone. After a few rounds nobody switches and you have four natural groups.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Financial Services — Retail banking customer segmentation for personalized products**
 
 A regional retail bank sends the same credit card and savings offers to every customer, and response rates are low while some customers receive offers that do not fit their situation. The bank holds balances, monthly deposits, card spend, digital login share, loan-to-balance ratio, number of products and overdraft history for each customer. Marketing wants a few clear, stable segments with names they can design offers for, and compliance wants the segments to avoid proxying for protected classes. Success means well-separated, stable segments, each with a sensible offer and a measurable expected margin.
@@ -43,7 +43,7 @@ A regional retail bank sends the same credit card and savings offers to every cu
 | Standardization | Rescaling each feature to mean 0 and standard deviation 1 so units do not dominate distance. |
 | Adjusted Rand Index | A 0-1 style score of how similar two clusterings are; used to test segment stability. |
 
-## 🟢 Easy — Run k-Means by hand on 12 bank customers
+## 🟢 Concept — Run k-Means by hand on 12 bank customers
 Implement the assignment and update steps in plain numpy and watch 12 customers settle into 3 segments.
 
 | 5W + H | |
@@ -112,7 +112,7 @@ Segment 2: avg balance $ 26.2k,  7.2 card txns/mo -> ['C04', 'C05', 'C06', 'C07'
 
 **Try this next:** Remove the scaling line (use X = customers.astype(float)) and see how balance alone drives the result. · Set k = 2 and k = 4 and compare final inertia. · Start from rows 0, 4, 8 and count how many iterations convergence takes.
 
-## 🟡 Medium — Segment 2,500 customers and pick k with elbow and silhouette
+## 🟡 Build — Segment 2,500 customers and pick k with elbow and silhouette
 Use scikit-learn KMeans on realistic synthetic banking data, choose k with the elbow and silhouette scores, and map segments to offers.
 
 | 5W + H | |
@@ -199,7 +199,7 @@ Suggested offers:
 
 **Try this next:** Remove StandardScaler and see how the best k and segments change. · Drop the age column from the model and check whether the segments stay similar. · Merge the stretched borrowers into the mortgage persona (same loan ratio) and see if silhouette still picks 4.
 
-## 🔴 Hard — Stable, explainable and fair segmentation pipeline
+## 🔴 Production — Stable, explainable and fair segmentation pipeline
 Build a production segmentation pipeline with log transforms, elbow plus silhouette selection, bootstrap stability, a surrogate tree, a baseline comparison and an expected-margin view.
 
 | 5W + H | |

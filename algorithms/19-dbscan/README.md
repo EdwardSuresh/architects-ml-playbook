@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Picture a beach from above: groups of people huddled under umbrellas form clusters, while a lone jogger is nobody's neighbour. DBSCAN says: if enough people are within arm's reach of you, you are in a crowd; crowds that touch merge; anyone alone is just a passer-by.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Insurance — Catastrophe claims hotspots after a hailstorm or tornado**
 
 After a severe storm, thousands of first-notice-of-loss reports arrive within days, and the carrier must decide where to send a limited number of field adjusters. Policyholders in the hardest-hit areas suffer if adjusters are spread thinly, while isolated claims far from the storm path may be unrelated damage or occasionally suspicious. Each claim has a geocoded address, claim amount, policy age and reporting date. Success means hotspots that follow the actual storm path, a deployment plan sized by claims and dollars, and a short, prioritised review queue for isolated claims - without treating any claim unfairly.
@@ -43,7 +43,7 @@ After a severe storm, thousands of first-notice-of-loss reports arrive within da
 | Haversine distance | Distance along the Earth's surface between two latitude/longitude points. |
 | k-distance plot | Sorted distances to each point's k-th neighbour; its bend suggests a good eps. |
 
-## 🟢 Easy — Spot 2 hotspots and 2 loners among 11 claims
+## 🟢 Concept — Spot 2 hotspots and 2 loners among 11 claims
 Apply DBSCAN's core, border and noise rules by hand to 11 claim locations with eps = 1 km and min_pts = 3.
 
 | 5W + H | |
@@ -120,7 +120,7 @@ Final labels: {'C1': 1, 'C2': 1, 'C3': 1, 'C4': 1, 'C5': 2, 'C6': 2, 'C7': 2, 'C
 
 **Try this next:** Set EPS = 0.5 and see the hotspots break up. · Set MIN_PTS = 5 and see which hotspot survives. · Move C9 to (2.0, 2.0) - does it join hotspot 1 as a border point?
 
-## 🟡 Medium — sklearn DBSCAN on 1,010 hailstorm claims
+## 🟡 Build — sklearn DBSCAN on 1,010 hailstorm claims
 Cluster synthetic claim latitude/longitude with scikit-learn's DBSCAN after converting to km, compare eps values, and summarise hotspots by count and dollars.
 
 | 5W + H | |
@@ -215,7 +215,7 @@ Town core     1    0    0  199
 
 **Try this next:** Change min_samples from 10 to 30 and watch the smallest swath behave. · Skip the km conversion and cluster raw degrees with eps=0.006 - is the result the same? · Add a fourth swath with only 15 claims and see whether it is found or treated as noise.
 
-## 🔴 Hard — Haversine DBSCAN hotspot engine with k-distance eps and noise triage
+## 🔴 Production — Haversine DBSCAN hotspot engine with k-distance eps and noise triage
 Cluster claims on true great-circle distance, pick eps from the k-distance knee, compare with k-Means, prioritise noise claims for review and produce an adjuster deployment plan.
 
 | 5W + H | |

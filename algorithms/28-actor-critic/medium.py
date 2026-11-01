@@ -1,4 +1,4 @@
-# Advantage Actor-Critic (A2C): monthly Stocks/Bonds/Cash allocation from 5 model portfolios (Medium)
+# Advantage Actor-Critic (A2C): monthly Stocks/Bonds/Cash allocation from 5 model portfolios (Build)
 import numpy as np
 import torch
 import torch.nn as nn
@@ -88,9 +88,9 @@ print("\nHow often each model portfolio was chosen:")
 for i, w in enumerate(PORTFOLIOS):
     print(f"  stocks {w[0]:.0%} / bonds {w[1]:.0%} / cash {w[2]:.0%}: {(acts == i).float().mean():.0%}")
 print("Business read: the agent mostly holds the growth mix and switches to the defensive mix in some months.")
-print("It earned more than 60/40 here but with more volatility - the Hard level adds risk and cost penalties.")
+print("It earned more than 60/40 here but with more volatility - the Production level adds risk and cost penalties.")
 
 # ---
-# Actor-Critic — MEDIUM lab · Financial Services: Monthly Stocks / Bonds / Cash allocation
+# Actor-Critic — BUILD lab · Financial Services: Monthly Stocks / Bonds / Cash allocation
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

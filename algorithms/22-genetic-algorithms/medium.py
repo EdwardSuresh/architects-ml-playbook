@@ -83,6 +83,6 @@ print(f"\nBusiness read-out: at ${COST_PER_MILE}/mile and {DAYS_PER_YEAR} delive
       f" about ${saving:,.0f}/year vs an unplanned order of stops.")
 
 # ---
-# Genetic Algorithms — MEDIUM lab · Supply Chain: Delivery route optimization for one truck
+# Genetic Algorithms — BUILD lab · Supply Chain: Delivery route optimization for one truck
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -53,6 +53,6 @@ clean_score = max((clean[i:i + 3, j:j + 3] * kernel).sum() for i in range(4) for
 print(f"Clean patch response: {clean_score:.0f} -> clean")
 
 # ---
-# Convolutional Neural Network (CNN) — EASY lab · Oil & Gas: Pipeline inspection - detecting corrosion pits and cracks in image patches
+# Convolutional Neural Network (CNN) — CONCEPT lab · Oil & Gas: Pipeline inspection - detecting corrosion pits and cracks in image patches
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

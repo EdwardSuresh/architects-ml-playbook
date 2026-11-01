@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Think of a cricket selection panel: each selector (neuron) weighs a few stats differently and gives an opinion, a second panel weighs those opinions, and a chairman makes the final call. Training is the panel reviewing past mistakes and adjusting how much each selector trusts each stat.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Insurance — Life insurance policy lapse prediction for retention outreach**
 
 When a life policy lapses, the carrier loses years of future premium and the family loses its protection, often without realising it. Insurers hold policy data such as policy age, premium changes, missed payments, autopay status, agent contacts and cash value. The retention team can only call a fraction of the book each month, so it needs a ranked list of who is most likely to lapse. Success means the top-ranked calls catch a large share of future lapses, probabilities are trustworthy for budgeting, and the model is documented for regulators.
@@ -44,7 +44,7 @@ When a life policy lapses, the carrier loses years of future premium and the fam
 | Class weight | Extra penalty on mistakes for the rarer class (lapses) so the model does not ignore it. |
 | Calibration | Whether predicted probabilities match real outcome rates, for example 20% scores lapse about 20% of the time. |
 
-## 🟢 Easy — One neuron learns who will lapse
+## 🟢 Concept — One neuron learns who will lapse
 Train a single sigmoid neuron with hand-written forward pass and backpropagation on 8 policyholders.
 
 | 5W + H | |
@@ -122,7 +122,7 @@ New customer lapse probability: 0.35
 
 **Try this next:** Set lr = 5.0 and see whether the loss jumps around instead of falling smoothly. · Add a third feature column (on_autopay 0/1) and a third weight. · Flip one label to make the data noisy and see the final loss stay higher.
 
-## 🟡 Medium — sklearn MLP ranks 4,000 policies for outreach
+## 🟡 Build — sklearn MLP ranks 4,000 policies for outreach
 Train a scaled two-hidden-layer MLPClassifier on 4,000 synthetic policies and turn scores into an outreach list.
 
 | 5W + H | |
@@ -210,7 +210,7 @@ on_autopay
 
 **Try this next:** Remove StandardScaler from the pipeline and compare the ROC-AUC. · Change hidden_layer_sizes to (4,) and then (64, 32) - does bigger help? · Set n_iter_no_change back to 10 (the default) and watch training stop too early.
 
-## 🔴 Hard — PyTorch lapse model with weights, calibration and budget
+## 🔴 Production — PyTorch lapse model with weights, calibration and budget
 Build a PyTorch MLP with class weights and early stopping, benchmark against logistic regression, explain it, calibrate it and pick an outreach volume.
 
 | 5W + H | |

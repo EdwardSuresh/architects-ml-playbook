@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Pricing a house by asking: what did the three most similar houses on this street sell for? You do not build a formula - you just find the closest comparables and average them. Estate agents have done k-NN for decades.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Supply Chain — Delivery transit-day estimation from similar past shipments**
 
 Customers expect an accurate delivery date at checkout, but transit time depends on distance, weight, carrier, season and service level. Planners today use a static miles-per-day table, so promises are missed in peak season and over-padded the rest of the year. The transportation management system holds years of shipment history with actual transit days. Success means estimates within one day for most shipments, a promise date that hits about 90% on-time, and an explanation customer service can show ('similar shipments took 8 days').
@@ -42,7 +42,7 @@ Customers expect an accurate delivery date at checkout, but transit time depends
 | Feature scaling | Rescaling columns to similar ranges so no single unit (miles vs pounds) dominates. |
 | Curse of dimensionality | With many features, all points look roughly equally far apart and neighbours lose meaning. |
 
-## 🟢 Easy — Find the 3 most similar past shipments by hand
+## 🟢 Concept — Find the 3 most similar past shipments by hand
 Compute distances from a new shipment to 8 past shipments in plain Python and average the transit days of the nearest ones.
 
 | 5W + H | |
@@ -117,7 +117,7 @@ k=3 distance-weighted -> 3.99 days
 
 **Try this next:** Change the new shipment to 2,200 miles and 2,800 lb - which neighbours are picked now? · Remove the scaling (divide by 1 instead of max_d/max_w) and see how weight starts to dominate the distance. · Add a 'carrier_delay' field and include it in the distance function.
 
-## 🟡 Medium — KNeighborsRegressor on 3,000 shipments
+## 🟡 Build — KNeighborsRegressor on 3,000 shipments
 Train scikit-learn's KNeighborsRegressor on scaled shipment features, compare k values and scaling, and explain a prediction with its neighbours.
 
 | 5W + H | |
@@ -214,7 +214,7 @@ Five closest past shipments:
 
 **Try this next:** Set weights='distance' in KNeighborsRegressor and compare MAE. · Remove is_peak from features and see what happens to the December prediction. · Change N to 300 and observe how k-NN suffers with less history.
 
-## 🔴 Hard — Tuned k-NN pipeline with carriers, seasons and promise dates
+## 🔴 Production — Tuned k-NN pipeline with carriers, seasons and promise dates
 Build a ColumnTransformer + KNeighborsRegressor pipeline, tune k, weights and metric, compare against baselines on a time-ordered test set, and set a buffered promise date.
 
 | 5W + H | |

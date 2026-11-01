@@ -135,6 +135,6 @@ if __name__ == "__main__":
     print("breaches and stability results; recalibrate when volatility regime changes.")
 
 # ---
-# Principal Component Analysis (PCA) — HARD lab · Financial Services: Treasury yield curve risk factors for rate hedging
+# Principal Component Analysis (PCA) — PRODUCTION lab · Financial Services: Treasury yield curve risk factors for rate hedging
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -1,4 +1,4 @@
-# DQN with target network + epsilon decay vs a tuned buy-low-sell-high rule for gas storage (Hard)
+# DQN with target network + epsilon decay vs a tuned buy-low-sell-high rule for gas storage (Production)
 import os
 import random
 import tempfile
@@ -179,6 +179,6 @@ if __name__ == "__main__":
     main()
 
 # ---
-# Deep Q-Network (DQN) — HARD lab · Oil & Gas: Natural gas storage: daily Inject / Hold / Withdraw decisions
+# Deep Q-Network (DQN) — PRODUCTION lab · Oil & Gas: Natural gas storage: daily Inject / Hold / Withdraw decisions
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

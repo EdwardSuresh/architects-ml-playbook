@@ -1,4 +1,4 @@
-# MEDIUM: scikit-learn HistGradientBoosting predicts which shipments will deliver late
+# BUILD: scikit-learn HistGradientBoosting predicts which shipments will deliver late
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -70,6 +70,6 @@ print(f"\nFlag top 15% (risk >= {cut:.2f}): {y_te.values[top].mean():.0%} of the
       f"vs {y_te.mean():.0%} overall -> catches {y_te.values[top].sum() / y_te.sum():.0%} of all late loads")
 
 # ---
-# Gradient Boosting — MEDIUM lab · Supply Chain: Predict late shipments (on-time delivery risk)
+# Gradient Boosting — BUILD lab · Supply Chain: Predict late shipments (on-time delivery risk)
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

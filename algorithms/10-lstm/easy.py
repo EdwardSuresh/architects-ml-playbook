@@ -50,6 +50,6 @@ forecast = (w_out @ h + b_out) * 1000
 print(f"\nUntrained forecast for week 6: {forecast:.0f} cases (training would tune W, U, b)")
 
 # ---
-# LSTM — EASY lab · Supply Chain: Weekly SKU demand forecasting for a distribution center
+# LSTM — CONCEPT lab · Supply Chain: Weekly SKU demand forecasting for a distribution center
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -130,6 +130,6 @@ joblib.dump(best.named_steps["iso"], path)
 print("Saved ->", os.path.basename(path))
 
 # ---
-# Isolation Forest — HARD lab · Financial Services: AML suspicious transaction detection for the analyst alert queue
+# Isolation Forest — PRODUCTION lab · Financial Services: AML suspicious transaction detection for the analyst alert queue
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

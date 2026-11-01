@@ -157,6 +157,6 @@ if __name__ == "__main__":
     print("keep the logistic baseline as a challenger, and monitor calibration quarterly.")
 
 # ---
-# Artificial Neural Network (ANN / MLP) — HARD lab · Insurance: Life insurance policy lapse prediction for retention outreach
+# Artificial Neural Network (ANN / MLP) — PRODUCTION lab · Insurance: Life insurance policy lapse prediction for retention outreach
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

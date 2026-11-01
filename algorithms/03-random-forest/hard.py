@@ -1,4 +1,4 @@
-# HARD: production SIU referral model - Random Forest pipeline, CV tuning, capacity-based threshold
+# PRODUCTION: production SIU referral model - Random Forest pipeline, CV tuning, capacity-based threshold
 import os
 import tempfile
 import warnings
@@ -141,6 +141,6 @@ if __name__ == "__main__":
     main()
 
 # ---
-# Random Forest — HARD lab · Insurance: Auto insurance claims fraud detection (SIU referral)
+# Random Forest — PRODUCTION lab · Insurance: Auto insurance claims fraud detection (SIU referral)
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

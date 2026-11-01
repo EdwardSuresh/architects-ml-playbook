@@ -83,6 +83,6 @@ print("\nInspection read-out: patches flagged as defects go to an integrity engi
 print("missed defects (false negatives) are the costly error, so recall is the key number.")
 
 # ---
-# Convolutional Neural Network (CNN) — MEDIUM lab · Oil & Gas: Pipeline inspection - detecting corrosion pits and cracks in image patches
+# Convolutional Neural Network (CNN) — BUILD lab · Oil & Gas: Pipeline inspection - detecting corrosion pits and cracks in image patches
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

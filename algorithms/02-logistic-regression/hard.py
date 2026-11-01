@@ -1,4 +1,4 @@
-# HARD: production credit scorecard - WoE binning, tuned logistic regression, points, adverse action
+# PRODUCTION: production credit scorecard - WoE binning, tuned logistic regression, points, adverse action
 import os
 import tempfile
 import warnings
@@ -139,6 +139,6 @@ if __name__ == "__main__":
     main()
 
 # ---
-# Logistic Regression — HARD lab · Financial Services: Consumer loan default prediction and credit scorecard
+# Logistic Regression — PRODUCTION lab · Financial Services: Consumer loan default prediction and credit scorecard
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -8,7 +8,7 @@
 
 💡 **Analogy:** An inspector runs a small magnifying glass across a pipe photo, square by square, looking for tell-tale shapes - a dark dot, a thin line. A CNN does the same with many 'magnifying glasses' at once, and learns from examples which shapes matter.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Oil & Gas — Pipeline inspection - detecting corrosion pits and cracks in image patches**
 
 Pipeline operators collect huge volumes of in-line inspection and camera data, and analysts must find small corrosion pits and cracks before they grow into leaks or ruptures. Manual review is slow, tiring and inconsistent across analysts, while a missed defect can harm people, the environment and the operator's licence to operate. The data is grayscale image patches of pipe wall, a small share of which contain defects confirmed by digs. Success means catching nearly every real defect, keeping false calls low enough that analysts are not flooded, and showing analysts which pixels triggered each flag.
@@ -43,7 +43,7 @@ Pipeline operators collect huge volumes of in-line inspection and camera data, a
 | Data augmentation | Creating extra training images by flipping or rotating existing ones. |
 | Saliency map | A heatmap of which pixels most influenced the model's score, used to explain predictions. |
 
-## 🟢 Easy — One 3x3 filter finds a crack by hand
+## 🟢 Concept — One 3x3 filter finds a crack by hand
 Slide a hand-made 3x3 crack filter over a 6x6 patch in numpy and see where it lights up.
 
 | 5W + H | |
@@ -126,7 +126,7 @@ Clean patch response: 0 -> clean
 
 **Try this next:** Make the crack horizontal (a dark row) and see the vertical filter miss it; then transpose the kernel. · Change the crack pixels from 1 to 6 (faint crack) and see whether the score still passes 20. · Add random noise with np.random.normal(0, 1, (6, 6)) to the clean patch and check for false alarms.
 
-## 🟡 Medium — Tiny PyTorch CNN on 1,200 inspection patches
+## 🟡 Build — Tiny PyTorch CNN on 1,200 inspection patches
 Generate synthetic pipe-wall patches with pits and cracks and train a two-layer PyTorch CNN to flag defects.
 
 | 5W + H | |
@@ -174,7 +174,7 @@ flowchart LR
 | 38-42 | unsqueeze(1) adds the channel dimension so shapes are (batch, 1, 16, 16), what Conv2d expects. The first 80% is training data. |
 | 44-56 | Each Conv2d learns 3x3 filters like the easy level's crack filter; MaxPool halves the size twice to 4x4, then a linear layer gives one logit. About 1,500 parameters. |
 | 58-68 | Each epoch shuffles indices, splits into 64-patch batches and runs forward, loss, backward and step. The printed loss falls steadily. |
-| 70-83 | Sigmoid turns logits into probabilities. Precision is perfect but recall is only about 0.74 - faint pits are missed, which motivates the hard level. |
+| 70-83 | Sigmoid turns logits into probabilities. Precision is perfect but recall is only about 0.74 - faint pits are missed, which motivates the Production level. |
 
 </details>
 
@@ -201,7 +201,7 @@ missed defects (false negatives) are the costly error, so recall is the key numb
 
 **Try this next:** Train for 20 epochs instead of 10 and see whether recall improves. · Lower the decision threshold from 0.5 to 0.3 and compare recall and false calls. · Change the first Conv2d to 4 filters and then 16 filters and compare results.
 
-## 🔴 Hard — Recall-first CNN with augmentation and saliency
+## 🔴 Production — Recall-first CNN with augmentation and saliency
 Train a production-style defect CNN with augmentation and class weighting, set a recall-first threshold on validation data, compare with a pixel baseline and explain flags with saliency.
 
 | 5W + H | |

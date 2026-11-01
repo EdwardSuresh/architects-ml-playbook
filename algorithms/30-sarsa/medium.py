@@ -1,4 +1,4 @@
-# Tabular SARSA: a warehouse robot learns a safe route past a forklift lane (Medium)
+# Tabular SARSA: a warehouse robot learns a safe route past a forklift lane (Build)
 import numpy as np
 
 np.random.seed(42)
@@ -77,6 +77,6 @@ print("\nBusiness read: SARSA keeps a buffer row away from the forklift lane, ac
 print("moves because the robot's own random exploration could otherwise drift into traffic.")
 
 # ---
-# SARSA — MEDIUM lab · Supply Chain: Warehouse robot learning a safe route past a forklift lane
+# SARSA — BUILD lab · Supply Chain: Warehouse robot learning a safe route past a forklift lane
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

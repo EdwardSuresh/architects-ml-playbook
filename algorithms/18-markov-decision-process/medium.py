@@ -1,4 +1,4 @@
-# Medium: learn transition probabilities from maintenance logs, then solve the MDP with value iteration
+# Build: learn transition probabilities from maintenance logs, then solve the MDP with value iteration
 import numpy as np
 import pandas as pd
 
@@ -79,6 +79,6 @@ print("\nReading: keep running healthy pumps, intervene before failure - the pol
       " where paying for maintenance beats risking a $25k/week outage.")
 
 # ---
-# Markov Decision Process (MDP) — MEDIUM lab · Oil & Gas: Pump maintenance policy optimisation
+# Markov Decision Process (MDP) — BUILD lab · Oil & Gas: Pump maintenance policy optimisation
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

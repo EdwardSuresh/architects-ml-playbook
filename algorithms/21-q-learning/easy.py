@@ -52,6 +52,6 @@ for i, st in enumerate(states):
     print(f"{st:>5} | {row} | order {actions[int(np.argmax(Q[i]))]}")
 
 # ---
-# Q-Learning — EASY lab · Supply Chain: Inventory reorder policy for one SKU
+# Q-Learning — CONCEPT lab · Supply Chain: Inventory reorder policy for one SKU
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

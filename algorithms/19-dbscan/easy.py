@@ -1,4 +1,4 @@
-# Easy: find hail-claim hotspots by hand with DBSCAN's two rules (eps, min_pts)
+# Concept: find hail-claim hotspots by hand with DBSCAN's two rules (eps, min_pts)
 import numpy as np
 
 # 🐍 PY: a dict mapping claim id -> (x_km, y_km) position east/north of the city centre
@@ -52,6 +52,6 @@ for k in sorted(set(label.values())):
     print(f"  {name}: {members}")
 
 # ---
-# DBSCAN — EASY lab · Insurance: Catastrophe claims hotspots after a hailstorm or tornado
+# DBSCAN — CONCEPT lab · Insurance: Catastrophe claims hotspots after a hailstorm or tornado
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

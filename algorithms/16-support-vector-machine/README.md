@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Imagine painting the widest possible road between two groups of houses so neither side's houses touch the road. Only the houses right at the road edge matter for where you paint it - those are the support vectors. A kernel is like letting the road bend around neighbourhoods instead of forcing it to be straight.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Oil & Gas — Lithology classification from well logs**
 
 Every new well produces logs of gamma ray, bulk density, neutron porosity and resistivity every half-foot, but rock type is only confirmed where expensive core is taken. Geologists spend days hand-interpreting lithology, and inconsistent picks between interpreters slow reservoir models and completion decisions. Using cored wells as labelled data, an SVM can produce a consistent Sandstone / Shale / Limestone track for every new well within minutes. Success means high accuracy on a blind well the model never saw, calibrated confidence, and only the uncertain intervals sent to a petrophysicist.
@@ -43,7 +43,7 @@ Every new well produces logs of gamma ray, bulk density, neutron porosity and re
 | gamma (RBF) | How far one training point's influence reaches; high gamma = very local, wiggly boundary. |
 | Platt scaling | Fitting a sigmoid on SVM scores to turn them into calibrated probabilities. |
 
-## 🟢 Easy — Draw the line between Sandstone and Shale
+## 🟢 Concept — Draw the line between Sandstone and Shale
 Fit a linear SVM on 12 hand-typed depth samples and see which samples become support vectors and how wide the margin is.
 
 | 5W + H | |
@@ -115,7 +115,7 @@ GR=115 RHOB=2.53 -> score +2.08 -> Shale     (clear side)
 
 **Try this next:** Change C to 0.01 and then 100 and see how many support vectors appear and how the margin width changes. · Add a sandstone sample with GR=90 (a 'hot' radioactive sand) and refit - which samples become support vectors now? · Remove the scaling line and fit on raw X - compare the weights and the predictions.
 
-## 🟡 Medium — RBF SVM on 1,800 log samples, three rock types
+## 🟡 Build — RBF SVM on 1,800 log samples, three rock types
 Train an RBF-kernel SVC on four standardised well logs to classify Sandstone, Shale and Limestone and read its confusion matrix.
 
 | 5W + H | |
@@ -211,7 +211,7 @@ Shale called Sandstone: 5 samples. These are the costly errors - a petrophysicis
 
 **Try this next:** Try gamma=0.01 and gamma=10 in the final SVC and watch accuracy and support-vector counts change. · Drop log_resistivity from the features list - which class gets worse? · Make Shale and Sandstone GR means closer (e.g. 70 and 85) to simulate shaly sands and see the confusion grow.
 
-## 🔴 Hard — Tuned, calibrated SVM tested on a blind well
+## 🔴 Production — Tuned, calibrated SVM tested on a blind well
 Build a production lithology pipeline with grid-searched C and gamma, calibrated probabilities, a blind-well test in depth order, permutation importance and a review threshold.
 
 | 5W + H | |

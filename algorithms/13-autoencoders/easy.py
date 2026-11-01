@@ -50,6 +50,6 @@ for name, x in new.items():
     print(f"{'':<13} biggest error on: {sensors[np.argmax((x - rebuilt) ** 2)]}")
 
 # ---
-# Autoencoders — EASY lab · Oil & Gas: Gas compressor sensor anomaly detection for predictive maintenance
+# Autoencoders — CONCEPT lab · Oil & Gas: Gas compressor sensor anomaly detection for predictive maintenance
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

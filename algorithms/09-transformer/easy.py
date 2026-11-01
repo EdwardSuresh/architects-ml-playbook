@@ -51,6 +51,6 @@ print(f"Similarity to Auto-Glass queue: {out.mean(axis=0) @ glass_dir:.2f}")
 print("Word 'by' receives the least attention:", tokens[int(A.sum(axis=0).argmin())])
 
 # ---
-# Transformer — EASY lab · Insurance: Claim notes / first notice of loss text triage
+# Transformer — CONCEPT lab · Insurance: Claim notes / first notice of loss text triage
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

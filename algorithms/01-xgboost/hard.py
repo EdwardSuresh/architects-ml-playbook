@@ -1,4 +1,4 @@
-# HARD: production-style XGBoost card-fraud scorer - time split, tuning, cost threshold, explainability
+# PRODUCTION: production-style XGBoost card-fraud scorer - time split, tuning, cost threshold, explainability
 import os
 import tempfile
 import warnings
@@ -143,6 +143,6 @@ if __name__ == "__main__":
     main()
 
 # ---
-# XGBoost — HARD lab · Financial Services: Real-time credit card fraud detection
+# XGBoost — PRODUCTION lab · Financial Services: Real-time credit card fraud detection
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

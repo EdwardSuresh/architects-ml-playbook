@@ -100,9 +100,9 @@ for p, a in zip(pred[-5:], actual[-5:]):
     print(f"  actual {a:6.1f}  predicted {p:6.1f}")
 print(f"\nBusiness read-out: mean test rate {actual.mean():.0f} bbl/d; RNN error {mae:.0f} bbl/d"
       f" ({100 * mae / actual.mean():.1f}%). For a ONE-day horizon it only ties the naive rule -")
-print("so always report a naive baseline. The value of sequence models shows up in multi-day forecasts (Hard).")
+print("so always report a naive baseline. The value of sequence models shows up in multi-day forecasts (Production).")
 
 # ---
-# Recurrent Neural Network (RNN) — MEDIUM lab · Oil & Gas: Daily oil production rate forecasting for a well
+# Recurrent Neural Network (RNN) — BUILD lab · Oil & Gas: Daily oil production rate forecasting for a well
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

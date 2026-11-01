@@ -97,6 +97,6 @@ print(f"Business read-out: the agent mostly reorders when stock < {first_no_orde
       f" saving ${always_cost - q_cost:.0f} per month vs a fixed 'order 5 daily' rule.")
 
 # ---
-# Q-Learning — MEDIUM lab · Supply Chain: Inventory reorder policy for one SKU
+# Q-Learning — BUILD lab · Supply Chain: Inventory reorder policy for one SKU
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

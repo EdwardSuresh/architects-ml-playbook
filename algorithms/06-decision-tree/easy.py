@@ -42,6 +42,6 @@ new_app = [[14, 2, 1, 280]]
 print("New application", new_app[0], "->", tree.predict(new_app)[0])
 
 # ---
-# Decision Tree — EASY lab · Insurance: Homeowners underwriting decision: Accept / Refer / Decline
+# Decision Tree — CONCEPT lab · Insurance: Homeowners underwriting decision: Accept / Refer / Decline
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

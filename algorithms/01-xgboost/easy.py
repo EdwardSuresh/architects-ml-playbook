@@ -1,4 +1,4 @@
-# EASY: XGBoost learns to spot card fraud from 18 hand-typed authorizations
+# CONCEPT: XGBoost learns to spot card fraud from 18 hand-typed authorizations
 import numpy as np
 from xgboost import XGBClassifier
 
@@ -49,6 +49,6 @@ decisions = ["DECLINE/REVIEW" if p > 0.5 else "APPROVE" for p in probs]
 print("\nDecisions:", decisions)
 
 # ---
-# XGBoost — EASY lab · Financial Services: Real-time credit card fraud detection
+# XGBoost — CONCEPT lab · Financial Services: Real-time credit card fraud detection
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

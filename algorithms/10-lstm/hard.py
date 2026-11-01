@@ -161,6 +161,6 @@ torch.save({"state": model.state_dict(), "mu": mu.to_dict(), "sd": sd.to_dict()}
 print("Saved ->", os.path.basename(path))
 
 # ---
-# LSTM — HARD lab · Supply Chain: Weekly SKU demand forecasting for a distribution center
+# LSTM — PRODUCTION lab · Supply Chain: Weekly SKU demand forecasting for a distribution center
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -72,6 +72,6 @@ print(f"  Adding SLOPE and CURVE hedges brings that to {pca.explained_variance_r
 print("  So 3 hedge trades can replace hedging 8 maturities separately.")
 
 # ---
-# Principal Component Analysis (PCA) — MEDIUM lab · Financial Services: Treasury yield curve risk factors for rate hedging
+# Principal Component Analysis (PCA) — BUILD lab · Financial Services: Treasury yield curve risk factors for rate hedging
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

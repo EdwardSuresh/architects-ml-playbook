@@ -1,4 +1,4 @@
-# Easy: model a pump's health as a Markov chain and simulate "just keep running it"
+# Concept: model a pump's health as a Markov chain and simulate "just keep running it"
 import numpy as np
 
 np.random.seed(42)
@@ -50,6 +50,6 @@ print(f"\nAverage 20-week cost if we never maintain: ${np.mean(costs):,.0f}")
 print("Next step: add actions (Repair, Replace) and let an MDP choose the cheapest policy.")
 
 # ---
-# Markov Decision Process (MDP) — EASY lab · Oil & Gas: Pump maintenance policy optimisation
+# Markov Decision Process (MDP) — CONCEPT lab · Oil & Gas: Pump maintenance policy optimisation
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

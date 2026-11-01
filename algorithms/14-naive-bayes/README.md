@@ -8,7 +8,7 @@
 
 💡 **Analogy:** A bank call-centre veteran hears 'escrow' and thinks mortgage, hears 'unauthorized' and thinks fraud, and weighs all the clue words together to pick a team. They treat each clue separately rather than reasoning about how clues interact - that is the 'naive' part, and it still works surprisingly well.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Financial Services — Customer complaint routing to the right product team**
 
 Banks receive thousands of written complaints each month through web forms, email and regulator portals such as the CFPB complaint database. Each must reach the right team - credit cards, mortgage servicing, fraud or fees - quickly, because regulators expect timely responses and misrouted fraud cases can cost customers money. Manual triage is slow and inconsistent, but years of labelled complaint narratives already exist. Success means most complaints are routed automatically and accurately, fraud cases are rarely missed, and uncertain cases go to a human triage queue.
@@ -43,7 +43,7 @@ Banks receive thousands of written complaints each month through web forms, emai
 | N-gram | A sequence of n words treated as one feature, such as 'late fee'. |
 | ComplementNB | A Naive Bayes variant that learns from all other classes and often does better on imbalanced text data. |
 
-## 🟢 Easy — Count words and apply Bayes by hand
+## 🟢 Concept — Count words and apply Bayes by hand
 Build a word-count Naive Bayes classifier in pure Python on 8 complaints and route a new one.
 
 | 5W + H | |
@@ -113,7 +113,7 @@ Route to: Credit Card team (probability 64%)
 
 **Try this next:** Add 'unauthorized' to one Credit Card example and see whether the routing flips. · Set alpha to 0.01 and watch how much more extreme the probabilities become. · Add a third Fraud example and see how the prior and likelihoods change.
 
-## 🟡 Medium — CountVectorizer plus MultinomialNB on 3,000 complaints
+## 🟡 Build — CountVectorizer plus MultinomialNB on 3,000 complaints
 Train a bag-of-words Multinomial Naive Bayes on 3,000 synthetic complaints and measure routing accuracy.
 
 | 5W + H | |
@@ -208,7 +208,7 @@ Auto-route 98% of complaints at >=90% confidence; accuracy on those 94.0%
 
 **Try this next:** Remove stop_words='english' and compare the vocabulary size and accuracy. · Set the label-noise rate from 0.08 to 0 and see accuracy rise. · Change alpha to 0.01 and 10 and compare the per-team F1 scores.
 
-## 🔴 Hard — Tuned TF-IDF Naive Bayes router with fraud escalation
+## 🔴 Production — Tuned TF-IDF Naive Bayes router with fraud escalation
 Tune a TF-IDF plus Naive Bayes pipeline with grid search, compare MultinomialNB and ComplementNB on imbalanced data, explain it and set a routing threshold.
 
 | 5W + H | |

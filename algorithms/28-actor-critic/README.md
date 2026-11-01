@@ -8,7 +8,7 @@
 
 💡 **Analogy:** A cricket batter (the actor) chooses shots, while the coach (the critic) watches and says 'that was better or worse than I expected from this position'. The batter does more of the shots that beat the coach's expectation, and the coach keeps refining what to expect.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Financial Services — Monthly Stocks / Bonds / Cash allocation**
 
 A wealth manager rebalances balanced portfolios monthly and wants to know whether a learning agent can tilt between growth and defensive mixes better than a static 60/40. Market regimes switch between calm bull markets and stressed bear markets, and nobody announces the switch. Data available: monthly asset returns, rolling volatility and momentum, current holdings and trading costs. Success means a higher Sharpe ratio than 60/40 on unseen periods after costs, with explainable behaviour and a governance trail that model risk can validate.
@@ -43,7 +43,7 @@ A wealth manager rebalances balanced portfolios monthly and wants to know whethe
 | Sharpe ratio | Excess return over cash divided by volatility; return per unit of risk. |
 | turnover | How much of the portfolio is traded; drives transaction costs. |
 
-## 🟢 Easy — One actor-critic update by hand: Risk-On vs Risk-Off
+## 🟢 Concept — One actor-critic update by hand: Risk-On vs Risk-Off
 Perform three actor-critic updates by hand on a two-action allocation choice and watch both the policy and the critic's expectation move.
 
 | 5W + H | |
@@ -118,7 +118,7 @@ Positive surprise raised Risk-On; the below-average Risk-Off month lowered Risk-
 
 **Try this next:** Set the Risk-Off reward to 1.5% in month 3: which way does the policy move now? · Start the critic at V = 2.0 (very optimistic): what happens to the actor after a +1.2% month? · Run 20 months alternating actions and print how fast V settles.
 
-## 🟡 Medium — A2C in PyTorch choosing among five model portfolios
+## 🟡 Build — A2C in PyTorch choosing among five model portfolios
 Train an advantage actor-critic network on regime-switching synthetic markets and compare its allocations with a static 60/40.
 
 | 5W + H | |
@@ -173,7 +173,7 @@ flowchart LR
 | 56-64 | Each update samples a random 24-month window, samples a portfolio per month and computes its return in percent. |
 | 65-73 | Advantage = r + gamma x V(next) - V(now). The actor loss uses the detached advantage; the critic minimises its square; a small entropy bonus keeps exploring. |
 | 77-84 | Greedy choices on 30 unseen years versus 60/40, reported as annualised return and volatility. |
-| 87-91 | Action frequencies explain the result: mostly 90/10 with defensive switches. Higher return but higher volatility, which motivates the risk-adjusted reward in Hard. |
+| 87-91 | Action frequencies explain the result: mostly 90/10 with defensive switches. Higher return but higher volatility, which motivates the risk-adjusted reward in Production. |
 
 </details>
 
@@ -197,14 +197,14 @@ How often each model portfolio was chosen:
   stocks 30% / bonds 50% / cash 20%: 0%
   stocks 0% / bonds 30% / cash 70%: 21%
 Business read: the agent mostly holds the growth mix and switches to the defensive mix in some months.
-It earned more than 60/40 here but with more volatility - the Hard level adds risk and cost penalties.
+It earned more than 60/40 here but with more volatility - the Production level adds risk and cost penalties.
 ```
 
 </details>
 
 **Try this next:** Set gamma to 0.9: does the critic loss get noisier and does the policy change? · Remove the entropy term and see whether the policy collapses to one portfolio early. · Add 'last month's bond return' as a fifth feature and compare test results.
 
-## 🔴 Hard — Risk-adjusted A2C with costs, tuning and Sharpe vs 60/40
+## 🔴 Production — Risk-adjusted A2C with costs, tuning and Sharpe vs 60/40
 Build a production-style A2C allocator with transaction costs, a mean-variance reward tuned on validation data, and a test-period Sharpe comparison against 60/40.
 
 | 5W + H | |

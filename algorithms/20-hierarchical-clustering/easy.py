@@ -1,4 +1,4 @@
-# Easy: group 5 stocks by how alike their returns move - agglomerative merging by hand
+# Concept: group 5 stocks by how alike their returns move - agglomerative merging by hand
 import numpy as np
 
 # 🐍 PY: dict of ticker -> list of 8 monthly returns in % (synthetic)
@@ -45,6 +45,6 @@ while len(clusters) > 1:
 print("\nReading: the two tech names merge first, then the banks; the utility joins last -> best diversifier.")
 
 # ---
-# Hierarchical Clustering — EASY lab · Financial Services: Portfolio diversification with correlation clustering and HRP
+# Hierarchical Clustering — CONCEPT lab · Financial Services: Portfolio diversification with correlation clustering and HRP
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

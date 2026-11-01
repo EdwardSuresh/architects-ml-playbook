@@ -130,6 +130,6 @@ if __name__ == "__main__":
     print("audit misroutes monthly and keep humans on low-confidence and possible-fraud cases.")
 
 # ---
-# Naive Bayes — HARD lab · Financial Services: Customer complaint routing to the right product team
+# Naive Bayes — PRODUCTION lab · Financial Services: Customer complaint routing to the right product team
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

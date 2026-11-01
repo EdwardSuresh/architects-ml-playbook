@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Imagine seating 500 wedding guests at round tables so that people who know each other sit together. You do not care how far apart table 3 and table 17 are; you only care that friends end up at the same table. t-SNE is that seating planner for data points.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Financial Services — Visualising card-transaction behaviour to reveal fraud clusters**
 
 A card issuer's fraud investigators review thousands of alerts a week and suspect that some fraud comes in organised rings that look alike. Each card has dozens of behavioural features (spend amount, night-time share, foreign share, velocity, merchant diversity), which nobody can picture. A t-SNE map gives investigators a 2-D picture where similar cards sit together, so a tight island of confirmed fraud can be reviewed in bulk and new rules drafted. Success means fraud types form clean islands (high neighbourhood purity) and investigators find rings faster, without anyone treating map distances as a score.
@@ -43,7 +43,7 @@ A card issuer's fraud investigators review thousands of alerts a week and suspec
 | kNN purity | Share of a point's nearest map-neighbours that carry the same known label. |
 | PCA pre-reduction | Compressing to ~10-50 dimensions with PCA first to remove noise and speed up t-SNE. |
 
-## 🟢 Easy — Neighbour probabilities for 6 cards by hand
+## 🟢 Concept — Neighbour probabilities for 6 cards by hand
 Compute t-SNE's similarity tables for 6 cards in plain numpy and watch a few gradient steps pull fraud-like cards together.
 
 | 5W + H | |
@@ -136,7 +136,7 @@ F3: strongest neighbour = F1  (p=0.084)
 
 **Try this next:** Change sigma to 0.1 and to 5.0: how do the P values change, and does the map still separate? · Move F1 to (1.0, 0.2) so it looks almost normal and rerun: where does it land on the 2-D map? · Replace the Student-t Q with a Gaussian (np.exp(-DY)) and compare the final KL and spread.
 
-## 🟡 Medium — Map 1,200 card customers with scikit-learn t-SNE
+## 🟡 Build — Map 1,200 card customers with scikit-learn t-SNE
 Run scikit-learn's TSNE on realistic synthetic card behaviour, draw an ASCII map and measure how cleanly the fraud ring forms its own island.
 
 | 5W + H | |
@@ -239,7 +239,7 @@ so investigators can lasso that island and review those accounts together.
 
 **Try this next:** Set perplexity to 5 and then 100: how does the map change and what happens to FraudRing purity? · Remove the StandardScaler line (use df[features].values) and see which segments merge. · Shrink the fraud ring to 15 cards: is it still visible as an island?
 
-## 🔴 Hard — Investigator-grade fraud map: PCA, perplexity sweep, trust checks
+## 🔴 Production — Investigator-grade fraud map: PCA, perplexity sweep, trust checks
 Build a reproducible pipeline that pre-reduces with PCA, sweeps perplexity, scores maps with trustworthiness and kNN purity, compares with PCA 2-D and saves the artefacts.
 
 | 5W + H | |

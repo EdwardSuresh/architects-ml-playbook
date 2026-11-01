@@ -44,6 +44,6 @@ for i, (row, s, lab) in enumerate(zip(txns, scores, labels)):
     print(f"{i:3d} {row[0]:7d} {row[1]:4d} {row[2]:7d} {s:6.3f}  {flag}")
 
 # ---
-# Isolation Forest — EASY lab · Financial Services: AML suspicious transaction detection for the analyst alert queue
+# Isolation Forest — CONCEPT lab · Financial Services: AML suspicious transaction detection for the analyst alert queue
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

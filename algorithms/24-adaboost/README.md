@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Think of a team of junior bank tellers screening cheques: the first checks one obvious thing, the next pays extra attention to the cheques the first one misjudged, and so on. At the end they vote, with the more reliable tellers getting a louder voice.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Oil & Gas — Drilling stuck-pipe early warning**
 
 Stuck pipe is one of the costliest drilling problems: freeing the string or sidetracking can cost hundreds of thousands of dollars and days of rig time. Drillers watch hookload, torque, rate of penetration, mud weight and standpipe pressure, but early signs are subtle and easy to miss on a long shift. The operations centre already streams these parameters every few seconds from each rig. Success means an alarm that catches most precursors early enough to circulate or ream, with a false-alarm rate the crew will tolerate, validated on wells the model has never seen.
@@ -44,7 +44,7 @@ Stuck pipe is one of the costliest drilling problems: freeing the string or side
 | Stuck pipe | When the drill string cannot be moved up or down, often costing days of rig time to free. |
 | GroupKFold | Cross-validation that keeps all rows of a group (here a well) in the same fold. |
 
-## 🟢 Easy — Three stumps that spot stuck pipe
+## 🟢 Concept — Three stumps that spot stuck pipe
 Run 3 rounds of AdaBoost by hand on 10 drilling snapshots and watch the row weights shift toward hard cases.
 
 | 5W + H | |
@@ -128,7 +128,7 @@ Training accuracy: 100%
 
 **Try this next:** Run 1 round only: which rows are wrong? · Change row 6's ROP to 40 and see how the chosen stumps change. · Add a fourth feature column (mud weight) and update names accordingly.
 
-## 🟡 Medium — AdaBoostClassifier on 4,000 rig snapshots
+## 🟡 Build — AdaBoostClassifier on 4,000 rig snapshots
 Train scikit-learn's AdaBoostClassifier on synthetic drilling data, tune the alarm threshold, and read feature importance.
 
 | 5W + H | |
@@ -218,7 +218,7 @@ each false alarm costs a short pause to circulate/ream, far cheaper than a fishi
 
 **Try this next:** Set learning_rate=1.0 and n_estimators=50: how does AUC change? · Try threshold 0.40 and count the extra false alarms. · Drop torque_trend_10min from X and see how much AUC falls.
 
-## 🔴 Hard — Well-grouped tuning, GBM comparison, cost-based alarms
+## 🔴 Production — Well-grouped tuning, GBM comparison, cost-based alarms
 Tune AdaBoost with well-grouped cross-validation, inspect its staged learning curve, compare with GradientBoosting, and set the alarm threshold by dollar cost.
 
 | 5W + H | |

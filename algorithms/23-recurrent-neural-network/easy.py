@@ -40,11 +40,11 @@ for xt in x[:-1]:
 # 🐍 PY: np.linalg.lstsq solves "find W so that H_all @ W ~= next-day targets"
 W_fit, *_ = np.linalg.lstsq(np.array(H_all), x[1:], rcond=None)
 pred = np.array(H_all) @ W_fit * 600
-# 🧠 ML: caution - 3 weights fit to 4 points, in-sample; real training needs far more days (see Medium)
+# 🧠 ML: caution - 3 weights fit to 4 points, in-sample; real training needs far more days (see Build)
 for d, (p, a) in enumerate(zip(pred, oil_bbl_per_day[1:]), start=2):
     print(f"Day {d}: predicted {p:6.1f} bbl/d   actual {a:6.1f}")
 
 # ---
-# Recurrent Neural Network (RNN) — EASY lab · Oil & Gas: Daily oil production rate forecasting for a well
+# Recurrent Neural Network (RNN) — CONCEPT lab · Oil & Gas: Daily oil production rate forecasting for a well
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

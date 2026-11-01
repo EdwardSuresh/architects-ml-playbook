@@ -76,6 +76,6 @@ for w, a, p, nv in zip(range(split, split + 8), actual, pred, naive):
 print(f"\nPlanner view: average absolute error = {np.mean(np.abs(actual - pred)):.0f} cases/week")
 
 # ---
-# LSTM — MEDIUM lab · Supply Chain: Weekly SKU demand forecasting for a distribution center
+# LSTM — BUILD lab · Supply Chain: Weekly SKU demand forecasting for a distribution center
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

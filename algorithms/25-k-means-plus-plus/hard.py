@@ -134,6 +134,6 @@ if __name__ == "__main__":
     print(f"Saved model + site table -> {os.path.basename(path)} in a temp dir")
 
 # ---
-# k-Means++ — HARD lab · Supply Chain: Choosing distribution center locations
+# k-Means++ — PRODUCTION lab · Supply Chain: Choosing distribution center locations
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

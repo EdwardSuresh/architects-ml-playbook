@@ -1,4 +1,4 @@
-# MEDIUM: scikit-learn linear regression for expected auto claim cost (pure premium) per policy
+# BUILD: scikit-learn linear regression for expected auto claim cost (pure premium) per policy
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -66,6 +66,6 @@ for (_, q), pp in zip(quotes.iterrows(), model.predict(quotes)):
     print(f"Quote age {q.driver_age}, {q.territory}: pure premium ${pp:,.0f} -> charged ${pp * 1.3:,.0f}")
 
 # ---
-# Linear Regression — MEDIUM lab · Insurance: Auto insurance expected claim cost and premium pricing
+# Linear Regression — BUILD lab · Insurance: Auto insurance expected claim cost and premium pricing
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

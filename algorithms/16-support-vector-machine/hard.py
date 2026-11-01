@@ -1,4 +1,4 @@
-# Hard: production lithology classifier - tuned RBF SVM, calibrated, tested on a blind well
+# Production: production lithology classifier - tuned RBF SVM, calibrated, tested on a blind well
 import os
 import tempfile
 import warnings
@@ -136,6 +136,6 @@ print("Model-risk note: validate on blind wells per basin; document logs, tool v
       " depth ranges used; re-calibrate when a new field or logging suite is added.")
 
 # ---
-# Support Vector Machine (SVM) — HARD lab · Oil & Gas: Lithology classification from well logs
+# Support Vector Machine (SVM) — PRODUCTION lab · Oil & Gas: Lithology classification from well logs
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

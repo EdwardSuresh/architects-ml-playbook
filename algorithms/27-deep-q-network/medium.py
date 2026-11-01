@@ -1,4 +1,4 @@
-# DQN with a replay buffer: daily Inject / Hold / Withdraw decisions for a gas storage field (Medium)
+# DQN with a replay buffer: daily Inject / Hold / Withdraw decisions for a gas storage field (Build)
 import random
 from collections import deque
 import numpy as np
@@ -104,6 +104,6 @@ print(f"\nBusiness read: year-end value (cash + gas left) = ${value:.0f}k on a 1
 print("A good policy fills in the cheap summer months and withdraws into the winter price peak.")
 
 # ---
-# Deep Q-Network (DQN) — MEDIUM lab · Oil & Gas: Natural gas storage: daily Inject / Hold / Withdraw decisions
+# Deep Q-Network (DQN) — BUILD lab · Oil & Gas: Natural gas storage: daily Inject / Hold / Withdraw decisions
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

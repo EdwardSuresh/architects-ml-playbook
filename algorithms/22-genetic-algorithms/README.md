@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Picture a football coach trying line-ups: he keeps the best-performing line-ups, mixes players from two good ones to make new combinations, and sometimes swaps a player at random to try something new. Over many matches the line-ups get steadily better without him ever testing every possible combination.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Supply Chain — Delivery route optimization for one truck**
 
 A distributor sends one truck each day to 15 customers, and the driver chooses the order of stops from experience. Extra miles waste fuel and driver hours, and late arrivals outside receiving windows cause overtime, refused deliveries and credits. The company knows each customer's address, order size and receiving window, plus average speed and unloading time. Success means a daily route that cuts total cost (miles plus lateness) compared with the current 'nearest next stop' habit, and that the dispatcher can review and override.
@@ -44,7 +44,7 @@ A distributor sends one truck each day to 15 customers, and the driver chooses t
 | Elitism | Copy the best few candidates into the next generation unchanged so they are never lost. |
 | Penalty method | Turning a hard rule (deliver within the window) into an extra cost so the optimiser can handle it. |
 
-## 🟢 Easy — Evolve a 5-stop delivery route
+## 🟢 Concept — Evolve a 5-stop delivery route
 Watch a tiny genetic algorithm evolve one truck's 5-stop route over 10 generations and check it against brute force.
 
 | 5W + H | |
@@ -123,7 +123,7 @@ Best route: Depot-B-C-D-A-E-Depot  25.37 mi
 
 **Try this next:** Set the mutation rate to 0 and see whether the GA gets stuck. · Keep only the top 2 as parents: does it converge faster or worse? · Add a sixth stop F at (7, 4) and check the brute-force count (720 routes).
 
-## 🟡 Medium — GA for a 15-stop daily route
+## 🟡 Build — GA for a 15-stop daily route
 Run a full genetic algorithm over 300 generations to plan a 15-stop route and quantify the savings.
 
 | 5W + H | |
@@ -205,7 +205,7 @@ Business read-out: at $2.1/mile and 250 delivery days, the GA route saves about 
 
 **Try this next:** Change POP to 40 and GENS to 100: how close do you get? · Replace inversion mutation with a simple swap and compare final miles. · Set KEEP to 5 (strong selection) and watch diversity collapse in avg_miles.
 
-## 🔴 Hard — Time windows, OX, tournaments and a parameter sweep
+## 🔴 Production — Time windows, OX, tournaments and a parameter sweep
 Build a production-style GA with order crossover, tournament selection, elitism and a time-window penalty, tune it, and beat nearest-neighbour.
 
 | 5W + H | |

@@ -1,4 +1,4 @@
-# Medium: sklearn DBSCAN on synthetic hailstorm claim locations around a metro area
+# Build: sklearn DBSCAN on synthetic hailstorm claim locations around a metro area
 import numpy as np
 import pandas as pd
 from sklearn.cluster import DBSCAN
@@ -68,6 +68,6 @@ print(f"{len(noise)} isolated claims (${noise.claim_amount.sum():,.0f}) -> desk 
       "a hail claim far from any swath deserves a closer look.")
 
 # ---
-# DBSCAN — MEDIUM lab · Insurance: Catastrophe claims hotspots after a hailstorm or tornado
+# DBSCAN — BUILD lab · Insurance: Catastrophe claims hotspots after a hailstorm or tornado
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

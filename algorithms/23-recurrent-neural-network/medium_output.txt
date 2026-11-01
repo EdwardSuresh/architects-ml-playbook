@@ -19,4 +19,4 @@ Last 5 test days:
   actual  141.3  predicted  136.8
 
 Business read-out: mean test rate 143 bbl/d; RNN error 10 bbl/d (7.1%). For a ONE-day horizon it only ties the naive rule -
-so always report a naive baseline. The value of sequence models shows up in multi-day forecasts (Hard).
+so always report a naive baseline. The value of sequence models shows up in multi-day forecasts (Production).

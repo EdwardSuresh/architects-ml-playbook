@@ -1,4 +1,4 @@
-# REINFORCE with learned baseline + entropy bonus for renewal discounts, with fairness checks (Hard)
+# REINFORCE with learned baseline + entropy bonus for renewal discounts, with fairness checks (Production)
 import os
 import tempfile
 import numpy as np
@@ -146,6 +146,6 @@ if __name__ == "__main__":
     main()
 
 # ---
-# Policy Gradient (REINFORCE) — HARD lab · Insurance: Renewal retention offers: which discount for which policyholder
+# Policy Gradient (REINFORCE) — PRODUCTION lab · Insurance: Renewal retention offers: which discount for which policyholder
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

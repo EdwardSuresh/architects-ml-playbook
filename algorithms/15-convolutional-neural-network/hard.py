@@ -156,6 +156,6 @@ if __name__ == "__main__":
     print("qualified ILI analysis; log every miss found in the field and revalidate the threshold.")
 
 # ---
-# Convolutional Neural Network (CNN) — HARD lab · Oil & Gas: Pipeline inspection - detecting corrosion pits and cracks in image patches
+# Convolutional Neural Network (CNN) — PRODUCTION lab · Oil & Gas: Pipeline inspection - detecting corrosion pits and cracks in image patches
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

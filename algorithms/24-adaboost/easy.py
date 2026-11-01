@@ -51,6 +51,6 @@ for i in range(n):
 print(f"\nTraining accuracy: {(final == y).mean():.0%}")
 
 # ---
-# AdaBoost — EASY lab · Oil & Gas: Drilling stuck-pipe early warning
+# AdaBoost — CONCEPT lab · Oil & Gas: Drilling stuck-pipe early warning
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

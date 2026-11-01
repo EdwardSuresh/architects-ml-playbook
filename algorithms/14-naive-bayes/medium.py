@@ -77,6 +77,6 @@ print(f"\nAuto-route {auto.mean():.0%} of complaints at >=90% confidence; "
       f"accuracy on those {accuracy_score(y_test[auto], pred[auto]):.1%}")
 
 # ---
-# Naive Bayes — MEDIUM lab · Financial Services: Customer complaint routing to the right product team
+# Naive Bayes — BUILD lab · Financial Services: Customer complaint routing to the right product team
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

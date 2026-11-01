@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Think of a new shop manager keeping a notebook: for each shelf level, they jot down how each ordering choice worked out over the following weeks. After months of notes, they simply look up the shelf level and pick the choice with the best track record. Early on they try odd choices on purpose, just to learn.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Supply Chain — Inventory reorder policy for one SKU**
 
 A regional distributor reorders a fast-moving SKU every day, and planners use gut feel or a fixed 'order 5 daily' rule. Too much stock ties up cash and shelf space, while too little loses sales and annoys retailers. The company has daily sales history, supplier lead times and cost estimates for holding, stockouts and placing orders. Success means a reorder rule that lowers total monthly cost and is at least as good as a well-tuned (s,S) policy, explained in a form planners can check.
@@ -44,7 +44,7 @@ A regional distributor reorders a fast-moving SKU every day, and planners use gu
 | Learning rate (alpha) | How far each update moves the Q-value toward the new target. |
 | (s,S) policy | Classic inventory rule: when stock position drops to s or below, order back up toward S. |
 
-## 🟢 Easy — Fill a 4x3 Q-table for a toy stockroom
+## 🟢 Concept — Fill a 4x3 Q-table for a toy stockroom
 Hand-run 8 days of Q-learning on a 4-state version of the reorder problem and print the Q-table.
 
 | 5W + H | |
@@ -95,7 +95,7 @@ flowchart LR
 | 31-36 | Epsilon-greedy choice: 20% of the time pick a random order (explore), otherwise pick the order with the highest Q-value (exploit). |
 | 40-41 | The heart of Q-learning: the target is today's reward plus the discounted value of the best action tomorrow. We move the current cell a fraction alpha toward that target. |
 | 43-45 | Print what happened each day so you can follow one cell changing at a time, then move to the next state. |
-| 50-52 | Print the final Q-table. The best action per row is the learned policy; with only 8 days it is rough, which is why Medium trains for thousands of days. |
+| 50-52 | Print the final Q-table. The best action per row is the learned policy; with only 8 days it is rough, which is why Build trains for thousands of days. |
 
 </details>
 
@@ -123,7 +123,7 @@ stock | order0  order5 order10 | best
 
 **Try this next:** Set epsilon = 0 and rerun: does the agent ever try ordering 10? · Raise STOCKOUT_COST to 30 and see how the Q-values for order 0 change. · Run 200 days instead of 8 and check whether the best-order column stabilises.
 
-## 🟡 Medium — Tabular Q-learning for a 21-state stockroom
+## 🟡 Build — Tabular Q-learning for a 21-state stockroom
 Train a full tabular Q-learning agent over 1,500 simulated months and compare its policy to simple rules.
 
 | 5W + H | |
@@ -214,7 +214,7 @@ Business read-out: the agent mostly reorders when stock < 6 units, saving $222 p
 
 **Try this next:** Change MEAN_DAILY_DEMAND to 6 and see whether the reorder point moves up. · Set ORDER_FIXED_COST to 0: does the agent start ordering small amounts more often? · Use a faster decay (0.99) and compare the last-100-episode cost.
 
-## 🔴 Hard — Lead time, tuning and an (s,S) showdown
+## 🔴 Production — Lead time, tuning and an (s,S) showdown
 Add a 2-day supplier lead time and weekly demand peaks, tune Q-learning, and test it against a tuned (s,S) policy on the same demand.
 
 | 5W + H | |

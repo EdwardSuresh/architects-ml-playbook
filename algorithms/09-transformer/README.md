@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Picture a claims adjuster reading a note with a highlighter in each hand. For every word, they glance at all the other words and highlight the ones that change its meaning: 'cracked' looks at 'windshield', 'not' looks at 'injured'. Self-attention is that highlighting, done by many readers (heads) in parallel.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Insurance — Claim notes / first notice of loss text triage**
 
 When a policyholder reports a loss, the call-centre or app captures a short free-text note such as 'windshield cracked by rock on highway' or 'car rolled, airbags deployed, driver taken to hospital'. Today a triage desk reads every note and routes it by hand to Auto-Glass, Total-Loss, Injury or Fraud-review queues, which delays simple glass claims and lets injury claims wait. The insurer has thousands of historic notes with the queue each one finally went to. Success means routing most claims automatically within seconds at high accuracy, sending low-confidence and fraud-flagged claims to people, and showing which words drove each decision.
@@ -44,7 +44,7 @@ When a policyholder reports a loss, the call-centre or app captures a short free
 | Pre-training / fine-tuning | Learn general language on huge text first, then adapt to a specific task with fewer labels. |
 | LLM | Large Language Model: a very large Transformer, usually decoder-only like GPT, trained to predict the next token. |
 
-## 🟢 Easy — Compute self-attention by hand on a 4-word claim note
+## 🟢 Concept — Compute self-attention by hand on a 4-word claim note
 Calculate scaled dot-product self-attention in numpy for 'windshield cracked by rock' and read the attention weights.
 
 | 5W + H | |
@@ -118,7 +118,7 @@ Word 'by' receives the least attention: by
 
 **Try this next:** Change the embedding of 'rock' to [0, 0, 1, 0] and see how attention to it changes. · Remove the division by np.sqrt(d) and observe the weights become sharper. · Add a fifth word 'injured' with vector [0, 0, 1, 1] and check the glass similarity.
 
-## 🟡 Medium — Train a tiny Transformer encoder to route 2,000 FNOL notes
+## 🟡 Build — Train a tiny Transformer encoder to route 2,000 FNOL notes
 Build and train a one-layer PyTorch Transformer encoder that classifies synthetic claim notes into four queues.
 
 | 5W + H | |
@@ -198,7 +198,7 @@ New FNOL note: insured reported neck pain after car rolled on highway
 
 **Try this next:** Change heads=2 to heads=4 and d=32 to d=16 and compare accuracy and speed. · Raise label noise from 0.05 to 0.20 and watch test accuracy fall. · Write your own note such as 'rock chipped windshield, cash only repair shop' and see how the model splits Glass vs Fraud.
 
-## 🔴 Hard — FNOL routing pipeline with masking, explanations, baseline and governance
+## 🔴 Production — FNOL routing pipeline with masking, explanations, baseline and governance
 Build a fuller Transformer claim router with tokenizer, positional encoding, padding mask, 2-layer multi-head encoder, attention-pooling explanations, early stopping, a TF-IDF baseline and a human-in-the-loop threshold.
 
 | 5W + H | |

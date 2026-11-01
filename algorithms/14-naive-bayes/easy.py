@@ -52,6 +52,6 @@ best = max(probs, key=probs.get)
 print(f"Route to: {best} team (probability {probs[best]:.0%})")
 
 # ---
-# Naive Bayes — EASY lab · Financial Services: Customer complaint routing to the right product team
+# Naive Bayes — CONCEPT lab · Financial Services: Customer complaint routing to the right product team
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -126,6 +126,6 @@ joblib.dump(best, out)
 print("Saved model ->", os.path.basename(out), f"({os.path.getsize(out)} bytes)")
 
 # ---
-# Decision Tree — HARD lab · Insurance: Homeowners underwriting decision: Accept / Refer / Decline
+# Decision Tree — PRODUCTION lab · Insurance: Homeowners underwriting decision: Accept / Refer / Decline
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

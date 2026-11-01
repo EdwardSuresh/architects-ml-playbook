@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Imagine 10 friends on a seesaw-shaped bench: when one end goes up, everyone near it goes up too. Instead of tracking all 10 heads, you track just 'how high is the whole bench' and 'how tilted is it' - two numbers that tell you almost everything.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Financial Services — Treasury yield curve risk factors for rate hedging**
 
 A bank's treasury and rates desk holds bonds and swaps across maturities from 3 months to 30 years, and every daily rate move changes their value. Hedging each maturity separately is costly and noisy, and risk managers need a simple story for why the portfolio gained or lost. Daily changes in Treasury yields are freely available and highly correlated, which makes them ideal for PCA. Success means three named factors (level, slope, curvature) that explain about 99% of curve moves, a factor-based VaR, and a small set of hedge trades that cut daily P&L swings sharply.
@@ -43,7 +43,7 @@ A bank's treasury and rates desk holds bonds and swaps across maturities from 3 
 | DV01 | Dollar value of a 1 basis point (0.01%) rise in yield; a bond position's rate sensitivity. |
 | Reconstruction error | How far the data rebuilt from only k components is from the real data. |
 
-## 🟢 Easy — Find level, slope and curve by hand on 10 days
+## 🟢 Concept — Find level, slope and curve by hand on 10 days
 Compute PCA from scratch with numpy on 10 days x 4 maturities and see the level factor emerge.
 
 | 5W + H | |
@@ -121,7 +121,7 @@ Day-by-day PC1 score (how much the whole curve shifted):
 
 **Try this next:** Change day 6 so the short end rises and the long end falls sharply, and watch PC2's share grow. · Remove the sign-flip line and rerun - the loadings may come out negative, with identical meaning. · Add a fifth maturity column (5Y) and check that PC1 still dominates.
 
-## 🟡 Medium — sklearn PCA on 6 years of synthetic yield moves
+## 🟡 Build — sklearn PCA on 6 years of synthetic yield moves
 Fit sklearn PCA on 1,500 days of 8-maturity yield changes, read the factor shapes, and test reconstruction on later days.
 
 | 5W + H | |
@@ -220,7 +220,7 @@ Business read-out for the rates desk:
 
 **Try this next:** Set n_components=1 and compare the test RMSE - how much does slope matter? · Wrap PCA in a pipeline with StandardScaler and see how the loadings change. · Double the curvature shock std (1.2 to 2.4) and watch PC3's variance share rise.
 
-## 🔴 Hard — Factor VaR, hedge and stability checks for a bond book
+## 🔴 Production — Factor VaR, hedge and stability checks for a bond book
 Choose the number of factors, compute PCA-based VaR for a bond portfolio, solve a 3-trade factor hedge, backtest it and check factor stability.
 
 | 5W + H | |

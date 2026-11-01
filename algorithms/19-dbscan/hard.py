@@ -1,4 +1,4 @@
-# Hard: catastrophe-claim hotspot engine - haversine DBSCAN, k-distance eps, k-Means comparison, noise triage
+# Production: catastrophe-claim hotspot engine - haversine DBSCAN, k-distance eps, k-Means comparison, noise triage
 import os
 import tempfile
 import warnings
@@ -134,6 +134,6 @@ print("Compliance: noise flags trigger review, not denial - state unfair claims 
       " (NAIC model act) require prompt, fair handling of every claim.")
 
 # ---
-# DBSCAN — HARD lab · Insurance: Catastrophe claims hotspots after a hailstorm or tornado
+# DBSCAN — PRODUCTION lab · Insurance: Catastrophe claims hotspots after a hailstorm or tornado
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -1,4 +1,4 @@
-# t-SNE on 1,200 synthetic card customers: can investigators SEE the fraud ring? (Medium)
+# t-SNE on 1,200 synthetic card customers: can investigators SEE the fraud ring? (Build)
 import warnings
 import numpy as np
 import pandas as pd
@@ -76,6 +76,6 @@ print(f"\nBusiness read: {fr:.0%} of a fraud-ring card's map neighbours are also
 print("so investigators can lasso that island and review those accounts together.")
 
 # ---
-# t-SNE — MEDIUM lab · Financial Services: Visualising card-transaction behaviour to reveal fraud clusters
+# t-SNE — BUILD lab · Financial Services: Visualising card-transaction behaviour to reveal fraud clusters
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

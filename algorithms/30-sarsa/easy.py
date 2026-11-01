@@ -1,4 +1,4 @@
-# One SARSA update by hand: a warehouse robot next to the forklift lane (Easy)
+# One SARSA update by hand: a warehouse robot next to the forklift lane (Concept)
 # 🐍 PY: a dict keyed by (state, action) tuples is a perfectly good tiny Q-table
 Q = {
     ("aisle_B2", "east"): -3.0,    # step along the edge of the forklift lane (short route)
@@ -39,6 +39,6 @@ print("\nTakeaway: because SARSA 'remembers' that its own exploration sometimes 
 print("it rates risky moves lower than Q-learning does - that is why it learns safer routes.")
 
 # ---
-# SARSA — EASY lab · Supply Chain: Warehouse robot learning a safe route past a forklift lane
+# SARSA — CONCEPT lab · Supply Chain: Warehouse robot learning a safe route past a forklift lane
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

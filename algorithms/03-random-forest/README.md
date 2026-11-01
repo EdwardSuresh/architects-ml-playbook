@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Instead of trusting one claims adjuster, you ask a hundred adjusters, each of whom has seen a different random pile of past claims and only looks at a few facts at a time. Their combined vote is far more reliable than any single opinion.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Insurance — Auto insurance claims fraud detection (SIU referral)**
 
 Industry estimates commonly put insurance fraud at around 10% of property-casualty losses, and auto claims are a frequent target: staged accidents, inflated repair bills and padded injury claims. Honest customers pay through higher premiums, while the SIU has only a handful of investigators who cannot review every claim. The insurer has claim details, policy tenure, police reports, witnesses, repair shop data and prior claims. Success means putting the most suspicious claims at the top of the SIU queue so investigators find more fraud per hour while honest claims are paid quickly.
@@ -42,7 +42,7 @@ Industry estimates commonly put insurance fraud at around 10% of property-casual
 | lift | How much more often the target appears in a top-scored group than at random. |
 | permutation importance | Drop in score when one feature's values are shuffled - less biased than impurity importance. |
 
-## 🟢 Easy — Three trees vote on one suspicious claim
+## 🟢 Concept — Three trees vote on one suspicious claim
 Train a tiny Random Forest on 14 hand-typed auto claims, inspect each tree's vote and see the forest average them.
 
 | 5W + H | |
@@ -123,7 +123,7 @@ What the forest relies on:
 
 **Try this next:** Change max_features to 4 so every tree sees all columns - do the trees still disagree? · Flip the police_report of the new claim to 1 and see how the probability changes. · Add a 15th claim that is fraud but looks routine and see whether the forest learns it.
 
-## 🟡 Medium — Rank 4,000 claims for SIU review
+## 🟡 Build — Rank 4,000 claims for SIU review
 Train a class-weighted Random Forest on synthetic auto claims, use out-of-bag validation and measure lift for SIU capacity.
 
 | 5W + H | |
@@ -213,7 +213,7 @@ Investigating top 10% (100 claims) targets $344,114 of fraudulent payouts
 
 **Try this next:** Set class_weight=None and compare recall for the fraud class. · Change min_samples_leaf to 1 and compare OOB accuracy with test AUC - spot the overfitting. · Add a feature for claims reported on a Monday and see whether it shows up in importance.
 
-## 🔴 Hard — SIU referral engine with capacity threshold
+## 🔴 Production — SIU referral engine with capacity threshold
 Build a production Random Forest pipeline with imputation and encoding, tuned by CV, compared with a baseline, thresholded by SIU capacity and checked for fairness.
 
 | 5W + H | |

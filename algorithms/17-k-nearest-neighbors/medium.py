@@ -1,4 +1,4 @@
-# Medium: KNeighborsRegressor predicting transit days from distance, weight and season
+# Build: KNeighborsRegressor predicting transit days from distance, weight and season
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -70,6 +70,6 @@ within_1 = np.mean(np.abs(pred - y_test) <= 1.0)
 print(f"\n{within_1:.0%} of test shipments predicted within +/- 1 day -> good enough to quote customer ETAs.")
 
 # ---
-# k-Nearest Neighbors (k-NN) — MEDIUM lab · Supply Chain: Delivery transit-day estimation from similar past shipments
+# k-Nearest Neighbors (k-NN) — BUILD lab · Supply Chain: Delivery transit-day estimation from similar past shipments
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

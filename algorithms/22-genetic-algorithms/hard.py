@@ -175,6 +175,6 @@ if __name__ == "__main__":
     print(f"Saved route plan -> {os.path.basename(out)} in a temp dir")
 
 # ---
-# Genetic Algorithms — HARD lab · Supply Chain: Delivery route optimization for one truck
+# Genetic Algorithms — PRODUCTION lab · Supply Chain: Delivery route optimization for one truck
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

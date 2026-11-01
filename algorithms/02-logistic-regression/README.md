@@ -8,7 +8,7 @@
 
 💡 **Analogy:** A bank loan officer keeps a mental tally: plus points for a steady job, minus points for missed payments, plus for low debt. Logistic regression is that tally written down precisely, with the final total converted into a percentage chance of default.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Financial Services — Consumer loan default prediction and credit scorecard**
 
 A lender approves thousands of unsecured personal loans a month and roughly 10-15% of them go bad within a year. Credit officers need a probability of default for every applicant to set approve/decline cut-offs, price the loan and reserve for losses. They have bureau data (credit score, delinquencies, inquiries, utilization) and application data (income, debt-to-income, employment). Success means a stable, well-calibrated score that rank-orders risk, passes model validation and fair-lending review, and produces clear adverse action reasons for every decline.
@@ -42,7 +42,7 @@ A lender approves thousands of unsecured personal loans a month and roughly 10-1
 | Weight of Evidence (WoE) | ln(%good / %bad) in a bin; used to transform features for scorecards. |
 | regularisation (C) | A penalty that shrinks coefficients to reduce overfitting; smaller C = stronger penalty. |
 
-## 🟢 Easy — Hand-code default odds for 20 borrowers
+## 🟢 Concept — Hand-code default odds for 20 borrowers
 Write logistic regression from scratch with numpy gradient descent and turn two applicants into probabilities of default.
 
 | 5W + H | |
@@ -115,7 +115,7 @@ DTI 48%, missed 3 -> probability of default 95.4% -> DECLINE
 
 **Try this next:** Change lr to 0.05 and watch how many more steps the loss needs to settle. · Add a third feature (e.g. years at address) to every tuple and to the weights. · Change the decision cut-off from 0.5 to 0.2 - a typical bank is far more conservative.
 
-## 🟡 Medium — Calibrated PD model on 4,000 loans
+## 🟡 Build — Calibrated PD model on 4,000 loans
 Fit scikit-learn logistic regression on realistic loan data, read odds ratios, check calibration by risk grade and set an approval policy.
 
 | 5W + H | |
@@ -200,7 +200,7 @@ Policy PD < 10%: approve 54% of applicants, bad rate among approved 5.3% vs 22.8
 
 **Try this next:** Add class_weight='balanced' and see what happens to calibration (predicted PDs inflate). · Drop credit_score and see how much Gini falls. · Change the policy to PD < 5% and compare approval rate vs bad rate.
 
-## 🔴 Hard — Points-based scorecard with adverse action
+## 🔴 Production — Points-based scorecard with adverse action
 Build a production-style WoE scorecard: custom sklearn transformer, tuned via CV, scaled to points, with cut-off economics and adverse action reasons.
 
 | 5W + H | |

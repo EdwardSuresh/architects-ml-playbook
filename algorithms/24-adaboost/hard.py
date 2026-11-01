@@ -132,6 +132,6 @@ if __name__ == "__main__":
     print(f"Saved model + threshold -> {os.path.basename(path)} in a temp dir")
 
 # ---
-# AdaBoost — HARD lab · Oil & Gas: Drilling stuck-pipe early warning
+# AdaBoost — PRODUCTION lab · Oil & Gas: Drilling stuck-pipe early warning
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

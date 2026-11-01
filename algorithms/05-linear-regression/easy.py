@@ -1,4 +1,4 @@
-# EASY: linear regression by hand - expected yearly claim cost for an auto policy
+# CONCEPT: linear regression by hand - expected yearly claim cost for an auto policy
 import numpy as np
 
 # 🐍 PY: a list of dicts - each dict is one policyholder with named fields
@@ -47,6 +47,6 @@ pure = new_driver @ coef
 print(f"New 28-year-old driving 16k miles: expected claims ${pure:.0f}, premium ${pure * 1.25:.0f}")
 
 # ---
-# Linear Regression — EASY lab · Insurance: Auto insurance expected claim cost and premium pricing
+# Linear Regression — CONCEPT lab · Insurance: Auto insurance expected claim cost and premium pricing
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

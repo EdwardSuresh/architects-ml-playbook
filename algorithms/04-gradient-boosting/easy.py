@@ -1,4 +1,4 @@
-# EASY: gradient boosting from scratch - each tiny tree fixes the last one's errors on late-shipment risk
+# CONCEPT: gradient boosting from scratch - each tiny tree fixes the last one's errors on late-shipment risk
 import numpy as np
 from sklearn.tree import DecisionTreeRegressor
 
@@ -44,6 +44,6 @@ print(f"\nNew 1,400 mi storm lane -> raw score {raw:.2f}, clipped risk {risk:.2f
       f"{'expedite / warn customer' if risk > 0.5 else 'standard'}")
 
 # ---
-# Gradient Boosting — EASY lab · Supply Chain: Predict late shipments (on-time delivery risk)
+# Gradient Boosting — CONCEPT lab · Supply Chain: Predict late shipments (on-time delivery risk)
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

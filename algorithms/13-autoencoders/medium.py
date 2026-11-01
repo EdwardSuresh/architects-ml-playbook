@@ -81,6 +81,6 @@ print("\nMaintenance read-out: a high error means the sensors no longer agree wi
 print("the way they do on a healthy compressor - send a technician before the valve fails.")
 
 # ---
-# Autoencoders — MEDIUM lab · Oil & Gas: Gas compressor sensor anomaly detection for predictive maintenance
+# Autoencoders — BUILD lab · Oil & Gas: Gas compressor sensor anomaly detection for predictive maintenance
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

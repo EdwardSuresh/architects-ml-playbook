@@ -1,4 +1,4 @@
-# HARD: auto pure-premium pricing - OLS vs engineered Ridge vs Tweedie GLM (actuarial standard)
+# PRODUCTION: auto pure-premium pricing - OLS vs engineered Ridge vs Tweedie GLM (actuarial standard)
 import os
 import tempfile
 import warnings
@@ -139,6 +139,6 @@ if __name__ == "__main__":
     main()
 
 # ---
-# Linear Regression — HARD lab · Insurance: Auto insurance expected claim cost and premium pricing
+# Linear Regression — PRODUCTION lab · Insurance: Auto insurance expected claim cost and premium pricing
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

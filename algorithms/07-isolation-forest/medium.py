@@ -62,6 +62,6 @@ print("\nAverage profile by alert flag:")
 print(test.groupby("alert")[["txn_amount", "cash_deposit", "txns_last_24h"]].mean().round(2))
 
 # ---
-# Isolation Forest — MEDIUM lab · Financial Services: AML suspicious transaction detection for the analyst alert queue
+# Isolation Forest — BUILD lab · Financial Services: AML suspicious transaction detection for the analyst alert queue
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

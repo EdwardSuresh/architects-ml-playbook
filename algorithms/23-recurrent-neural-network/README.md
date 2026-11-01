@@ -8,7 +8,7 @@
 
 💡 **Analogy:** It is like a cricket commentator who keeps a running sense of the innings: after each ball, they update their mental summary of momentum and use it to predict the next over. They do not replay every ball; they carry a compressed memory forward.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Oil & Gas — Daily oil production rate forecasting for a well**
 
 An operator needs short-term production forecasts for each well to plan trucking, sales nominations and field crew visits. Rates decline over time, but noise, shut-ins and choke changes make simple decline curves miss short-term behaviour. The SCADA historian holds daily oil rates, shut-in flags and well age. Success means forecasts for the next 30 days that beat the decline-curve and naive baselines on producing days, plus a clear flag when actual production falls well below forecast.
@@ -44,7 +44,7 @@ An operator needs short-term production forecasts for each well to plan trucking
 | Shut-in | A period when a well is closed (maintenance, failure), so production drops to near zero. |
 | Direct multi-step forecast | Predicting all future days at once instead of feeding predictions back in one day at a time. |
 
-## 🟢 Easy — Watch an RNN remember 5 days of oil
+## 🟢 Concept — Watch an RNN remember 5 days of oil
 Compute an RNN's hidden state by hand in numpy over 5 days of a well's oil rate and see how memory carries forward.
 
 | 5W + H | |
@@ -121,7 +121,7 @@ Day 5: predicted  446.6 bbl/d   actual  462.0
 
 **Try this next:** Multiply W_hh by 3 and watch the hidden values saturate near +1 or -1. · Set W_hh to zeros: the RNN now has no memory. What changes in the printout? · Add a shut-in day (rate 0) in the middle and watch the hidden state react.
 
-## 🟡 Medium — PyTorch RNN on 3 years of well data
+## 🟡 Build — PyTorch RNN on 3 years of well data
 Train a PyTorch nn.RNN on sliding 14-day windows to forecast tomorrow's oil rate and compare it with a naive baseline.
 
 | 5W + H | |
@@ -204,14 +204,14 @@ Last 5 test days:
   actual  141.3  predicted  136.8
 
 Business read-out: mean test rate 143 bbl/d; RNN error 10 bbl/d (7.1%). For a ONE-day horizon it only ties the naive rule -
-so always report a naive baseline. The value of sequence models shows up in multi-day forecasts (Hard).
+so always report a naive baseline. The value of sequence models shows up in multi-day forecasts (Production).
 ```
 
 </details>
 
 **Try this next:** Change WINDOW to 30 and see if test MAE improves. · Remove the residual (return the head output directly) and compare MAE. · Swap nn.RNN for nn.GRU (same arguments) and rerun.
 
-## 🔴 Hard — 30-day forecast: RNN vs Arps decline curve
+## 🔴 Production — 30-day forecast: RNN vs Arps decline curve
 Forecast the next 30 days with an RNN and a GRU, compare them with an Arps decline fit and a naive baseline, and measure vanishing gradients.
 
 | 5W + H | |

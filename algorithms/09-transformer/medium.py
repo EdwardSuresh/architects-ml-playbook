@@ -93,6 +93,6 @@ for q, p in sorted(zip(QUEUES, probs.tolist()), key=lambda t: -t[1]):
     print(f"  {q:12s} {p:.2f} {'#' * int(p * 30)}")
 
 # ---
-# Transformer — MEDIUM lab · Insurance: Claim notes / first notice of loss text triage
+# Transformer — BUILD lab · Insurance: Claim notes / first notice of loss text triage
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

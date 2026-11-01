@@ -1,4 +1,4 @@
-# Hard: production transit-day estimator - one-hot + scaling pipeline, tuned k-NN, explainable neighbours
+# Production: production transit-day estimator - one-hot + scaling pipeline, tuned k-NN, explainable neighbours
 import os
 import tempfile
 import warnings
@@ -131,6 +131,6 @@ print("Governance: k-NN stores the training data itself - purge per data-retenti
       "re-fit monthly as carrier performance drifts.")
 
 # ---
-# k-Nearest Neighbors (k-NN) — HARD lab · Supply Chain: Delivery transit-day estimation from similar past shipments
+# k-Nearest Neighbors (k-NN) — PRODUCTION lab · Supply Chain: Delivery transit-day estimation from similar past shipments
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

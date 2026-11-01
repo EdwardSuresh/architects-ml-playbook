@@ -159,6 +159,6 @@ if __name__ == "__main__":
     print(f"Saved RNN weights + Arps params -> {os.path.basename(out)} in a temp dir")
 
 # ---
-# Recurrent Neural Network (RNN) — HARD lab · Oil & Gas: Daily oil production rate forecasting for a well
+# Recurrent Neural Network (RNN) — PRODUCTION lab · Oil & Gas: Daily oil production rate forecasting for a well
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

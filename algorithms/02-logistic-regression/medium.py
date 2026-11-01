@@ -1,4 +1,4 @@
-# MEDIUM: scikit-learn logistic regression for consumer loan probability of default (PD)
+# BUILD: scikit-learn logistic regression for consumer loan probability of default (PD)
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -62,6 +62,6 @@ print(f"\nPolicy PD < 10%: approve {approve.mean():.0%} of applicants, "
       f"vs {y_te.values[~approve].mean():.1%} among declined")
 
 # ---
-# Logistic Regression — MEDIUM lab · Financial Services: Consumer loan default prediction and credit scorecard
+# Logistic Regression — BUILD lab · Financial Services: Consumer loan default prediction and credit scorecard
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

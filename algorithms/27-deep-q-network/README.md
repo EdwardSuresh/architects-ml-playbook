@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Think of a new gas scheduler who keeps a notebook of 'if the price is X and the tank is Y full, injecting today tends to pay Z by year end'. At first the notebook is guesses; after many simulated years it becomes a reliable rulebook. DQN is that notebook, written by a neural network.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Oil & Gas — Natural gas storage: daily Inject / Hold / Withdraw decisions**
 
 A midstream operator leases a 100,000 MMBtu storage field and must decide each day whether to inject gas, hold, or withdraw and sell. Prices are cheap in summer and expensive in winter, but the size of the winter premium and short-term shocks change every year. Schedulers today use simple buy-below/sell-above rules that leave money on the table and sometimes never trigger. Data available: daily hub prices, forward curves, storage levels, injection/withdrawal limits and fuel costs. Success means a policy that beats the rule-based baseline out-of-sample, with fewer loss-making years, inside all physical and contractual limits.
@@ -43,7 +43,7 @@ A midstream operator leases a 100,000 MMBtu storage field and must decide each d
 | discount factor (gamma) | How much future rewards count versus today's; 0.97 per step values the winter payoff. |
 | mark-to-market reward | Daily change in value of cash plus inventory, giving a dense learning signal. |
 
-## 🟢 Easy — A tiny neural Q-function on five storage transitions
+## 🟢 Concept — A tiny neural Q-function on five storage transitions
 Train a 2-8-3 neural network by hand in numpy so it learns which of Inject/Hold/Withdraw is worth most in two storage situations.
 
 | 5W + H | |
@@ -113,7 +113,7 @@ Winter, pricey, fairly full    Q=[ 8.64  4.22 15.1 ] -> Withdraw
 
 **Try this next:** Set gamma to 0.9 and lr to 0.05: does training still converge, or do Q-values blow up (a classic DQN instability)? · Add a transition where withdrawing in summer earns +1 and see how the summer Q-values change. · Increase the hidden layer to 32 units and compare the final Q-values.
 
-## 🟡 Medium — DQN with replay buffer on a seasonal gas-price year
+## 🟡 Build — DQN with replay buffer on a seasonal gas-price year
 Train a PyTorch DQN with a replay buffer on a simulated storage year and show its month-by-month inject/withdraw pattern.
 
 | 5W + H | |
@@ -200,7 +200,7 @@ A good policy fills in the cheap summer months and withdraws into the winter pri
 
 **Try this next:** Set eps to 0.3 during training: does the policy get better or worse? · Change the reward to cash only (-vol * p) and see how much harder learning becomes. · Double FEE to 0.02 and check whether the agent starts filling later in the summer.
 
-## 🔴 Hard — Double DQN with target network vs tuned buy-low-sell-high rule
+## 🔴 Production — Double DQN with target network vs tuned buy-low-sell-high rule
 Train a Double DQN with target network and epsilon decay on a richer storage simulator, then compare it with a tuned rule over 200 unseen price years.
 
 | 5W + H | |

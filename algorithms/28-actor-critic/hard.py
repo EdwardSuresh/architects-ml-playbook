@@ -1,4 +1,4 @@
-# A2C portfolio allocator with risk-adjusted reward, transaction costs and Sharpe vs 60/40 (Hard)
+# A2C portfolio allocator with risk-adjusted reward, transaction costs and Sharpe vs 60/40 (Production)
 import os
 import tempfile
 import numpy as np
@@ -167,6 +167,6 @@ if __name__ == "__main__":
     main()
 
 # ---
-# Actor-Critic — HARD lab · Financial Services: Monthly Stocks / Bonds / Cash allocation
+# Actor-Critic — PRODUCTION lab · Financial Services: Monthly Stocks / Bonds / Cash allocation
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

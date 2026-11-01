@@ -1,4 +1,4 @@
-# MEDIUM: XGBoost on 5,000 synthetic card authorizations with ~1-2% fraud
+# BUILD: XGBoost on 5,000 synthetic card authorizations with ~1-2% fraud
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -70,6 +70,6 @@ print(f"\nAt threshold 0.5: fraud $ stopped = ${caught:,.0f}, fraud $ missed = $
 print(f"Customers inconvenienced (declines/step-up) = {int(flag.sum())} of {len(flag)} swipes")
 
 # ---
-# XGBoost — MEDIUM lab · Financial Services: Real-time credit card fraud detection
+# XGBoost — BUILD lab · Financial Services: Real-time credit card fraud detection
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

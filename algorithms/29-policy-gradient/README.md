@@ -8,7 +8,7 @@
 
 💡 **Analogy:** A shop manager tries different window displays. Each week, if sales were good, she becomes a bit more likely to reuse that display; if poor, a bit less likely. Over months, the best displays dominate, but she still occasionally tries others. That is REINFORCE.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Insurance — Renewal retention offers: which discount for which policyholder**
 
 A personal-auto carrier loses many policyholders at renewal, and its blanket 5% loyalty discount is expensive for customers who would have stayed anyway. The retention team wants a policy that chooses 0%, 5% or 10% per customer to maximise retained premium net of discount cost. Data available: tenure, premium, claims history, competitor quote gap and multi-policy flag, plus past renewal outcomes. Success means higher retained premium than any fixed discount on a held-out book, no unfair skew across protected groups, and compliance with state rules on price optimization.
@@ -43,7 +43,7 @@ A personal-auto carrier loses many policyholders at renewal, and its blanket 5% 
 | contextual bandit | A one-step RL problem: see context, take action, get reward, no future state. |
 | price optimization | Setting prices partly on predicted willingness to pay or stay, rather than cost and risk; restricted for insurance in many states. |
 
-## 🟢 Easy — REINFORCE on a 3-arm discount bandit
+## 🟢 Concept — REINFORCE on a 3-arm discount bandit
 Use plain numpy REINFORCE to learn which of three renewal discounts earns the most expected retained premium for a single customer type.
 
 | 5W + H | |
@@ -115,7 +115,7 @@ Learned policy favours a 5% discount.
 
 **Try this next:** Change renew_prob for 10% to 0.92: does the policy switch to 10%? · Replace reward with reward - 900 (a crude baseline) and compare how quickly it converges. · Lower lr to 0.01 and see how many steps are needed.
 
-## 🟡 Medium — Feature-conditioned softmax policy in PyTorch
+## 🟡 Build — Feature-conditioned softmax policy in PyTorch
 Train a PyTorch softmax policy that picks a discount per customer from tenure, premium, claims and competitor gap, and compare it with blanket discounts.
 
 | 5W + H | |
@@ -196,7 +196,7 @@ tenure_band
 
 **Try this next:** Increase training to 1,000 epochs: does the policy get closer to the oracle? · Replace nn.Linear(4, 3) with a small two-layer network and compare. · Subtract the batch-average reward from reward before the loss and see whether learning is smoother.
 
-## 🔴 Hard — REINFORCE with baseline, entropy bonus and fairness audit
+## 🔴 Production — REINFORCE with baseline, entropy bonus and fairness audit
 Build a production-style renewal-offer policy with a learned baseline and entropy bonus, choose settings on a validation book, beat fixed discounts on a test book and audit fairness.
 
 | 5W + H | |

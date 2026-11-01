@@ -69,6 +69,6 @@ for seg, row in profile.iterrows():
     print(f"  Segment {seg} ({int(row.customers)} cust, age {row.age:.0f}): {offer}")
 
 # ---
-# k-Means Clustering — MEDIUM lab · Financial Services: Retail banking customer segmentation for personalized products
+# k-Means Clustering — BUILD lab · Financial Services: Retail banking customer segmentation for personalized products
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

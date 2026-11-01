@@ -8,7 +8,7 @@
 
 💡 **Analogy:** It is like building a family tree for a football league: first pair up players who play almost identically, then merge those pairs into positions, then positions into defence and attack. You can stop at any level - 2 groups, 5 groups or 11 - by deciding where to cut the tree.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Financial Services — Portfolio diversification with correlation clustering and HRP**
 
 A portfolio that holds 25 stocks may still be concentrated if many of them move together, and that concentration shows up painfully in a market sell-off. Traditional mean-variance optimisation produces extreme, unstable weights because it inverts a noisy covariance matrix. Daily return history is available for every holding. Success means clusters that reveal what really moves together, a robust allocation that spreads risk across clusters, and lower out-of-sample volatility with low turnover than naive alternatives.
@@ -41,7 +41,7 @@ A portfolio that holds 25 stocks may still be concentrated if many of them move 
 | Correlation distance | sqrt(0.5 x (1 - correlation)); 0 when assets move identically. |
 | Hierarchical Risk Parity (HRP) | An allocation method that uses the cluster tree to split risk evenly instead of inverting the covariance matrix. |
 
-## 🟢 Easy — Merge 5 stocks step by step by correlation
+## 🟢 Concept — Merge 5 stocks step by step by correlation
 Compute correlation distances between 5 stocks and perform agglomerative average-linkage merges by hand to see which assets belong together.
 
 | 5W + H | |
@@ -114,7 +114,7 @@ Reading: the two tech names merge first, then the banks; the utility joins last 
 
 **Try this next:** Change cluster_dist to use min (single linkage) or max (complete linkage) and compare merge heights. · Add a gold miner stock that moves opposite to tech and see where it merges. · Make BANK2 noisier and see whether the banks still merge first.
 
-## 🟡 Medium — scipy linkage on 20 stocks, cut into sector clusters
+## 🟡 Build — scipy linkage on 20 stocks, cut into sector clusters
 Cluster 20 stocks from 3 years of synthetic daily returns with scipy's Ward linkage, cut the tree into 4 groups and print a text dendrogram order.
 
 | 5W + H | |
@@ -210,7 +210,7 @@ Holding 5 stocks from ONE cluster is close to holding one stock - spread picks a
 
 **Try this next:** Switch method to 'single' or 'complete' and compare the last merge heights. · Halve the sector volatilities and see if clusters still match sectors. · Cut with criterion='distance' and t=0.8 instead of maxclust.
 
-## 🔴 Hard — Hierarchical Risk Parity vs equal weight, out of sample
+## 🔴 Production — Hierarchical Risk Parity vs equal weight, out of sample
 Compare linkage methods by cophenetic correlation, build HRP-style weights from the cluster tree, and test volatility, concentration and turnover against equal-weight, inverse-variance and min-variance portfolios out of sample.
 
 | 5W + H | |

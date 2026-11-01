@@ -8,7 +8,7 @@
 
 💡 **Analogy:** It is like the game of 20 Questions played by a seasoned underwriter: 'Is the roof older than 20 years? Any claims in the last 5 years? Is the house in a wildfire zone?' Each answer sends you down a different branch until you land on Accept, Refer or Decline.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Insurance — Homeowners underwriting decision: Accept / Refer / Decline**
 
 A homeowners insurer receives thousands of new-business applications a week and every one used to sit in an underwriter's queue. Most are clean risks that could be accepted straight away, a smaller group needs a human to look at roof photos or claim history, and a few are clearly outside appetite. The insurer has historic applications with roof age, prior claims, wildfire zone, construction type, distance to fire station, a credit-based insurance score and the final underwriter decision. Success means auto-accepting the clean risks, sending true edge cases to underwriters, almost never auto-accepting a risk that should be declined, and being able to print the exact rule behind every decision for regulators.
@@ -43,7 +43,7 @@ A homeowners insurer receives thousands of new-business applications a week and 
 | export_text | A scikit-learn function that prints the trained tree as readable if-else rules. |
 | Decision path | The exact list of questions one applicant passed through; useful as a reason code. |
 
-## 🟢 Easy — Hand-build the underwriting rule book from 12 applications
+## 🟢 Concept — Hand-build the underwriting rule book from 12 applications
 Compute Gini impurity by hand for one candidate split, then let scikit-learn grow a 3-level tree and print its rules.
 
 | 5W + H | |
@@ -123,7 +123,7 @@ New application [14, 2, 1, 280] -> Refer
 
 **Try this next:** Change the hand split from roof_age_yrs <= 13 to prior_claims_5yr <= 1 and compare the two Gini values. · Set max_depth=1 and see which single question the tree considers most important. · Add two more Decline rows with high claims and see how the printed rules change.
 
-## 🟡 Medium — Learn underwriting rules from 3,000 applications
+## 🟡 Build — Learn underwriting rules from 3,000 applications
 Train and test a depth-limited tree on realistic synthetic homeowners data and read its rules, importances and errors.
 
 | 5W + H | |
@@ -228,7 +228,7 @@ Top of the rule book:
 
 **Try this next:** Remove min_samples_leaf and set max_depth=None; compare train vs test accuracy to see overfitting. · Change criterion to 'entropy' and check whether the top split changes. · Increase the wildfire weight in the hidden risk formula and watch its importance rise.
 
-## 🔴 Hard — Production underwriting tree with tuning, cost and reason codes
+## 🔴 Production — Production underwriting tree with tuning, cost and reason codes
 Build a tuned, class-balanced tree pipeline, compare it to a manual rule on business cost, explain decisions and save the model.
 
 | 5W + H | |

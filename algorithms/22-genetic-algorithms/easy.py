@@ -59,6 +59,6 @@ best = min(itertools.permutations(customers), key=lambda r: route_miles(list(r))
 print("Best route: Depot-" + "-".join(best) + f"-Depot  {route_miles(list(best)):.2f} mi")
 
 # ---
-# Genetic Algorithms — EASY lab · Supply Chain: Delivery route optimization for one truck
+# Genetic Algorithms — CONCEPT lab · Supply Chain: Delivery route optimization for one truck
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

@@ -175,6 +175,6 @@ if __name__ == "__main__":
     print(f"Saved Q-table + configs -> {os.path.basename(path)} in a temp dir")
 
 # ---
-# Q-Learning — HARD lab · Supply Chain: Inventory reorder policy for one SKU
+# Q-Learning — PRODUCTION lab · Supply Chain: Inventory reorder policy for one SKU
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson

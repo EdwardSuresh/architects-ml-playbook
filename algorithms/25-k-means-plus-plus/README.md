@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Imagine placing 3 ice-cream vans on a beach. Instead of dropping them at random (and maybe parking two side by side), you put the first one anywhere, then place each next van where people are farthest from any existing van, with some randomness. Then you let them drift toward their crowds.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Supply Chain — Choosing distribution center locations**
 
 A distributor serving retailers across the south-central US is reviewing its warehouse footprint as leases expire. Too few DCs means long, expensive truck runs and missed next-day deliveries; too many means paying fixed costs for half-empty buildings. The company has every customer's location and annual case volume, plus freight rates and DC operating costs. Success means a recommended number and rough placement of DCs that minimises total annual cost while meeting a next-day service target, ready to be refined against real candidate sites.
@@ -43,7 +43,7 @@ A distributor serving retailers across the south-central US is reviewing its war
 | Circuity factor | Multiplier converting straight-line miles to typical road miles, often about 1.2. |
 | Adjusted Rand index | Score from 0 to 1 for how similar two clusterings are, corrected for chance. |
 
-## 🟢 Easy — Seed 3 DC sites the k-means++ way
+## 🟢 Concept — Seed 3 DC sites the k-means++ way
 Step through k-means++ seeding by hand on 12 customer towns and compare it with random seeding over 200 trials.
 
 | 5W + H | |
@@ -121,7 +121,7 @@ Seeding only (before any k-means iterations), 200 trials:
 
 **Try this next:** Set K = 4 and see where the extra seed tends to land. · Use probabilities proportional to D (not D squared) and compare the bad-start rate. · Move the south-east cluster closer to the west one and rerun.
 
-## 🟡 Medium — Random vs k-means++ across 10 seeds
+## 🟡 Build — Random vs k-means++ across 10 seeds
 Cluster 3,000 customer locations into 8 DC sites and measure how initialisation affects inertia, iterations and bad solutions.
 
 | 5W + H | |
@@ -228,7 +228,7 @@ puts two DCs in one metro and leaves another metro unserved - k-means++ makes th
 
 **Try this next:** Set n_init=5 in the loop for both inits: does random catch up? · Change K to 6 and see which metros share a DC. · Remove the miles conversion (use raw degrees) and compare the site table.
 
-## 🔴 Hard — Demand-weighted DC network sized by total cost
+## 🔴 Production — Demand-weighted DC network sized by total cost
 Use demand-weighted k-means++ to place DCs, choose k by fixed plus transport cost in haversine road miles, check stability and report the network.
 
 | 5W + H | |

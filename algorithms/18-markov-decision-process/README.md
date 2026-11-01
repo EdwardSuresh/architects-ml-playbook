@@ -8,7 +8,7 @@
 
 💡 **Analogy:** Think of looking after a car: in each condition (fine, noisy, smoking) you can keep driving, service it or replace it. Each choice has a cost today and changes the odds of what condition the car is in next month. An MDP works out the rule that keeps your total cost lowest over the years.
 
-## The use case (same for Easy, Medium and Hard)
+## The use case (same for Concept, Build and Production)
 **Oil & Gas — Pump maintenance policy optimisation**
 
 A field operates dozens of pumps that drift from Good to Worn to Critical and eventually fail, stopping production until replaced. Crews either run equipment to failure or service on a fixed calendar, and both waste money - failures cost thousands of barrels while unnecessary repairs cost downtime and parts. Condition-monitoring data and CMMS work orders show how pumps degrade and what each action costs. Success means a simple state-to-action rule that lowers two-year cost and failure weeks versus current practice, while respecting safety limits.
@@ -44,7 +44,7 @@ A field operates dozens of pumps that drift from Good to Worn to Critical and ev
 | Value iteration | Repeatedly applying the Bellman update until values stop changing. |
 | Policy iteration | Alternating exact evaluation of a policy and greedy improvement until the policy is stable. |
 
-## 🟢 Easy — Simulate a pump wearing out week by week
+## 🟢 Concept — Simulate a pump wearing out week by week
 Define pump health states and a transition matrix, simulate the 'never maintain' strategy, and see how fast failure probability grows.
 
 | 5W + H | |
@@ -114,7 +114,7 @@ Next step: add actions (Repair, Replace) and let an MDP choose the cheapest poli
 
 **Try this next:** Change the Worn -> Critical probability from 0.18 to 0.05 and see the average cost drop. · Extend weeks to 52 and compare the week-52 distribution. · Add a crude 'repair when Critical' rule inside simulate() by resetting s to 0 and adding $6,000.
 
-## 🟡 Medium — Learn transitions from logs, solve with value iteration
+## 🟡 Build — Learn transitions from logs, solve with value iteration
 Estimate transition probabilities for Run, Repair and Replace from a synthetic maintenance log, then use value iteration to find the cheapest action in each state.
 
 | 5W + H | |
@@ -208,7 +208,7 @@ Reading: keep running healthy pumps, intervene before failure - the policy shows
 
 **Try this next:** Lower gamma to 0.5 and see whether the policy stops repairing Worn pumps. · Raise the Repair cost to 15,000 and rerun. · Shrink the log to 5 pumps and check how noisy the estimated transition matrix becomes.
 
-## 🔴 Hard — Policy vs value iteration with oil-price regimes and baselines
+## 🔴 Production — Policy vs value iteration with oil-price regimes and baselines
 Solve an 8-state pump MDP (health x oil price) with both policy and value iteration, test discount sensitivity, and prove the policy beats run-to-failure and fixed-schedule maintenance in Monte Carlo.
 
 | 5W + H | |

@@ -63,6 +63,6 @@ dec_as_acc = ((y_te == "Decline") & (pred == "Accept")).sum()
 print(f"Business check: {dec_as_acc} true-Decline risks auto-accepted out of {len(y_te)} test apps")
 
 # ---
-# Decision Tree — MEDIUM lab · Insurance: Homeowners underwriting decision: Accept / Refer / Decline
+# Decision Tree — BUILD lab · Insurance: Homeowners underwriting decision: Accept / Refer / Decline
 # Part of The Architect's ML Playbook: https://github.com/EdwardSuresh/architects-ml-playbook
 # Legend: '# 🐍 PY:' = Python lesson, '# 🧠 ML:' = machine-learning lesson
